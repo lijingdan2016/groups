@@ -39,6 +39,6 @@
     <br/>
     <img src="image/faxian.png"/>
     <br/>
-    <img src="ermao.png"/>
+    <img src="image/ermao.png"/>
 <body>
 </html>
