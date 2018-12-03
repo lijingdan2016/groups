@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { SyrHome2Page } from '../syr-home2/syr-home2';
 
 /**
  * Generated class for the KrfKcbPage page.
@@ -22,4 +23,7 @@ export class KrfKcbPage {
     console.log('ionViewDidLoad KrfKcbPage');
   }
 
+  butt(){
+    this.navCtrl.push(SyrHome2Page);
+  }
 }

@@ -15,6 +15,7 @@ import { WjSettingPage } from '../pages/wj-setting/wj-setting';
 import { HshDlPage } from '../pages/hsh-dl/hsh-dl';
 import { WjZcPage } from '../pages/wj-zc/wj-zc';
 import { KrfKcbPage } from '../pages/krf-kcb/krf-kcb';
+import { KrfFbrwPage } from '../pages/krf-fbrw/krf-fbrw';
 import { KrfLrcjPage } from '../pages/krf-lrcj/krf-lrcj';
 import { SyrSqPage } from '../pages/syr-sq/syr-sq';
 import { NamePage } from '../pages/name/name';
@@ -53,6 +54,7 @@ import { WjGxqmPage } from '../pages/wj-gxqm/wj-gxqm';
     HshSfxzPage,
     WjZcPage,
     KrfKcbPage,
+    KrfFbrwPage,
     KrfLrcjPage,
     SyrSqPage,
     NamePage,
@@ -97,6 +99,7 @@ import { WjGxqmPage } from '../pages/wj-gxqm/wj-gxqm';
     HshDlPage,
     WjZcPage,
     KrfKcbPage,
+    KrfFbrwPage,
     KrfLrcjPage,
     SyrSqPage,
     NamePage,

@@ -1,48 +1,49 @@
 ion-header{
-    i
-    {
-    display:inline-block;
-    font-size:30px;
-    }
-    ion-title{
+    div{
+        width:360px;
+        height:80px;
+        background-color:#a1c45a;
+        margin-bottom:0px;
+        i
+        {
         display:inline-block;
-        margin-left:60px;
+        font-size:30px;
+        margin-left:20px;
+        position:absolute;
+        top:20px;
+        }
+        ion-title{
+            display:inline-block;
+            margin-left:70px;
+        }
         
     }
-    #left{
-        margin-left:20px;
-    }
-    #right{
-        float:right;
-        margin-right:20px;
-    }
 }
-
 #container{
-    width:320px;
-    height:520px;
-    background-color: #259B24;
-    position:absolute;
+    width:360px;
+    height:600px;
+    
+   
    h5{
        
        span{
-           margin-left:90px;
+           margin-left:100px;
        }
    }
    .week{
        margin-top:20px;
-       margin-left:10px;
+       margin-left:20px;
        button{
            width:70px;
            height:30px;
-           margin-left:40px;
+           margin-left:50px;
        }
    }
    button{
        width:70px;
        height:30px;
        margin-top:20px;
-       margin-left:100px;
+       margin-left:110px;
    }
 }
 @font-face {
