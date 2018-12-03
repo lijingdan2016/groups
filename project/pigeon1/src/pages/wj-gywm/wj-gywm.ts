@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { WjDetail1Page } from '../wj-detail1/wj-detail1';
 
 /**
- * Generated class for the WjHeartPage page.
+ * Generated class for the WjGywmPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,18 +10,16 @@ import { WjDetail1Page } from '../wj-detail1/wj-detail1';
 
 @IonicPage()
 @Component({
-  selector: 'page-wj-heart',
-  templateUrl: 'wj-heart.html',
+  selector: 'page-wj-gywm',
+  templateUrl: 'wj-gywm.html',
 })
-export class WjHeartPage {
+export class WjGywmPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad WjHeartPage');
+    console.log('ionViewDidLoad WjGywmPage');
   }
-  detail(){
-    this.navCtrl.push(WjDetail1Page);
-  }
+
 }
