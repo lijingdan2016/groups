@@ -4,6 +4,8 @@ import { WjClassPage } from '../wj-class/wj-class';
 import { WjHeartPage } from '../wj-heart/wj-heart';
 import { WjUpdatePage } from '../wj-update/wj-update';
 import { WjSettingPage } from '../wj-setting/wj-setting';
+import { WjGxqmPage } from '../wj-gxqm/wj-gxqm';
+import { WjTouxiangPage } from '../wj-touxiang/wj-touxiang';
 
 /**
  * Generated class for the WjMyPage page.
@@ -34,7 +36,12 @@ export class WjMyPage {
   }
   push5(){
     this.navCtrl.push(WjSettingPage);
-    
+  }
+  bj(){
+    this.navCtrl.push(WjGxqmPage);
+  }
+  tx(){
+    this.navCtrl.push(WjTouxiangPage);
   }
 
 

@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HshDlPage } from '../hsh-dl/hsh-dl';
+import { WjTouxiangPage } from '../wj-touxiang/wj-touxiang';
+import { WjGxqmPage } from '../wj-gxqm/wj-gxqm';
 
 /**
  * Generated class for the WjSettingPage page.
@@ -24,5 +26,11 @@ export class WjSettingPage {
   }
   exit(){
     this.navCtrl.push(HshDlPage);
+  }
+  touxiang(){
+    this.navCtrl.push(WjTouxiangPage);
+  }
+  gx(){
+    this.navCtrl.push(WjGxqmPage);
   }
 }
