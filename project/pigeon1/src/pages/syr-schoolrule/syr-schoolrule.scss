@@ -1,0 +1,19 @@
+page-syr-schoolrule {
+    .toolbar-md{
+        min-height:46px;
+    }
+    .toolbar-title-md{
+        font-size: 18px;
+    }
+    ion-content{
+        ul{
+            padding-left: 15px;
+            li{
+                span{
+                    font-size: 16px;
+                    line-height: 2.5em;
+                }
+            }
+        }
+    }
+}

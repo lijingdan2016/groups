@@ -1,0 +1,23 @@
+page-ljhjrbj {
+    ion-navbar{
+        ion-title{
+            padding-right:44px;
+        }
+        
+    }
+    ion-content{
+        .box{
+            ion-input{
+                margin-top:15px;
+                border:1px solid green;
+                height: 50px;
+            }
+            button{
+                margin-top:15px;
+                height: 60px;
+                background-color: #259B24;
+            }
+        }
+        
+    }
+}

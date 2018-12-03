@@ -1,0 +1,44 @@
+page-syr-sousuo {
+    ion-header{
+        background-color: white;
+        ion-searchbar{
+            width: 80%;
+            margin: 0 auto;
+            background-color: rgb(237, 237, 237);
+            float: left;
+        }
+        span{
+            width: 15%;
+            float: left;
+            margin-left: 4%;
+            font-size: 18px;
+            line-height: 48px;
+        }
+    }
+    ion-content{
+        .neirong{
+            width: 100%;
+            float: left;
+            ul{
+                width: 100%;
+                padding: 0;
+                margin:0;
+                margin-left: 6px;   
+                li{
+                    border: 0.5px solid black;
+                    float: left; 
+                    margin: 5px;
+                    border-radius: 4px;
+                    height: 25px;
+                    span{
+                        font-size: 13px;
+                        padding: 8px;
+                        height: 25px;
+                        line-height: 25px;
+                        color: rgb(102, 102, 102);
+                    }
+                }
+            }
+        }
+    }
+}
