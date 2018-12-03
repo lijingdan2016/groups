@@ -32,6 +32,7 @@ import { WjKqPage } from '../pages/wj-kq/wj-kq';
 import { SyrHome1Page } from '../pages/syr-home1/syr-home1';
 import { SyrHome2Page } from '../pages/syr-home2/syr-home2';
 import { Tabs2Page } from '../pages/tabs2/tabs2';
+import { LjdJczyPage } from '../pages/ljd-jczy/ljd-jczy';
 
 
 @NgModule({
@@ -65,6 +66,7 @@ import { Tabs2Page } from '../pages/tabs2/tabs2';
     SyrHome2Page,
     Tabs2Page,
     SyrHome1Page,
+    LjdJczyPage
   ],
   imports: [
     BrowserModule,
@@ -106,6 +108,7 @@ import { Tabs2Page } from '../pages/tabs2/tabs2';
     SyrHome2Page,
     Tabs2Page,
     SyrHome1Page,
+    LjdJczyPage
   ],
   providers: [
     StatusBar,

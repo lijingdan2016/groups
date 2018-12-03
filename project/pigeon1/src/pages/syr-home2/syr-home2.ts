@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { LjdCkcjPage } from '../ljd-ckcj/ljd-ckcj';
+import { LjdJczyPage } from '../ljd-jczy/ljd-jczy';
+import { LjdPsbxPage } from '../ljd-psbx/ljd-psbx';
 
 /**
  * Generated class for the SyrHome2Page page.
@@ -30,7 +33,15 @@ export class SyrHome2Page {
   gosub5(){
     this.navCtrl.push('SyrSousuoPage',{id:5});
   }
-
+  gockcj(){
+    this.navCtrl.push(LjdCkcjPage);
+  }
+  gojczy(){
+    this.navCtrl.push(LjdJczyPage);
+  }
+  gopsbx(){
+    this.navCtrl.push(LjdPsbxPage);
+  }
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
