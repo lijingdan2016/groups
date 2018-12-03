@@ -1,0 +1,179 @@
+<!--
+  Generated template for the SyrSqPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-content>
+  <ul class="navList">
+    <li><i class="iconfont" style="font-size: 20px;float: left;margin-left: 20px;">&#xe64a;</i></li>
+    <li (click) = "isClick(1)" [class.first]="isActive==1">推荐</li>
+    <li (click) = "isClick(2)" [class.first]="isActive==2">关注</li>
+    <li (click) = "send()"><i class="iconfont" style="font-size: 20px;float: right;margin-right: 20px;">&#xe65f;</i></li>
+  </ul>
+  <div [ngSwitch]="isActive">
+    <div *ngSwitchCase = "1">
+      <ul class="ng1">
+        <li>
+          <div class="li1">
+            <div class="nei1">
+              <img src="../../assets/imgs/img3-1.jpg"/>
+              <i class="iconfont" style="font-size: 16px;float: left;margin-left: 65%;position: absolute;bottom: -3px;color: #259b24;">&#xe602;</i>
+            </div>
+            <div class="nei2">
+              <p>Rachel Jayson</p>
+              <p style="font-size: 10px;color: rgb(141, 138, 138);">5:09 PM</p>
+            </div>
+            <i class="iconfont" style="font-size: 20px;float:right;margin-top: 3px;color: #259b24;">&#xe638;</i>
+          </div>
+          <div class="li2">
+            <h6>童年决定命运</h6>
+            <p>大概是一年以前，我意识到一个问题：很多人的一生，在童年就已经决定了...</p>
+          </div>
+        </li>
+        <li>
+          <div class="li1">
+            <div class="nei1">
+              <img src="../../assets/imgs/img3-2.jpeg"/>
+              <i class="iconfont" style="font-size: 16px;float: left;margin-left: 65%;position: absolute;bottom: -3px;color: #259b24;">&#xe602;</i>
+            </div>
+            <div class="nei2">
+              <p>小兔子乖乖</p>
+              <p style="font-size: 10px;color: rgb(141, 138, 138);">3:09 PM</p>
+            </div>
+            <i class="iconfont" style="font-size: 20px;float:right;margin-top: 3px;">&#xe638;</i>
+          </div>
+          <div class="li2">
+            <h6>从芈月传看家庭教育</h6>
+            <p>同样是一部红楼梦，易学家看到的是经，道学家看到的是淫，才子看到的是缠绵，革命家...</p>
+          </div>
+        </li>
+        <li>
+          <div class="li1">
+            <div class="nei1">
+              <img src="../../assets/imgs/img3-7.jpg"/>
+              <i class="iconfont" style="font-size: 16px;float: left;margin-left: 65%;position: absolute;bottom: -3px;color: #259b24;">&#xe602;</i>
+            </div>
+            <div class="nei2">
+              <p>然后</p>
+              <p style="font-size: 10px;color: rgb(141, 138, 138);">5:09 PM</p>
+            </div>
+            <i class="iconfont" style="font-size: 20px;float:right;margin-top: 3px;">&#xe638;</i>
+          </div>
+          <div class="li2">
+            <h6>童年决定命运</h6>
+            <p>大概是一年以前，我意识到一个问题：很多人的一生，在童年就已经决定了...</p>
+          </div>
+        </li>
+        <li>
+          <div class="li1">
+            <div class="nei1">
+              <img src="../../assets/imgs/img3-8.jpg"/>
+              <i class="iconfont" style="font-size: 16px;float: left;margin-left: 65%;position: absolute;bottom: -3px;color: #259b24;">&#xe602;</i>
+            </div>
+            <div class="nei2">
+              <p>依然是我</p>
+              <p style="font-size: 10px;color: rgb(141, 138, 138);">5:09 PM</p>
+            </div>
+            <i class="iconfont" style="font-size: 20px;float:right;margin-top: 3px;color: #259b24;">&#xe638;</i>
+          </div>
+          <div class="li2">
+            <h6>童年决定命运</h6>
+            <p>大概是一年以前，我意识到一个问题：很多人的一生，在童年就已经决定了...</p>
+          </div>
+        </li>
+        <li>
+          <div class="li1">
+            <div class="nei1">
+              <img src="../../assets/imgs/img3-9.jpg"/>
+              <i class="iconfont" style="font-size: 16px;float: left;margin-left: 65%;position: absolute;bottom: -3px;color: #259b24;">&#xe602;</i>
+            </div>
+            <div class="nei2">
+              <p>会更好的</p>
+              <p style="font-size: 10px;color: rgb(141, 138, 138);">5:09 PM</p>
+            </div>
+            <i class="iconfont" style="font-size: 20px;float:right;margin-top: 3px;">&#xe638;</i>
+          </div>
+          <div class="li2">
+            <h6>童年决定命运</h6>
+            <p>大概是一年以前，我意识到一个问题：很多人的一生，在童年就已经决定了...</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div *ngSwitchCase = "2">
+      <ul class="ng1">
+        <li>
+          <div class="li1">
+            <div class="nei1">
+              <img src="../../assets/imgs/img3-3.jpg"/>
+              <i class="iconfont" style="font-size: 16px;float: left;margin-left: 65%;position: absolute;bottom: -3px;color: rgb(216, 79, 79);">&#xe628;</i>
+            </div>
+            <div class="nei2">
+              <p>明天</p>
+              <p style="font-size: 10px;color: rgb(141, 138, 138);">5:09 PM</p>
+            </div>
+            <i class="iconfont" style="font-size: 20px;float:right;margin-top: 3px;color: #259b24;">&#xe638;</i>
+          </div>
+          <div class="li2">
+            <h6>童年决定命运</h6>
+            <p>大概是一年以前，我意识到一个问题：很多人的一生，在童年就已经决定了...</p>
+          </div>
+        </li>
+        <li>
+          <div class="li1">
+            <div class="nei1">
+              <img src="../../assets/imgs/img3-4.jpg"/>
+              <i class="iconfont" style="font-size: 16px;float: left;margin-left: 65%;position: absolute;bottom: -3px;color: rgb(216, 79, 79);">&#xe628;</i>
+            </div>
+            <div class="nei2">
+              <p>我们都一样</p>
+              <p style="font-size: 10px;color: rgb(141, 138, 138);">3:09 PM</p>
+            </div>
+            <i class="iconfont" style="font-size: 20px;float:right;margin-top: 3px;">&#xe601;</i>
+          </div>
+          <div class="li2">
+            <h6>从芈月传看家庭教育</h6>
+            <p>同样是一部红楼梦，易学家看到的是经，道学家看到的是淫，才子看到的是缠绵，革命家...</p>
+          </div>
+        </li>
+        <li>
+          <div class="li1">
+            <div class="nei1">
+              <img src="../../assets/imgs/img3-5.jpeg"/>
+              <i class="iconfont" style="font-size: 16px;float: left;margin-left: 65%;position: absolute;bottom: -3px;color: rgb(216, 79, 79);">&#xe628;</i>
+            </div>
+            <div class="nei2">
+              <p>雨过天晴</p>
+              <p style="font-size: 10px;color: rgb(141, 138, 138);">3:09 PM</p>
+            </div>
+            <i class="iconfont" style="font-size: 20px;float:right;margin-top: 3px;">&#xe601;</i>
+          </div>
+          <div class="li2">
+            <h6>从芈月传看家庭教育</h6>
+            <p>同样是一部红楼梦，易学家看到的是经，道学家看到的是淫，才子看到的是缠绵，革命家...</p>
+          </div>
+        </li>
+        <li>
+          <div class="li1">
+            <div class="nei1">
+              <img src="../../assets/imgs/img3-6.jpg"/>
+              <i class="iconfont" style="font-size: 16px;float: left;margin-left: 65%;position: absolute;bottom: -3px;color: rgb(216, 79, 79);">&#xe628;</i>
+            </div>
+            <div class="nei2">
+              <p>梦想</p>
+              <p style="font-size: 10px;color: rgb(141, 138, 138);">3:09 PM</p>
+            </div>
+            <i class="iconfont" style="font-size: 20px;float:right;margin-top: 3px;">&#xe601;</i>
+          </div>
+          <div class="li2">
+            <h6>从芈月传看家庭教育</h6>
+            <p>同样是一部红楼梦，易学家看到的是经，道学家看到的是淫，才子看到的是缠绵，革命家...</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+      
+  </ion-content>
