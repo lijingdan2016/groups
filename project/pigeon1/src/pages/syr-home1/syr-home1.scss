@@ -1,0 +1,96 @@
+page-syr-home1 {
+    ion-content{
+        
+        .yul1,.yul{
+            list-style: none;
+        }
+        .box1{
+            width: 100%;
+            margin-top: 10px;
+            height: 30px;
+            .box1-1{
+                width: 10%;
+                margin-right: 5%;
+                float: left;
+                margin-left: 5%;
+            }
+            .box1-2{
+                width: 75%;
+                float: left;
+                border: 1px solid rgb(173, 173, 173);
+                border-radius: 30px;
+                height: 30px;
+                padding: 6px 20px;
+                input{
+                    width: 90%;
+                    border: none;
+                }
+            }
+        }
+        .box2{
+            width: 100%;
+            margin-top: 25px;
+        }
+        .box3{
+            width: 100%;
+            margin-top: 20px;
+            ul{
+                width: 100%;
+                padding: 0;
+                margin: 0;
+                li{
+                    text-align: center;
+                    float: left;
+                    width: 23%;
+                    margin-left: 8%;
+                    div{
+                        border: 1px solid #a1c45a;
+                        background-color: #a1c45a;
+                        border-radius: 50%;
+                        height: 76px;
+                        margin-bottom: 10px;
+                    }
+                    span{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        .box4{
+            width: 100%;
+            margin-top: 10px;
+            ul{
+                margin: 0;
+                padding: 0;
+                li{
+                    text-align: center;
+                    width: 41%;
+                    margin-left: 6%;
+                    margin-top: 20px;
+                    float: left;
+                    border: 1px solid rgb(190, 189, 189);
+                    background-color: rgb(240, 240, 240);
+                    height: 70px;
+                    .box4-1{
+                        width: 50%;
+                        float: left;
+                        span{
+                            font-size: 14px;
+                            line-height: 70px;
+                        }
+                    }
+                    .box4-2{
+                        margin-right: 5px;
+                        margin-top: 5px;
+                        width: 40%;
+                        float: right;
+                        border: 1px solid #a1c45a;
+                        border-radius: 50%;
+                        background-color: #a1c45a;
+                        height: 53px;
+                    }
+                }
+            }
+        }
+    }
+}
