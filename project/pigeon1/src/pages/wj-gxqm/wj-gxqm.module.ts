@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-import { KrfKcbPage } from './krf-kcb';
+import { WjGxqmPage } from './wj-gxqm';
 
 @NgModule({
   declarations: [
-    KrfKcbPage,
+    WjGxqmPage,
   ],
   imports: [
-    IonicPageModule.forChild(KrfKcbPage),
+    IonicPageModule.forChild(WjGxqmPage),
   ],
 })
-export class KrfKcbPageModule {}
+export class WjGxqmPageModule {}

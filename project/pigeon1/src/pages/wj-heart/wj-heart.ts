@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { WjDetail1Page } from '../wj-detail1/wj-detail1';
 
 /**
  * Generated class for the WjHeartPage page.
@@ -21,7 +22,7 @@ export class WjHeartPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad WjHeartPage');
   }
-  // detail(){
-  //   this.navCtrl.push()
-  // }
+  detail(){
+    this.navCtrl.push(WjDetail1Page);
+  }
 }

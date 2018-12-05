@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { SyrHome2Page } from '../syr-home2/syr-home2';
 
 /**
- * Generated class for the KrfKcbPage page.
+ * Generated class for the WjAqszPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,19 +10,16 @@ import { SyrHome2Page } from '../syr-home2/syr-home2';
 
 @IonicPage()
 @Component({
-  selector: 'page-krf-kcb',
-  templateUrl: 'krf-kcb.html',
+  selector: 'page-wj-aqsz',
+  templateUrl: 'wj-aqsz.html',
 })
-export class KrfKcbPage {
+export class WjAqszPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad KrfKcbPage');
+    console.log('ionViewDidLoad WjAqszPage');
   }
 
-  butt(){
-    this.navCtrl.push(SyrHome2Page);
-  }
 }

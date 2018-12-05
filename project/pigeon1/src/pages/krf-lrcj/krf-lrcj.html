@@ -1,11 +1,11 @@
-<!-- <ion-header>
+<ion-header center>
   <div>
-    <i class="iconfont" id="left">&#xe6a3;</i>
-    <ion-title>录入成绩</ion-title>
+    <i class="iconfont" id="left"(click)="goSub()" style="color: white">&#xe6a3;</i>
+    <ion-title >录入成绩</ion-title>
   </div>
 </ion-header>
 <ion-content>
-  <h6>请输入</h6>
+  <h5>请输入</h5>
   <div class="in">
     <h6>学生编号：</h6>
     <select>
@@ -31,7 +31,7 @@
   </div>
   <div class="in">
       <h6>考试成绩：</h6>
-      <input type="text" name="grade" value="95"/>
+      <input type="number" name="grade" value="95" min="0" max="100" step="1"/>
   </div>
   <div class="in">
       <h6>考试类型：</h6>
@@ -47,4 +47,4 @@
   </div>
   <button id="butt1">保存</button>
   <button id="butt2">取消</button>
-</ion-content> -->
+</ion-content>

@@ -15,6 +15,7 @@ import { WjSettingPage } from '../pages/wj-setting/wj-setting';
 import { HshDlPage } from '../pages/hsh-dl/hsh-dl';
 import { WjZcPage } from '../pages/wj-zc/wj-zc';
 import { KrfKcbPage } from '../pages/krf-kcb/krf-kcb';
+import { KrfFbrwPage } from '../pages/krf-fbrw/krf-fbrw';
 import { KrfLrcjPage } from '../pages/krf-lrcj/krf-lrcj';
 import { SyrSqPage } from '../pages/syr-sq/syr-sq';
 import { NamePage } from '../pages/name/name';
@@ -33,7 +34,9 @@ import { SyrHome1Page } from '../pages/syr-home1/syr-home1';
 import { SyrHome2Page } from '../pages/syr-home2/syr-home2';
 import { Tabs2Page } from '../pages/tabs2/tabs2';
 import { LjdJczyPage } from '../pages/ljd-jczy/ljd-jczy';
-
+import { WjDetail1Page } from '../pages/wj-detail1/wj-detail1';
+import { WjTouxiangPage } from '../pages/wj-touxiang/wj-touxiang';
+import { WjGxqmPage } from '../pages/wj-gxqm/wj-gxqm';
 
 @NgModule({
   declarations: [
@@ -51,6 +54,7 @@ import { LjdJczyPage } from '../pages/ljd-jczy/ljd-jczy';
     HshSfxzPage,
     WjZcPage,
     KrfKcbPage,
+    KrfFbrwPage,
     KrfLrcjPage,
     SyrSqPage,
     NamePage,
@@ -66,7 +70,11 @@ import { LjdJczyPage } from '../pages/ljd-jczy/ljd-jczy';
     SyrHome2Page,
     Tabs2Page,
     SyrHome1Page,
-    LjdJczyPage
+    LjdJczyPage,
+    WjDetail1Page,
+    WjTouxiangPage,
+    WjGxqmPage
+    
   ],
   imports: [
     BrowserModule,
@@ -91,6 +99,7 @@ import { LjdJczyPage } from '../pages/ljd-jczy/ljd-jczy';
     HshDlPage,
     WjZcPage,
     KrfKcbPage,
+    KrfFbrwPage,
     KrfLrcjPage,
     SyrSqPage,
     NamePage,
@@ -108,7 +117,10 @@ import { LjdJczyPage } from '../pages/ljd-jczy/ljd-jczy';
     SyrHome2Page,
     Tabs2Page,
     SyrHome1Page,
-    LjdJczyPage
+    LjdJczyPage,
+    WjDetail1Page,
+    WjTouxiangPage,
+    WjGxqmPage
   ],
   providers: [
     StatusBar,

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { WjKqPage } from '../wj-kq/wj-kq';
 import { KrfLrcjPage } from '../krf-lrcj/krf-lrcj';
+import { KrfFbrwPage } from '../krf-fbrw/krf-fbrw';
 
 /**
  * Generated class for the SyrHome1Page page.
@@ -37,6 +38,10 @@ export class SyrHome1Page {
   }
   gosub5(){
     this.navCtrl.push('SyrSousuoPage',{id:5});
+  }
+
+  fbrw(){
+    this.navCtrl.push(KrfFbrwPage);
   }
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {

@@ -2,20 +2,13 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { SyrHome1Page } from '../syr-home1/syr-home1';
 
-/**
- * Generated class for the KrfLrcjPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
 @IonicPage()
 @Component({
-  selector: 'page-krf-lrcj',
-  templateUrl: 'krf-lrcj.html',
+  selector: 'page-krf-fbrw',
+  templateUrl: 'krf-fbrw.html',
 })
-export class KrfLrcjPage {
-
+export class KrfFbrwPage {
+  
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
@@ -23,7 +16,7 @@ export class KrfLrcjPage {
     console.log('ionViewDidLoad KrfLrcjPage');
   }
 
-  goSub(){
+  return(){
     this.navCtrl.push(SyrHome1Page);
   }
 }
