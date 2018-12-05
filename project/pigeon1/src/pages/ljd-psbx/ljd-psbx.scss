@@ -1,6 +1,6 @@
 page-ljd-psbx {
     .toolbar-content-md {
-        padding-right:35px;
+        padding-right:90px;
     }
     .toolbar-title-md{
         font-weight:bolder;
@@ -12,7 +12,7 @@ page-ljd-psbx {
         height:45px;
     }
    .ion-md-mic:before{
-       color:green;
+       color:#a1c45a;
        font-size:25px;
        padding-top:2px;
    }
@@ -28,7 +28,7 @@ page-ljd-psbx {
    .iconfont{
        position:absolute;
        left:251px;
-       top:8px;
+       top:11px;
    }
    .div1{
        position:relative;
@@ -49,6 +49,7 @@ page-ljd-psbx {
    p{
        line-height:10px;
    }
+
    
 }
 
@@ -63,6 +64,7 @@ page-ljd-psbx {
     url('//at.alicdn.com/t/font_884741_a3nhxlbu4v.svg#iconfont') format('svg');
   }  
 .iconfont{
+    color:#a1c45a;
     font-family:"iconfont" !important;
     font-size:25px;font-style:normal;
     -webkit-font-smoothing: antialiased;
