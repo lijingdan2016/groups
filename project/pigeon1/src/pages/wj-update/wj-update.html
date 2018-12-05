@@ -1,0 +1,45 @@
+<ion-header text-center no-border>
+    <ion-navbar color="gr">
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>
+        更新
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+<ion-content>
+    <!-- <div>
+      <img src="../../assets/imgs/logo2.gif" style="width:50px;height:50px;">
+    </div> -->
+    <ion-list style="height:68px;">
+        <ion-item>
+          <ion-thumbnail item-start>
+            <img src="../../assets/imgs/logo2.gif" style="width:50px;height:53px;margin-top:10px;margin-left:20px;">
+          </ion-thumbnail>
+          <h2>鸽子</h2>
+          <p>版本号:7.8.2&nbsp;大小:54.15MB</p>
+          <button ion-button clear item-end color='gr' (click)="showAlert();">点击下载</button>
+        </ion-item>
+    </ion-list>
+    <ion-slides pager autoplay='1000' loop>
+        <ion-slide style="height: 560px;">
+          <img src="../../assets/imgs/23.png" alt="">
+        </ion-slide>
+      
+        <ion-slide style="height: 560px;">
+          <img src="../../assets/imgs/24.png" alt="">
+        </ion-slide>
+      
+        <ion-slide style="height: 560px;">
+          <img src="../../assets/imgs/25.png" alt="">
+        </ion-slide>
+    </ion-slides>
+    <div style="margin-left:20px;">
+      <h4 style="font-weight:bold;">鸽子新版特性</h4>
+      <p style="color:gray">-能够及时快速地回复指定消息，实现高效沟通</p>
+      <p style="color:gray">-家长能够看到孩子地成长，制定相关计划。老师界面也会看到孩子成长，实现双向配合。</p>
+      <p style="color:gray">-可以上传更加高清的照片，体现个性</p>
+      <p style="color:gray">-兼容问题得以修复，新版本使用起来更加的舒适。</p>
+    </div>
+</ion-content>

@@ -1,0 +1,24 @@
+page-syr-class {
+    .toolbar-md{
+        min-height:46px;
+    }
+    .toolbar-title-md{
+        font-size: 18px;
+    }
+    ion-content{
+        div{
+            fieldset{
+                border-color: #259b24;
+                margin-bottom: 15px;
+            }
+            legend{
+                font-size: 16px;
+                color: #259b24;
+            }
+            p{
+                font-size: 15px;
+                text-indent: 2em;
+            }
+        }
+    }
+}

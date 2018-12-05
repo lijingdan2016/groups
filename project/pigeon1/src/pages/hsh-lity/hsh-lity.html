@@ -1,0 +1,34 @@
+<ion-content>
+  <div class="articleHeader">
+    <div class="search">
+      <button (click)="goToHome() " background="gr">跳过>></button>
+    </div>
+    <div class="coverFlow">
+      <ion-slides pager >
+        <ion-slide>
+          <img src="../../assets/imgs/welcome1.png" />
+        </ion-slide>
+        <ion-slide>
+          <img src="../../assets/imgs/welcome2.png" />
+        </ion-slide>
+        
+        <ion-slide>
+          <img src="../../assets/imgs/welcome3.png" />
+        </ion-slide>
+        
+        <ion-slide>
+          <ion-row>
+              <ion-col>
+                <img  src="../../assets/imgs/welcome4.png" />
+              </ion-col>
+              <div class="goon">
+                <button (click)="goToHome() " ion-button color="gr">体验完啦~</button>
+              </div>
+          </ion-row>
+          
+          </ion-slide>
+      </ion-slides>
+    </div>
+  </div>
+</ion-content>
+
