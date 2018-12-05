@@ -4,21 +4,19 @@
           <span>鸽子</span>
       </div> 
       <ion-list>
-
         <ion-item color='trans'>
           <ion-label color='gr'>用户名/手机号</ion-label>
-          <ion-input type="text"></ion-input>
+          <ion-input type="text" #username></ion-input>
         </ion-item>
   
         <ion-item color='trans'>
           <ion-label color='gr'>密码</ion-label>
-          <ion-input type="password"></ion-input>
+          <ion-input type="password" #password></ion-input> 
         </ion-item>
-  
       </ion-list>
   
       <div padding>
-        <button ion-button color="gr" block (click)="fanhui();">注册</button>
+        <button type="submit" ion-button color="gr" block (click)="logIn(username, password)">注册</button>
       </div>
 
 </ion-content>
