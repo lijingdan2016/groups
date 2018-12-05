@@ -1,57 +1,59 @@
-ion-header{
-    div{
-        width:360px;
-        height:100px;
-        background-color:#a1c45a;
-        i
-        {
-        display:inline-block;
-        font-size:30px;
-        position:absolute;
-        top:20px;
+page-krf-fbrw{
+    ion-header{
+        div{
+            width:360px;
+            height:60px;
+            background-color:#a1c45a;
+            i
+            {
+                display:inline-block;
+                font-size:30px;
+                position:absolute;
+                top:20px;
+                line-height: 20px;
+            }
+            ion-title{
+                display:inline-block;
+                margin-left:70px;
+                line-height:60px;
+            }
+            #left{
+                margin-left:20px;
+            }
+            #right{
+                float:right;
+                margin-right:20px;
+            }
+        
+            ul li{
+                list-style: none;
+                display:inline-block;
+                margin-left:30px;
+            
+            }
         }
-        ion-title{
-            display:inline-block;
-            margin-left:70px;
-            line-height:100px;
-        }
-        #left{
+    }
+
+    ion-content{
+        margin-top:0px;
+    }
+    .homework{
+        margin:0 auto;
+        width:340px;
+        height:120px;
+        background-color:rgb(226, 225, 225);
+        i{
             margin-left:20px;
+            margin-right:10px;
+            color:grey;
         }
-        #right{
-            float:right;
-            margin-right:20px;
+        p{
+            color:grey;
+            font-size:14px;
         }
-       
-        ul li{
-            list-style: none;
-            display:inline-block;
-            margin-left:30px;
-           
-        }
+        margin-bottom:20px;
     }
 }
-
-ion-content{
-    margin-top:30px;
-}
-.homework{
-    margin:0 auto;
-    width:340px;
-    height:120px;
-    background-color:rgb(226, 225, 225);
-    i{
-        margin-left:20px;
-        margin-right:10px;
-        color:grey;
-    }
-    p{
-        color:grey;
-        font-size:14px;
-    }
-    margin-bottom:20px;
-}
-
 
 @font-face {
     font-family: 'iconfont';  /* project id 884911 */

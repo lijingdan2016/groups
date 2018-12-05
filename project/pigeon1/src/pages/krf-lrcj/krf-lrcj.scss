@@ -1,53 +1,55 @@
-ion-header{
-    div{
-        width:360px;
-        height:60px;
-        background-color:#a1c45a;
-        i
-        {
-        display:inline-block;
-        font-size:30px;
-        margin-left:20px;
-        position:absolute;
-        top:20px;
-        }
-        ion-title{
+page-krf-lrcj{
+    ion-header{
+        div{
+            width:360px;
+            height:60px;
+            background-color:#a1c45a;
+            i
+            {
             display:inline-block;
-            margin-left:100px;
-            line-height:60px;
+            font-size:30px;
+            margin-left:20px;
+            position:absolute;
+            top:20px;
+            }
+            ion-title{
+                display:inline-block;
+                margin-left:100px;
+                line-height:60px;
+            }
         }
     }
-}
-h5{
-    margin-left:20px;
-}
-.in{
-    margin-left:40px;
-    margin-bottom: 25px;
-    h6{
-        display:inline-block;
+    h5{
+        margin-left:20px;
     }
-    select,input{
-        display:inline-block;
-        width:170px;
+    .in{
+        margin-left:40px;
+        margin-bottom: 25px;
+        h6{
+            display:inline-block;
+        }
+        select,input{
+            display:inline-block;
+            width:170px;
+            height:30px;
+            color:grey;
+            background-color:rgb(226, 225, 225);
+        }
+    }
+    #butt1{
+        display: inline-block;
+        width:70px;
         height:30px;
-        color:grey;
-        background-color:rgb(226, 225, 225);
+        margin-left:60px;
+        background-color:#259B24;
     }
-}
-#butt1{
-    display: inline-block;
-    width:70px;
-    height:30px;
-    margin-left:60px;
-    background-color:#259B24;
-}
-#butt2{
-    display: inline-block;
-    width:70px;
-    height:30px;
-    margin-left:100px;
-    background-color:#259B24;
+    #butt2{
+        display: inline-block;
+        width:70px;
+        height:30px;
+        margin-left:100px;
+        background-color:#259B24;
+    }
 }
 @font-face {
     font-family: 'iconfont';  /* project id 884911 */

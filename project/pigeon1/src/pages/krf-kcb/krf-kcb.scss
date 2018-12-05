@@ -1,50 +1,52 @@
-ion-header{
-    div{
-        width:360px;
-        height:80px;
-        background-color:#a1c45a;
-        margin-bottom:0px;
-        i
-        {
-        display:inline-block;
-        font-size:30px;
-        margin-left:20px;
-        position:absolute;
-        top:20px;
-        }
-        ion-title{
+page-krf-kcb{
+    ion-header{
+        div{
+            width:360px;
+            height:80px;
+            background-color:#a1c45a;
+            margin-bottom:0px;
+            i
+            {
             display:inline-block;
-            margin-left:70px;
+            font-size:30px;
+            margin-left:20px;
+            position:absolute;
+            top:20px;
+            }
+            ion-title{
+                display:inline-block;
+                margin-left:70px;
+            }
+            
         }
-        
     }
-}
-#container{
-    width:360px;
-    height:600px;
+    #container{
+        width:360px;
+        height:600px;
+        
     
-   
-   h5{
-       
-       span{
-           margin-left:100px;
-       }
-   }
-   .week{
-       margin-top:20px;
-       margin-left:20px;
-       button{
-           width:70px;
-           height:30px;
-           margin-left:50px;
-       }
-   }
-   button{
-       width:70px;
-       height:30px;
-       margin-top:20px;
-       margin-left:110px;
-   }
+    h5{
+        
+        span{
+            margin-left:100px;
+        }
+    }
+    .week{
+        margin-top:20px;
+        margin-left:20px;
+        button{
+            width:70px;
+            height:30px;
+            margin-left:50px;
+        }
+    }
+    button{
+        width:70px;
+        height:30px;
+        margin-top:20px;
+        margin-left:110px;
+    }
+    }
 }
 @font-face {
     font-family: 'iconfont';  /* project id 884911 */
