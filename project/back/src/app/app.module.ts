@@ -1,19 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import {RouterModule,Router}  from '@angular/router';
 import { AppComponent } from './app.component';
-import { ShouyeComponent } from './components/shouye/shouye.component';
-import { HeroDetailComponent } from './components/hero-detail/hero-detail.component';
-// import { NgxEchartsModule } from 'ngx-echarts';
+import { UsersComponent } from './components/users/users.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    ShouyeComponent,
-    HeroDetailComponent
+    UsersComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
-    // NgxEchartsModule
+    RouterModule.forRoot([
+      {path:'users',component:UsersComponent},
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
