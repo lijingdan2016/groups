@@ -7,6 +7,8 @@ import { UsersComponent } from './components/users/users.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { HshDlComponent } from './components/hsh-dl/hsh-dl.component';
 import { HshWjglComponent } from './components/hsh-wjgl/hsh-wjgl.component';
+import { ShouyeComponent } from './components/shouye/shouye.component';
+import { SystemComponent } from './components/system/system.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { HshWjglComponent } from './components/hsh-wjgl/hsh-wjgl.component';
     UsersComponent,
     SidebarComponent,
     HshDlComponent,
-    HshWjglComponent
+    HshWjglComponent,
+    ShouyeComponent,
+    SystemComponent
   ],
   imports: [
     BrowserModule,
@@ -22,6 +26,8 @@ import { HshWjglComponent } from './components/hsh-wjgl/hsh-wjgl.component';
       {path:'users',component:UsersComponent},
       {path:'sidebar',component:SidebarComponent},
       {path:'wjgl',component:HshWjglComponent},
+      {path:'shouye',component:ShouyeComponent},
+      {path:'system',component:SystemComponent}
     ])
   ],
   providers: [],
