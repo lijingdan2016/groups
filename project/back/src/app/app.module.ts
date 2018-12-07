@@ -5,23 +5,23 @@ import {RouterModule,Router}  from '@angular/router';
 import { AppComponent } from './app.component';
 import { UsersComponent } from './components/users/users.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
-import { CardsComponent } from './components/cards/cards.component';
-import { SystemComponent } from './components/system/system.component';
+import { HshDlComponent } from './components/hsh-dl/hsh-dl.component';
+import { HshWjglComponent } from './components/hsh-wjgl/hsh-wjgl.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
     SidebarComponent,
-    CardsComponent,
-    SystemComponent
+    HshDlComponent,
+    HshWjglComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
       {path:'users',component:UsersComponent},
-      {path:'cards',component:CardsComponent},
-      {path:'system',component:SystemComponent},
+      {path:'sidebar',component:SidebarComponent},
+      {path:'wjgl',component:HshWjglComponent},
     ])
   ],
   providers: [],
