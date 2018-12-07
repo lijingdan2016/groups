@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "back": {
+    "demo02": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/back",
+            "outputPath": "dist/demo02",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -25,9 +25,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [
-              "src/assets/echarts.common.min.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -52,18 +50,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "back:build"
+            "browserTarget": "demo02:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "back:build:production"
+              "browserTarget": "demo02:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "back:build"
+            "browserTarget": "demo02:build"
           }
         },
         "test": {
@@ -97,7 +95,7 @@
         }
       }
     },
-    "back-e2e": {
+    "demo02-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "targets": {
@@ -105,11 +103,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "back:serve"
+            "devServerTarget": "demo02:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "back:serve:production"
+              "devServerTarget": "demo02:serve:production"
             }
           }
         },
@@ -125,5 +123,5 @@
       }
     }
   },
-  "defaultProject": "back"
+  "defaultProject": "demo02"
 }

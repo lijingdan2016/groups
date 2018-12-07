@@ -1,23 +1,129 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<!-- <div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul> -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>后台页面</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  
+	<body>
+		<div class="container" style="margin-top: 30px">
+        <div class="row">
+            <div class="col-xs-2">
+                <ul class="nav nav-pills nav-stacked" style="background-color:rgb(37, 155, 36)">
+                	<li style="padding-left:30px;"><img src="../assets/images/gezi.png"/></li>
+                  <li><a href="#" data-toggle="tab"><span class="glyphicon glyphicon-home">&nbsp;</span>&nbsp;首页</a></li>
+                  <li><a href="#" data-toggle="tab"><i class="iconfont">&#xe662;</i>&nbsp;&nbsp;系统管理</a></li>
+                  <li><a href="#home" data-toggle="tab"><i class="iconfont">&#xe619;</i>&nbsp;&nbsp;帖子管理</a></li>
+                  <li><a href="#" data-toggle="tab"><i class="iconfont">&#xe604;</i>&nbsp;&nbsp;用户管理</a></li>
+                  <li><a href="#" data-toggle="tab"><i class="iconfont">&#xe64e;</i>&nbsp;&nbsp;文件管理</a></li>
+                  <li><a href="#" data-toggle="tab"><i class="iconfont">&#xe671;</i>&nbsp;&nbsp;关键字管理</a></li>
+                  <li><a href="#" data-toggle="tab"><i class="iconfont">&#xe641;</i>&nbsp;&nbsp;学校信息管理</a></li>
+                   
+                </ul>
+            </div>
 
-<app-sidebar></app-sidebar>
-<router-outlet></router-outlet>
+        
+        <div class="col-md-10">
+          <div class="tab-pane fade" id="home">
+				     <input type="text" name="search" placeholder="请输入您要查找的关键字">
+				     <div class="right">
+				     	<span class="glyphicon glyphicon-bell">&nbsp;</span>
+				     	<span class="glyphicon glyphicon-envelope">&nbsp;</span>
+				     </div>
+				     <form>
+				     	<table type="text/css">
+				     		<tr>
+				     			<th>序号</th>
+				     			<th>用户名</th>
+				     			<th>帖子内容</th>
+				     			<th>时间</th>
+				     			<th>操作</th>
+				     		</tr>
+				     		<tr>
+				     			<td colspan=5>
+                    <div class="biao">1</div>
+                    <div class="biao">我是学霸</div>
+                    <div class="biao">啊啊哈哈哈哈哈哈哈</div>
+                    <div class="biao">1/8/2018</div>
+                    <div class="biao">
+                    <button type="button" class="btn btn-info">编辑</button>
+                    <button type="button" class="btn btn-warning">删除</button> 
+                    </div>
+				     			</td>
+				     		</tr>
+				     		<tr>
+				     			<td colspan=5>
+				     				<div class="biao">2</div>
+				     				<div class="biao">我是学霸</div>
+				     				<div class="biao">啊啊哈哈哈哈哈哈哈</div>
+				     				<div class="biao">1/8/2018</div>
+				     				<div class="biao">
+				     					<button type="button" class="btn btn-info">编辑</button>
+				     					<button type="button" class="btn btn-warning">删除</button> 
+				     				</div>
+				     			</td>
+				     		</tr>
+				     		<tr>
+				     			<td colspan=5>
+				     				<div class="biao">3</div>
+				     				<div class="biao">我是学霸</div>
+				     				<div class="biao">啊啊哈哈哈哈哈哈哈</div>
+				     				<div class="biao">1/8/2018</div>
+				     				<div class="biao">
+				     					<button type="button" class="btn btn-info">编辑</button>
+				     					<button type="button" class="btn btn-warning">删除</button> 
+				     				</div>
+				     			</td>
+				     		</tr>
+				     		<tr>
+				     			<td colspan=5>
+				     				<div class="biao">4</div>
+				     				<div class="biao">我是学霸</div>
+				     				<div class="biao">啊啊哈哈哈哈哈哈哈</div>
+				     				<div class="biao">1/8/2018</div>
+				     				<div class="biao">
+				     					<button type="button" class="btn btn-info">编辑</button>
+				     					<button type="button" class="btn btn-warning">删除</button> 
+				     				</div>
+				     			</td>
+				     		</tr>
+				     		<tr>
+				     			<td colspan=5>
+				     				<div class="biao">5</div>
+				     				<div class="biao">我是学霸</div>
+				     				<div class="biao">啊啊哈哈哈哈哈哈哈</div>
+				     				<div class="biao">1/8/2018</div>
+				     				<div class="biao">
+				     					<button type="button" class="btn btn-info">编辑</button>
+				     					<button type="button" class="btn btn-warning">删除</button> 
+				     				</div>
+				     			</td>
+				     		</tr>
+				     		<tr>
+				     			<td colspan=5>
+				     				<div class="biao">6</div>
+				     				<div class="biao">我是学霸</div>
+				     				<div class="biao">啊啊哈哈哈哈哈哈哈</div>
+				     				<div class="biao">1/8/2018</div>
+				     				<div class="biao">
+				     					<button type="button" class="btn btn-info">编辑</button>
+				     					<button type="button" class="btn btn-warning">删除</button>  
+				     				</div>
+				     			</td>
+				     		</tr>
+				     	</table>
+				     </form>
+			      </div>
+	       </div>
+	          
+   
+         
+
+
+	</div>
+  </div>
+	</body>
+</html>
+
 
