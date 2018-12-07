@@ -20,12 +20,15 @@
     margin-right: 2px;    
 }
 #right ul li{
+    font-size: 16px;
     list-style: none;
     width:16%;
     float: left;
     height: 40px;
     line-height: 40px;
     text-align: center;
+    margin-right: 2px;  
+    border: 1px solid white;
     
 }
 .btn1{
