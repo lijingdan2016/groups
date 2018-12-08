@@ -19,7 +19,7 @@ import { KrfFbrwPage } from '../krf-fbrw/krf-fbrw';
 export class SyrHome1Page {
 
   lrcj(){
-    this.navCtrl.push(KrfLrcjPage)
+    this.navCtrl.push('KrfLrcjPage');
   }
   kq(){
     this.navCtrl.push(WjKqPage);
@@ -41,7 +41,7 @@ export class SyrHome1Page {
   }
 
   fbrw(){
-    this.navCtrl.push(KrfFbrwPage);
+    this.navCtrl.push('KrfFbrwPage');
   }
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {

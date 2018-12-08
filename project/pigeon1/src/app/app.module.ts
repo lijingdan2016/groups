@@ -14,9 +14,6 @@ import { WjUpdatePage } from '../pages/wj-update/wj-update';
 import { WjSettingPage } from '../pages/wj-setting/wj-setting';
 import { HshDlPage } from '../pages/hsh-dl/hsh-dl';
 import { WjZcPage } from '../pages/wj-zc/wj-zc';
-import { KrfKcbPage } from '../pages/krf-kcb/krf-kcb';
-import { KrfFbrwPage } from '../pages/krf-fbrw/krf-fbrw';
-import { KrfLrcjPage } from '../pages/krf-lrcj/krf-lrcj';
 import { SyrSqPage } from '../pages/syr-sq/syr-sq';
 import { NamePage } from '../pages/name/name';
 import { TxlPage } from '../pages/txl/txl';
@@ -27,13 +24,10 @@ import { LjhtjpyPage } from '../pages/ljhtjpy/ljhtjpy';
 import { HshLityPage } from '../pages/hsh-lity/hsh-lity';
 import { IonicStorageModule } from '@ionic/storage';
 import { HshSfxzPage } from '../pages/hsh-sfxz/hsh-sfxz';
-import { LjdCkcjPage } from '../pages/ljd-ckcj/ljd-ckcj';
-import { LjdPsbxPage } from '../pages/ljd-psbx/ljd-psbx';
 import { WjKqPage } from '../pages/wj-kq/wj-kq';
 import { SyrHome1Page } from '../pages/syr-home1/syr-home1';
 import { SyrHome2Page } from '../pages/syr-home2/syr-home2';
 import { Tabs2Page } from '../pages/tabs2/tabs2';
-import { LjdJczyPage } from '../pages/ljd-jczy/ljd-jczy';
 import { WjDetail1Page } from '../pages/wj-detail1/wj-detail1';
 import { WjTouxiangPage } from '../pages/wj-touxiang/wj-touxiang';
 import { WjGxqmPage } from '../pages/wj-gxqm/wj-gxqm';
@@ -53,9 +47,6 @@ import { WjGxqmPage } from '../pages/wj-gxqm/wj-gxqm';
     HshLityPage,
     HshSfxzPage,
     WjZcPage,
-    KrfKcbPage,
-    KrfFbrwPage,
-    KrfLrcjPage,
     SyrSqPage,
     NamePage,
     TxlPage,
@@ -63,17 +54,14 @@ import { WjGxqmPage } from '../pages/wj-gxqm/wj-gxqm';
     LjhjrbjPage,
     LjhltPage,
     LjhtjpyPage,
-    LjdCkcjPage,
-    LjdPsbxPage,
     LjhcjbjPage,
     WjKqPage,
     SyrHome2Page,
     Tabs2Page,
     SyrHome1Page,
-    LjdJczyPage,
     WjDetail1Page,
     WjTouxiangPage,
-    WjGxqmPage
+    WjGxqmPage,
     
   ],
   imports: [
@@ -98,9 +86,6 @@ import { WjGxqmPage } from '../pages/wj-gxqm/wj-gxqm';
     WjSettingPage,
     HshDlPage,
     WjZcPage,
-    KrfKcbPage,
-    KrfFbrwPage,
-    KrfLrcjPage,
     SyrSqPage,
     NamePage,
     TxlPage,
@@ -110,17 +95,14 @@ import { WjGxqmPage } from '../pages/wj-gxqm/wj-gxqm';
     LjhtjpyPage,
     HshLityPage,
     HshSfxzPage,
-    LjdCkcjPage,
-    LjdPsbxPage,
     LjhcjbjPage,
     WjKqPage,
     SyrHome2Page,
     Tabs2Page,
     SyrHome1Page,
-    LjdJczyPage,
     WjDetail1Page,
     WjTouxiangPage,
-    WjGxqmPage
+    WjGxqmPage,
   ],
   providers: [
     StatusBar,

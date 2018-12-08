@@ -16,7 +16,7 @@ export class KrfFbrwPage {
     console.log('ionViewDidLoad KrfLrcjPage');
   }
 
-  return(){
+ /*  return(){
     this.navCtrl.push(SyrHome1Page);
-  }
+  } */
 }

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { SyrHome2Page } from '../syr-home2/syr-home2';
 
 /**
  * Generated class for the LjdJczyPage page.
@@ -21,6 +22,8 @@ export class LjdJczyPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad LjdJczyPage');
   }
+
+ 
   /* ionViewDidEnter(){
     let elements = document.querySelectorAll(".tabbar");
     if (elements != null) {
