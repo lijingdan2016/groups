@@ -9,6 +9,7 @@ import { HshDlComponent } from './components/hsh-dl/hsh-dl.component';
 import { HshWjglComponent } from './components/hsh-wjgl/hsh-wjgl.component';
 import { ShouyeComponent } from './components/shouye/shouye.component';
 import { SystemComponent } from './components/system/system.component';
+// import { CardsComponent } from './components/cards/cards.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SystemComponent } from './components/system/system.component';
     HshDlComponent,
     HshWjglComponent,
     ShouyeComponent,
-    SystemComponent
+    SystemComponent,
+    // CardsComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +29,8 @@ import { SystemComponent } from './components/system/system.component';
       {path:'sidebar',component:SidebarComponent},
       {path:'wjgl',component:HshWjglComponent},
       {path:'shouye',component:ShouyeComponent},
-      {path:'system',component:SystemComponent}
+      {path:'system',component:SystemComponent},
+      // {path:'cards',component:CardsComponent}
     ])
   ],
   providers: [],
