@@ -10,7 +10,7 @@ import { HshWjglComponent } from './components/hsh-wjgl/hsh-wjgl.component';
 import { ShouyeComponent } from './components/shouye/shouye.component';
 import { SystemComponent } from './components/system/system.component';
 import { KeysComponent } from './components/keys/keys.component';
-// import { CardsComponent } from './components/cards/cards.component';
+import { CardsComponent } from './components/cards/cards.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,7 @@ import { KeysComponent } from './components/keys/keys.component';
     ShouyeComponent,
     SystemComponent,
     KeysComponent,
-    // CardsComponent
+    CardsComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +32,7 @@ import { KeysComponent } from './components/keys/keys.component';
       {path:'wjgl',component:HshWjglComponent},
       {path:'shouye',component:ShouyeComponent},
       {path:'system',component:SystemComponent},
-      // {path:'cards',component:CardsComponent}
+      {path:'cards',component:CardsComponent},
       {path:'keys',component:KeysComponent},
     ])
   ],
