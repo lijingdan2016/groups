@@ -6,7 +6,7 @@
 
 .top1{
     height: 50px;
-    width: 880px;
+    width: 870px;
     border-bottom:2px dashed gainsboro;
 }
 .content input{
@@ -17,9 +17,9 @@
     margin: 10px 240px 5px 180px;
 }
 .corner{
-    padding-top: 25px;
+    padding-top: 10px;
     width: 880px;
-    height:150px ;
+    height:170px ;
 }
 .bottom{
     border-top:2px dashed gainsboro;
@@ -32,6 +32,8 @@ th{
     width: 160px;
     line-height: 35px;
     border-bottom: 1px solid gainsboro;
+    text-align: center;
+
 }
 td{
     width: 160px;
