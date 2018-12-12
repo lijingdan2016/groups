@@ -41,10 +41,11 @@ export class LjhjrbjPage {
       }
     ).subscribe(data=>{
       console.log(data);
-      if(data){
-        this.navCtrl.push(LjhqrjrPage);
-      }else{
+      if(JSON.stringify(data) === '[]'){
         this.showToast('bottom','您搜索的班级不存在');
+        
+      }else{
+        this.navCtrl.push(LjhqrjrPage);
       }
 
     });

@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angu
 import { WjZcPage } from '../wj-zc/wj-zc';
 import { HshSfxzPage } from '../hsh-sfxz/hsh-sfxz';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Storage } from '@ionic/storage';
 // import { IdentityPage } from '../identity/identity';
 
 /**
@@ -18,11 +19,11 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   templateUrl: 'hsh-dl.html',
 })
 export class HshDlPage {
-  class_id:Number;
-  class;
+  
   userinfo;
-  constructor(public toastCtrl: ToastController,public http:HttpClient,public navCtrl: NavController, public navParams: NavParams) {
+  constructor( public toastCtrl: ToastController,public http:HttpClient,public navCtrl: NavController, public navParams: NavParams) {
     // this.userinfo = navParams.data;
+   
   }
   private headers = new HttpHeaders({'Content-Type':'application/json'});// 请求头
 
@@ -47,8 +48,8 @@ export class HshDlPage {
       responseType : 'json'
     }).subscribe(data => {
       console.log(data);
-
-      if( !data) {
+        
+      if(JSON.stringify(data) === '[]' || data===null) {
         this.showToast('bottom','用户名或密码错误，请重新输入！');
         return ;
       } else{
