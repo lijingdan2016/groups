@@ -1,0 +1,60 @@
+<!--
+  Generated template for the LjdPsbxPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!-- <ion-header text-center no-border>
+  <ion-toolbar color="gr">
+    <ion-buttons left>
+      <button ion-button icon-only>
+          <ion-icon name="ios-arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title style="font-weight:bold">平时表现</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+<ion-header no-border>
+    <ion-navbar color="gr" >
+      <ion-title right>平时表现</ion-title>
+    </ion-navbar>
+  </ion-header>
+<ion-content padding>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content pullingIcon="arrow-dropdown"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Refreshing..."></ion-refresher-content>
+    </ion-refresher>
+    <img style="height:40px;width:250px;margin-left:40px;" src="assets/imgs/image3.jpg"/>
+    <div style="border:2px dashed #a1c45a" class="div1">
+      <img style="margin-left:4px;margin-top:4px;" src="assets/imgs/image4.jpg"/>
+      <h5 style="font-weight:bolder;">老师</h5>
+      <p class="p1">2018年11月19日 18:00</p>
+      <br/>
+      <hr style="margin:0px;height:1px;border:0px;background-color:black;"/>
+      <p>小明同学今天表现优异，积极打扫卫生，</p>
+      <p>今天语文卷子考试得了A，数学考试得了</p>
+      <p>A，希望继续保持，再接再厉！</p>
+    </div>
+
+    <div style="border:2px dashed #a1c45a;margin-top:50px;" class="div1">
+      <img style="margin-left:4px;margin-top:4px;" src="assets/imgs/image4.jpg"/>
+      <h5 style="font-weight:bolder;">老师</h5>
+      <p class="p1">2018年11月20日 18:00</p>
+      <br/>
+      <hr style="margin:0px;height:1px;border:0px;background-color:black;"/>
+      <p>小明同学今天表现不错，积极帮助同学</p>
+      <p>解答问题，数学口算全部正确，就是英语</p>
+      <p>单词背的不太好，正确率70%，希望继续</p>
+      <p>努力，再接再厉！</p>
+    </div>
+    
+
+    <ion-footer no-border text-center>
+      <ion-icon name="md-mic"></ion-icon>
+      <input type="text" name="fname" placeholder="输入评论日期"/>
+      <i class="iconfont">&#xe629;</i>
+      <button style="background-color:#a1c45a;width:50px;height:25px;">发送</button>
+    </ion-footer>
+</ion-content>

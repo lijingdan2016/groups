@@ -1,0 +1,23 @@
+page-wj-zc {
+    ion-content{
+        background: url(../../assets/imgs/27.jpg);
+        background-size: cover;
+        .div1{
+            margin-top:63px;
+            text-align: center;
+            margin-bottom: 30px;
+            img{
+                
+                width: 50px;
+                height: 50px;
+            }
+            span{
+                font-size: 40px;
+                font-family: YouYuan;
+                font-weight: bold;
+            }
+        }
+        
+        
+    }
+}

@@ -1,0 +1,41 @@
+page-hsh-dl {
+    ion-content{
+        background: url(../../assets//imgs/26.jpg) no-repeat;
+        ion-grid{
+            ion-row{
+                .text-input::-webkit-input-placeholder {
+                    color: white;
+                }
+            
+                .text-input:-ms-input-placeholder {
+                    color: white;
+                }
+            
+                .text-input::-moz-placeholder {
+                    color: white;
+                }
+            
+                .text-input:-moz-placeholder {
+                    color: white;
+                }
+                ion-col{   
+                    display:flex;
+                    align-items:center;
+                    color:white;
+                }
+                p{
+                    color: gray;
+                    margin-left: 85px;
+                }
+                img {
+                    max-width:80px;
+                    max-height:80px;
+                    width:"100px";
+                    height:"100px";
+                    border-radius:60%;
+                    margin: 50px 0 50px 0;               
+                }
+            }
+        }
+    }
+}

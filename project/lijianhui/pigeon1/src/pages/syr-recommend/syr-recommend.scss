@@ -1,0 +1,39 @@
+page-syr-recommend {
+    .toolbar-md{
+        min-height:46px;
+    }
+    .toolbar-title-md{
+        font-size: 18px;
+    }
+    ion-content{
+        ul{
+            padding: 0;
+            margin: 10px 20px;
+            li{
+                width: 45%;
+                float: left;
+                border: 0.5px solid rgb(180, 180, 180);
+                padding: 10px;
+                margin-bottom: 15px;
+                border-radius: 5px;
+                img{
+                    float: left;
+                    height: 129.9px;
+                }
+                span{
+                    width: 100%;
+                    margin-top: 5px;
+                    padding-top: 5px;
+                    border-top: 0.1px solid rgb(202, 202, 202);
+                    float: left;
+                    text-align: center;
+                    font-size: 10px;
+                    height: 30px;
+                }
+            }
+            :nth-child(odd){
+                margin-right: 10%;
+            }
+        }
+    }
+}
