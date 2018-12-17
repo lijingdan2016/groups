@@ -1,0 +1,8 @@
+{
+  "host":"localhost",
+  "user":"root",
+  "password":"ljh1997",
+  "database":"one",
+  "connectionLimit":10,
+  "supportBigNumbers":true
+}
