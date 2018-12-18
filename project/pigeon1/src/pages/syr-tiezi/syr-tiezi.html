@@ -6,12 +6,12 @@
     <div class="title"><ion-title style="padding: 0;">
       发帖子
     </ion-title></div>
-    <div class="span"><span class="span2">发送</span></div>
+    <div class="span"><span class="span2" (click) = "gosub1(content)" >发送</span></div>
   </ion-navbar>
 </ion-header>
 <ion-content >
   <div class="box2">
-    <ion-textarea placeholder="分享点新鲜事..."></ion-textarea>
+    <ion-textarea placeholder="分享点新鲜事..." #content></ion-textarea>
   </div>
   
 
