@@ -6,13 +6,15 @@ page-ljd-ckcj {
         }
     }
     ion-content{
+        margin:0;
+        padding:0;
         position: relative;
         .div2{
-            position:absolute;
-            top:130px;
+            
             border-radius:20px;
             margin-left:40px;
             text-align:center;
+            
         }
         .div3{
             position:absolute;

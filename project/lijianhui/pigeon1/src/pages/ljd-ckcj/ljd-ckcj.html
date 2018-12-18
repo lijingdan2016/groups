@@ -24,24 +24,27 @@
     </div>
   </div>
   
-  <div style="height:490px;width:100%;background-color:#E5F7C0"></div>
-  <div style="background-color: white;width:80%;height:200px;" class="div2">
-    <p style="font-weight:bolder;">2015——2016学年第一学期9月月考</p>
-    <p style="color:rgba(0,0,0,0.6)">2015-10-01  12:00  王虎老师</p>
-    <hr style="margin:0px;height:1px;border:0px;background-color:rgba(0,0,0,0.6)"/>
-    <h6>成绩：语文：100分</h6>
-    <h6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;数学：100分</h6>
-    <h6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;英语：100分</h6>
+  <div style="height:490px;width:100%;background-color:#E5F7C0;margin:0;padding:0">
+    <div *ngFor='let item of score' style="background-color: white;width:80%;height:200px;" class="div2">
+      <p style="font-weight:bolder;">{{item.data}}</p>
+      <p style="color:rgba(0,0,0,0.6)">2015-10-01  12:00  王虎老师</p>
+      <hr style="margin:0px;height:1px;border:0px;background-color:rgba(0,0,0,0.6)"/>
+      <h6>成绩：语文：{{item.chinese}}</h6>
+      <h6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;数学：{{item.math}}</h6>
+      <h6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;英语：{{item.english}}</h6>
+    </div>
   </div>
-  <div style="background-color: white;width:80%;height:200px;" class="div3">
+  
+  <!-- <div style="background-color: white;width:80%;height:200px;" class="div3">
     <p style="font-weight:bolder;">2015——2016学年第一学期10月月考</p>
     <p style="color:rgba(0,0,0,0.6)">2015-11-01  12:00  王虎老师</p>
     <hr style="margin:0px;height:1px;border:0px;background-color:rgba(0,0,0,0.6)"/>
-    <h6>成绩：语文：100分</h6>
+    <h6>成绩：语文：100</h6>
     <h6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;数学：100分</h6>
     <h6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;英语：100分</h6>
-  </div>
+  </div> -->
   <div class="div4">
     <ion-icon name="md-arrow-dropdown"></ion-icon>
   </div>
+  
 </ion-content>
