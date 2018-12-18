@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { TabsPage } from '../tabs/tabs';
 import { Tabs2Page } from '../tabs2/tabs2';
+import { Storage } from '@ionic/storage';
 
 /**
  * Generated class for the HshSfxzPage page.
@@ -17,7 +18,10 @@ import { Tabs2Page } from '../tabs2/tabs2';
 })
 export class HshSfxzPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(private storage: Storage,public navCtrl: NavController, public navParams: NavParams) {
+    this.storage.get('').then(
+      
+    )
   }
 
   goToHome1(){

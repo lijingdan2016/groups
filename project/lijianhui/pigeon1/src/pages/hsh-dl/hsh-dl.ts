@@ -19,11 +19,18 @@ import { Storage } from '@ionic/storage';
   templateUrl: 'hsh-dl.html',
 })
 export class HshDlPage {
-  
+  usern:string;
+  psw:string;
   userinfo;
-  constructor( public toastCtrl: ToastController,public http:HttpClient,public navCtrl: NavController, public navParams: NavParams) {
-    // this.userinfo = navParams.data;
-   
+  constructor( private storage: Storage,public toastCtrl: ToastController,public http:HttpClient,public navCtrl: NavController, public navParams: NavParams) {
+    this.userinfo = navParams.data;
+    storage.ready().then(() => {
+      storage.get('USER_INFO').then( value => {
+        this.usern = !!value ? JSON.parse(value).username : '';
+        this.psw= !!value ? JSON.parse(value).password : '';
+        
+      });
+    });
   }
   private headers = new HttpHeaders({'Content-Type':'application/json'});// 请求头
 
@@ -40,6 +47,10 @@ export class HshDlPage {
       //   this.navCtrl.push(HshSfxzPage);
       // }
     }
+    let data = {username: username.value, password: password.value};
+    // 存储用户信息
+    this.storage.remove("USER_INFO");
+    this.storage.set("USER_INFO",JSON.stringify(data));
     //需要post请求
     this.http.post('/login/data', {name: username.value, password: password.value} ,{
       headers : this.headers,
@@ -50,7 +61,7 @@ export class HshDlPage {
       console.log(data);
         
       if(JSON.stringify(data) === '[]' || data===null) {
-        this.showToast('bottom','用户名或密码错误，请重新输入！');
+        this.showToast('top','用户名或密码错误，请重新输入！');
         return ;
       } else{
         this.navCtrl.push(HshSfxzPage)
