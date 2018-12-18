@@ -1,0 +1,9 @@
+{
+"host":"localhost",
+ "user":"root",
+"password":"tyfy02468",
+ "database":"mysql",
+ "connectionLimit":10,
+ "supportBigNumbers":true
+ }
+
