@@ -14,35 +14,26 @@ import { WjUpdatePage } from '../pages/wj-update/wj-update';
 import { WjSettingPage } from '../pages/wj-setting/wj-setting';
 import { HshDlPage } from '../pages/hsh-dl/hsh-dl';
 import { WjZcPage } from '../pages/wj-zc/wj-zc';
-
-import { KrfFbrwPage } from '../pages/krf-fbrw/krf-fbrw';
-import { KrfLrcjPage } from '../pages/krf-lrcj/krf-lrcj';
 import { SyrSqPage } from '../pages/syr-sq/syr-sq';
 import { NamePage } from '../pages/name/name';
 import { TxlPage } from '../pages/txl/txl';
 import { LjhcjbjPage } from '../pages/ljhcjbj/ljhcjbj';
 import { LjhjrbjPage } from '../pages/ljhjrbj/ljhjrbj';
 import { LjhltPage } from '../pages/ljhlt/ljhlt';
-
+import { LjhtjpyPage } from '../pages/ljhtjpy/ljhtjpy';
 import { HshLityPage } from '../pages/hsh-lity/hsh-lity';
 import { IonicStorageModule } from '@ionic/storage';
 import { HshSfxzPage } from '../pages/hsh-sfxz/hsh-sfxz';
-import { LjdCkcjPage } from '../pages/ljd-ckcj/ljd-ckcj';
-import { LjdPsbxPage } from '../pages/ljd-psbx/ljd-psbx';
 import { WjKqPage } from '../pages/wj-kq/wj-kq';
 import { SyrHome1Page } from '../pages/syr-home1/syr-home1';
 import { SyrHome2Page } from '../pages/syr-home2/syr-home2';
 import { Tabs2Page } from '../pages/tabs2/tabs2';
-import { LjdJczyPage } from '../pages/ljd-jczy/ljd-jczy';
 import { WjDetail1Page } from '../pages/wj-detail1/wj-detail1';
 import { WjTouxiangPage } from '../pages/wj-touxiang/wj-touxiang';
 import { WjGxqmPage } from '../pages/wj-gxqm/wj-gxqm';
-import { HttpClientModule  } from '@angular/common/http';
-import { LjhqrjrPage } from '../pages/ljhqrjr/ljhqrjr';
-import { LjhtjpyPage } from '../pages/ljhtjpy/ljhtjpy';
-import { LjhcjcgPage } from '../pages/ljhcjcg/ljhcjcg';
-//import { KrfKcbPage } from '../pages/krf-kcb/krf-kcb';
 
+import { HttpClientModule } from '@angular/common/http';
+import { HttpModule,JsonpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -59,9 +50,6 @@ import { LjhcjcgPage } from '../pages/ljhcjcg/ljhcjcg';
     HshLityPage,
     HshSfxzPage,
     WjZcPage,
-   // KrfKcbPage,
-    KrfFbrwPage,
-    KrfLrcjPage,
     SyrSqPage,
     NamePage,
     TxlPage,
@@ -69,24 +57,21 @@ import { LjhcjcgPage } from '../pages/ljhcjcg/ljhcjcg';
     LjhjrbjPage,
     LjhltPage,
     LjhtjpyPage,
-    LjdCkcjPage,
-    LjdPsbxPage,
     LjhcjbjPage,
-    LjhqrjrPage,
-    LjhcjcgPage,
     WjKqPage,
     SyrHome2Page,
     Tabs2Page,
     SyrHome1Page,
-    LjdJczyPage,
     WjDetail1Page,
     WjTouxiangPage,
-    WjGxqmPage
+    WjGxqmPage,
     
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    HttpModule,
+    JsonpModule,
     IonicModule.forRoot(MyApp,{
       tabsHideOnSubPages:true,
       // backButtonText:'取消'
@@ -107,9 +92,6 @@ import { LjhcjcgPage } from '../pages/ljhcjcg/ljhcjcg';
     WjSettingPage,
     HshDlPage,
     WjZcPage,
-   // KrfKcbPage,
-    KrfFbrwPage,
-    KrfLrcjPage,
     SyrSqPage,
     NamePage,
     TxlPage,
@@ -119,25 +101,19 @@ import { LjhcjcgPage } from '../pages/ljhcjcg/ljhcjcg';
     LjhtjpyPage,
     HshLityPage,
     HshSfxzPage,
-    LjdCkcjPage,
-    LjdPsbxPage,
     LjhcjbjPage,
-    LjhqrjrPage,
-    LjhcjcgPage,
     WjKqPage,
     SyrHome2Page,
     Tabs2Page,
     SyrHome1Page,
-    LjdJczyPage,
     WjDetail1Page,
     WjTouxiangPage,
-    WjGxqmPage
+    WjGxqmPage,
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
-
+    {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
 export class AppModule {}

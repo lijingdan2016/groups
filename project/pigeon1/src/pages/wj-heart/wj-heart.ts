@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { WjDetail1Page } from '../wj-detail1/wj-detail1';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 /**
  * Generated class for the WjHeartPage page.
@@ -16,38 +15,14 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   templateUrl: 'wj-heart.html',
 })
 export class WjHeartPage {
-  private headers = new HttpHeaders({'Content-Type':'application/json'});
-  message: Object;
-  constructor(public navCtrl: NavController, public navParams: NavParams,public http:HttpClient) {
+
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
-  // showdata(){
-  //   this.http.post('/heart/data' ,{
-  //     headers : this.headers,
-  //     observe : 'body',
-  //   }).subscribe(data => {
-  //     console.log(data);
-  //   });
-  // }
+
   ionViewDidLoad() {
-      this.http.post('/heart/data' ,{},{
-        headers : this.headers,
-        observe : 'body',
-      }).subscribe(data => {
-        console.log(data);
-        this.message=data;
-      });
-    
+    console.log('ionViewDidLoad WjHeartPage');
   }
-  
   detail(){
     this.navCtrl.push(WjDetail1Page);
-  } 
-  
-}
-class message{
-  
-      public pushname:string;
-      public ontime:Date;
-      public title:string
-      
+  }
 }

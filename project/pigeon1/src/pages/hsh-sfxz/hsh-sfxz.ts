@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { TabsPage } from '../tabs/tabs';
 import { Tabs2Page } from '../tabs2/tabs2';
-import { HttpClient,HttpHeaders } from '@angular/common/http';
 
 /**
  * Generated class for the HshSfxzPage page.
@@ -17,39 +16,16 @@ import { HttpClient,HttpHeaders } from '@angular/common/http';
   templateUrl: 'hsh-sfxz.html',
 })
 export class HshSfxzPage {
-  a;
-  private headers = new HttpHeaders({'Content-Type':'application/json'});
-  constructor(public http:HttpClient,public navCtrl: NavController, public navParams: NavParams) {
-    this.a = navParams.data;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   goToHome1(){
-    console.log(this.a);
-    this.navCtrl.push(TabsPage);
-    this.http.post('/login/identity',this.a,{
-      headers : this.headers,
-      observe : 'body',
-      responseType : 'json'
-    }).subscribe(data=>{
-      console.log(data);
-      
-    })
-      
-    
+    this.navCtrl.setRoot(TabsPage);
   }
   goToHome2(){
     this.navCtrl.push(Tabs2Page);
-    this.http.post('/login/secondidentity',this.a,{
-      headers : this.headers,
-      observe : 'body',
-      responseType : 'json'
-    }).subscribe(data=>{
-      console.log(data);
-      
-    })
   }
-
-
   ionViewDidLoad() {
     console.log('ionViewDidLoad HshSfxzPage');
   }

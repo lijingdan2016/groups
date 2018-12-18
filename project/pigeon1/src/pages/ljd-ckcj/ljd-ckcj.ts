@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { SyrHome2Page } from '../syr-home2/syr-home2';
-import { HttpClient, HttpHeaders } from "@angular/common/http";
+
 /**
  * Generated class for the LjdCkcjPage page.
  *
@@ -15,28 +15,12 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
   templateUrl: 'ljd-ckcj.html',
 })
 export class LjdCkcjPage {
-  score;
-  constructor(public navCtrl: NavController, public navParams: NavParams,private http: HttpClient) {
+
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
-  chu(){
-    this.http.get('/score/data2')
-    .subscribe(data => {
-      console.log(data); 
-      this.score=data;
-        }, err => {
-      console.log('error');
-    })
-  }
+
   
   ionViewDidLoad() {
     console.log('ionViewDidLoad LjdCkcjPage');
   }
 }
-class score{
-  student_id:number;
-  data:string;
-  math:number;
-  Chinese:number;
-  english:number 
-}
-
