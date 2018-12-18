@@ -32,6 +32,7 @@ import { WjDetail1Page } from '../pages/wj-detail1/wj-detail1';
 import { WjTouxiangPage } from '../pages/wj-touxiang/wj-touxiang';
 import { WjGxqmPage } from '../pages/wj-gxqm/wj-gxqm';
 import { HttpClientModule } from "@angular/common/http";
+import { WjClassdetailPage } from '../pages/wj-classdetail/wj-classdetail'
 @NgModule({
   declarations: [
     MyApp,
@@ -62,6 +63,7 @@ import { HttpClientModule } from "@angular/common/http";
     WjDetail1Page,
     WjTouxiangPage,
     WjGxqmPage,
+    WjClassdetailPage
     
   ],
   imports: [
@@ -104,6 +106,7 @@ import { HttpClientModule } from "@angular/common/http";
     WjDetail1Page,
     WjTouxiangPage,
     WjGxqmPage,
+    WjClassdetailPage
   ],
   providers: [
     StatusBar,

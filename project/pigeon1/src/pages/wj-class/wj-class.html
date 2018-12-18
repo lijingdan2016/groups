@@ -3,7 +3,7 @@
       <button ion-button icon-only menuToggle>
         <ion-icon name="menu"></ion-icon>
       </button>
-      <ion-title style="color:black">
+      <ion-title>
         班级
       </ion-title>
       <ion-buttons end>
@@ -14,7 +14,7 @@
     </ion-navbar>
   </ion-header>
 <ion-content>
-    <ion-list>
+    <!-- <ion-list>
         <ion-item>
           <ion-thumbnail item-start>
             <img src="../../assets/imgs/44.jpg">
@@ -41,5 +41,19 @@
         </ion-item>
     
        
+    </ion-list> -->
+    <ion-list>
+      <!-- <ion-list-header>
+        Hobbits
+      </ion-list-header> -->
+      <a ion-item (click)="openModal({charNum: 0})">
+        思思初一六班
+      </a>
+      <a ion-item (click)="openModal({charNum: 1})">
+        课外班三班
+      </a>
+      <a ion-item (click)="openModal({charNum: 2})">
+        乐器小班
+      </a>
     </ion-list>
 </ion-content>
