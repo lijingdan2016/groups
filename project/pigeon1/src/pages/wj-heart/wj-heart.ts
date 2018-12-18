@@ -39,6 +39,9 @@ export class WjHeartPage {
     
   }
   
+  detail(){
+    this.navCtrl.push(WjDetail1Page);
+  } 
   
 }
 class message{

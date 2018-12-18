@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { SyrHome2Page } from '../syr-home2/syr-home2';
 
 /**
  * Generated class for the LjdJczyPage page.
@@ -15,15 +14,13 @@ import { SyrHome2Page } from '../syr-home2/syr-home2';
   templateUrl: 'ljd-jczy.html',
 })
 export class LjdJczyPage {
-score;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
- 
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad LjdJczyPage');
   }
-  
- 
   /* ionViewDidEnter(){
     let elements = document.querySelectorAll(".tabbar");
     if (elements != null) {

@@ -1,9 +1,22 @@
 page-krf-lrcj{
-    
     ion-header{
-        height:50px;
-        ion-title{
-            line-height:50px;
+        div{
+            width:360px;
+            height:60px;
+            background-color:#a1c45a;
+            i
+            {
+            display:inline-block;
+            font-size:30px;
+            margin-left:20px;
+            position:absolute;
+            top:20px;
+            }
+            ion-title{
+                display:inline-block;
+                margin-left:100px;
+                line-height:60px;
+            }
         }
     }
     h5{

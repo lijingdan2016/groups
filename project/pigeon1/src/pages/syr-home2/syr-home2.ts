@@ -37,13 +37,13 @@ export class SyrHome2Page {
     this.navCtrl.push('SyrSousuoPage',{id:5});
   }
   gockcj(){
-    this.navCtrl.push('LjdCkcjPage',{id:6});
+    this.navCtrl.push(LjdCkcjPage);
   }
   gojczy(){
-    this.navCtrl.push('LjdJczyPage',{id:7});
+    this.navCtrl.push(LjdJczyPage);
   }
   gopsbx(){
-    this.navCtrl.push('LjdPsbxPage');
+    this.navCtrl.push(LjdPsbxPage);
   }
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
