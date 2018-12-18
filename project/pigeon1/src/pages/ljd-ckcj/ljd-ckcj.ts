@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { SyrHome2Page } from '../syr-home2/syr-home2';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 /**
  * Generated class for the LjdCkcjPage page.
@@ -27,10 +26,10 @@ export class LjdCkcjPage {
       console.log('error');
     })
   }
-  
   ionViewDidLoad() {
     console.log('ionViewDidLoad LjdCkcjPage');
   }
+
 }
 class score{
   student_id:number;
@@ -39,4 +38,3 @@ class score{
   Chinese:number;
   english:number 
 }
-
