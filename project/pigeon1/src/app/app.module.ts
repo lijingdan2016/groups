@@ -31,7 +31,7 @@ import { Tabs2Page } from '../pages/tabs2/tabs2';
 import { WjDetail1Page } from '../pages/wj-detail1/wj-detail1';
 import { WjTouxiangPage } from '../pages/wj-touxiang/wj-touxiang';
 import { WjGxqmPage } from '../pages/wj-gxqm/wj-gxqm';
-
+import { HttpClientModule } from "@angular/common/http";
 @NgModule({
   declarations: [
     MyApp,
@@ -66,6 +66,7 @@ import { WjGxqmPage } from '../pages/wj-gxqm/wj-gxqm';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp,{
       tabsHideOnSubPages:true,
       // backButtonText:'取消'
@@ -107,6 +108,7 @@ import { WjGxqmPage } from '../pages/wj-gxqm/wj-gxqm';
   providers: [
     StatusBar,
     SplashScreen,
+
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
