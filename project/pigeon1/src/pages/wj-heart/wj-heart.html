@@ -14,19 +14,18 @@
     </ion-navbar>
 </ion-header>
 
-
 <ion-content>
     <ion-list>
 
         <ion-list-header>今天</ion-list-header>
     
-        <ion-item>
+        <ion-item *ngFor="let item of message">
           <ion-avatar item-start>
-            <img src="../../assets/imgs/12.jpg">
+            <!-- <img src="../../assets/imgs/12.jpg"> -->
           </ion-avatar>
-          <h2>只愿你健康成长</h2>
-          <p>老年人</p>
-          <ion-note item-end>下午3:43</ion-note>
+          <h2>{{item.title}}</h2>
+          <p>{{item.pushname}}</p>
+          <!-- <ion-note item-end>{{item.ontime}}</ion-note> -->
         </ion-item>
     
         <ion-item>

@@ -12,6 +12,6 @@
 
 </ion-header>
 <ion-content padding>
-  <input type="text" name="submit" id="text" style="background-color:#f2f4fb;width: 330px;height: 160px;text-align: center;padding-top: 0;">
-  <button style="background-color:#a1c45a;margin-top: 36px;" block ion-button>保存</button> 
+  <input type="text" name="submit" #content style="background-color:#f2f4fb;width: 330px;height: 160px;text-align: center;padding-top: 0;">
+  <button style="background-color:#a1c45a;margin-top: 36px;" block ion-button (click)="save(content);" onclick="history.go(-1)">保存</button> 
 </ion-content>
