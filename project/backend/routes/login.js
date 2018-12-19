@@ -50,7 +50,7 @@ router.post('/identity',function(req,res){
 
   res.header('Access-Control-Allow-Origin','*');
   res.header('Content-Type','text/plain; charset="utf-8"');
-  const sql = "update user set identity = '家长' where username = '"+account+"' and password= '"+password+"'";
+  const sql = "update user set identity = '老师' where username = '"+account+"' and password= '"+password+"'";
   if(account&&password){
     db.query(sql,(err,result)=>{
       if(err){
@@ -69,7 +69,7 @@ router.post('/secondidentity',function(req,res){
 
   res.header('Access-Control-Allow-Origin','*');
   res.header('Content-Type','text/plain; charset="utf-8"');
-  const sql = "update user set identity = '老师' where username = '"+account+"' and password= '"+password+"'";
+  const sql = "update user set identity = '家长' where username = '"+account+"' and password= '"+password+"'";
   if(account&&password){
     db.query(sql,(err,result)=>{
       if(err){
