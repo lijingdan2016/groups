@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ViewController,ToastController} from 'ionic-angular';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { WjparbehavePage } from '../wjparbehave/wjparbehave';
 /**
  * Generated class for the LjdPsbxPage page.
  *
@@ -15,7 +16,7 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 })
 export class LjdPsbxPage {
   private headers = new HttpHeaders({'Content-Type':'application/json'});
-  constructor(public navCtrl: NavController, public navParams: NavParams,public http:HttpClient,public viewCtrl:ViewController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public http:HttpClient,public viewCtrl:ViewController,public toastCtrl:ToastController) {
   }
 
   ionViewDidLoad() {
@@ -30,6 +31,20 @@ export class LjdPsbxPage {
     }
     ).subscribe(data=>{
       console.log(data);
+      if(JSON.stringify(data) === '[]' || data===null) {
+        this.showToast('bottom','学生学号输入错误，请重新输入！');
+        return ;
+        }else{
+          this.navCtrl.push(WjparbehavePage,a);
+        }
     })
+  }
+  showToast(position: string, message: string) {
+    let toast = this.toastCtrl.create({
+      message: message,
+      duration: 2000,
+      position: position
+    });
+    toast.present(toast);
   }
 }
