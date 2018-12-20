@@ -4,8 +4,13 @@ page-syr-notice {
     }
     .toolbar-title-md{
         font-size: 18px;
+
     }
     ion-content{
+        .content{
+            //text-align: center;
+            font-size: 18px;
+        }
         ul{
             padding-left: 10px;
             li{
