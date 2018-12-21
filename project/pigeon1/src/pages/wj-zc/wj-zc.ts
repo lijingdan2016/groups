@@ -21,15 +21,17 @@ export class WjZcPage {
   constructor(public http:HttpClient,public navCtrl: NavController, public navParams: NavParams,public httpClient: HttpClient) {
   }
 
-  logIn(username: HTMLInputElement, password: HTMLInputElement,email:HTMLInputElement) {
+  logIn(username: HTMLInputElement, password: HTMLInputElement,email:HTMLInputElement,student:HTMLInputElement) {
     if (username.value.length == 0) {
       alert("请输入账号");
     } else if (password.value.length == 0) {
       alert("请输入密码");
     }else if (email.value.length == 0) {
       alert("请输入邮箱");
+    }else if (student.value.length == 0) {
+      alert("请输入学号");
     } else {
-      let userinfo: string = '用户名：' + username.value + '密码：' + password.value + '邮箱：' + email.value;
+      let userinfo: string = '用户名：' + username.value + '密码：' + password.value + '邮箱：' + email.value +'学号'+student.value;
       // alert(userinfo);
       
       console.log(userinfo);
@@ -41,7 +43,7 @@ export class WjZcPage {
       // }
       // )
     };
-    let a={name:username.value,password:password.value,email:email.value};
+    let a={name:username.value,password:password.value,email:email.value,student:student.value};
     this.http.post('/login/registe',a,{
       headers : this.headers,
       observe : 'body',

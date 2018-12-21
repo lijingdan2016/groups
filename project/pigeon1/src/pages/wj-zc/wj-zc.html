@@ -21,8 +21,13 @@
           <ion-input type="email" #email></ion-input>
         </ion-item>
 
+        <ion-item color='trans'>
+          <ion-label color='gr'>学生学号</ion-label>
+          <ion-input type="text" #student></ion-input>
+        </ion-item>
+
         <div padding>
-          <button type="submit" ion-button color="gr" block (click)="logIn(username, password,email)">注册</button>
+          <button type="submit" ion-button color="gr" block (click)="logIn(username, password,email,student)">注册</button>
         </div>
       <!-- </form> -->
 </ion-content>
