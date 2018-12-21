@@ -11,7 +11,7 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
--- 导出  表 pigeon1.behave 结构
+-- 导出  表 pigeon.behave 结构
 DROP TABLE IF EXISTS `behave`;
 CREATE TABLE IF NOT EXISTS `behave` (
   `user_id` int(11) NOT NULL,
@@ -21,12 +21,12 @@ CREATE TABLE IF NOT EXISTS `behave` (
   CONSTRAINT `FK_be` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='表现';
 
--- 正在导出表  pigeon1.behave 的数据：~0 rows (大约)
+-- 正在导出表  pigeon.behave 的数据：~0 rows (大约)
 DELETE FROM `behave`;
 /*!40000 ALTER TABLE `behave` DISABLE KEYS */;
 /*!40000 ALTER TABLE `behave` ENABLE KEYS */;
 
--- 导出  表 pigeon1.class 结构
+-- 导出  表 pigeon.class 结构
 DROP TABLE IF EXISTS `class`;
 CREATE TABLE IF NOT EXISTS `class` (
   `class_id` int(11) NOT NULL,
@@ -37,12 +37,12 @@ CREATE TABLE IF NOT EXISTS `class` (
   CONSTRAINT `FK_cl` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='班级表';
 
--- 正在导出表  pigeon1.class 的数据：~0 rows (大约)
+-- 正在导出表  pigeon.class 的数据：~0 rows (大约)
 DELETE FROM `class`;
 /*!40000 ALTER TABLE `class` DISABLE KEYS */;
 /*!40000 ALTER TABLE `class` ENABLE KEYS */;
 
--- 导出  表 pigeon1.join_class 结构
+-- 导出  表 pigeon.join_class 结构
 DROP TABLE IF EXISTS `join_class`;
 CREATE TABLE IF NOT EXISTS `join_class` (
   `user_id` int(11) NOT NULL,
@@ -53,12 +53,12 @@ CREATE TABLE IF NOT EXISTS `join_class` (
   CONSTRAINT `FK_jo2` FOREIGN KEY (`class_id`) REFERENCES `class` (`class_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='加入班级';
 
--- 正在导出表  pigeon1.join_class 的数据：~0 rows (大约)
+-- 正在导出表  pigeon.join_class 的数据：~0 rows (大约)
 DELETE FROM `join_class`;
 /*!40000 ALTER TABLE `join_class` DISABLE KEYS */;
 /*!40000 ALTER TABLE `join_class` ENABLE KEYS */;
 
--- 导出  表 pigeon1.schedule 结构
+-- 导出  表 pigeon.schedule 结构
 DROP TABLE IF EXISTS `schedule`;
 CREATE TABLE IF NOT EXISTS `schedule` (
   `user_id` int(11) NOT NULL,
@@ -69,12 +69,12 @@ CREATE TABLE IF NOT EXISTS `schedule` (
   CONSTRAINT `FK_sche` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='课程表';
 
--- 正在导出表  pigeon1.schedule 的数据：~0 rows (大约)
+-- 正在导出表  pigeon.schedule 的数据：~0 rows (大约)
 DELETE FROM `schedule`;
 /*!40000 ALTER TABLE `schedule` DISABLE KEYS */;
 /*!40000 ALTER TABLE `schedule` ENABLE KEYS */;
 
--- 导出  表 pigeon1.score 结构
+-- 导出  表 pigeon.score 结构
 DROP TABLE IF EXISTS `score`;
 CREATE TABLE IF NOT EXISTS `score` (
   `user_id` int(11) NOT NULL,
@@ -93,12 +93,12 @@ CREATE TABLE IF NOT EXISTS `score` (
   CONSTRAINT `FK_sc` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='成绩表';
 
--- 正在导出表  pigeon1.score 的数据：~0 rows (大约)
+-- 正在导出表  pigeon.score 的数据：~0 rows (大约)
 DELETE FROM `score`;
 /*!40000 ALTER TABLE `score` DISABLE KEYS */;
 /*!40000 ALTER TABLE `score` ENABLE KEYS */;
 
--- 导出  表 pigeon1.task 结构
+-- 导出  表 pigeon.task 结构
 DROP TABLE IF EXISTS `task`;
 CREATE TABLE IF NOT EXISTS `task` (
   `user_id` int(11) NOT NULL,
@@ -108,12 +108,12 @@ CREATE TABLE IF NOT EXISTS `task` (
   CONSTRAINT `FK_ta` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='任务表';
 
--- 正在导出表  pigeon1.task 的数据：~0 rows (大约)
+-- 正在导出表  pigeon.task 的数据：~0 rows (大约)
 DELETE FROM `task`;
 /*!40000 ALTER TABLE `task` DISABLE KEYS */;
 /*!40000 ALTER TABLE `task` ENABLE KEYS */;
 
--- 导出  表 pigeon1.user 结构
+-- 导出  表 pigeon.user 结构
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE IF NOT EXISTS `user` (
   `user_id` int(11) NOT NULL,
@@ -121,10 +121,12 @@ CREATE TABLE IF NOT EXISTS `user` (
   `email` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
   `identity` char(4) COLLATE utf8_unicode_ci DEFAULT NULL,
   `stu_id` int(11) NOT NULL,
+  `nickname` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `signature` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='用户信息表';
 
--- 正在导出表  pigeon1.user 的数据：~0 rows (大约)
+-- 正在导出表  pigeon.user 的数据：~0 rows (大约)
 DELETE FROM `user`;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
