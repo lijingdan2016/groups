@@ -18,7 +18,7 @@ export class LjdCkcjPage {
   constructor(public navCtrl: NavController, public navParams: NavParams,private http: HttpClient) {
   }
   chu(){
-    this.http.get('/score/data2')
+    this.http.get('http://192.168.23.144:3000/index2/data2')
     .subscribe(data => {
       console.log(data); 
       this.score=data;
