@@ -1,30 +1,34 @@
 <div class="content">
   <table>
     <tr>
-      <th class="biaotou">头像</th>
-      <th class="biaotou">用户名</th>
-      <th class="biaotou">手机号</th>
+      <th class="biaotou">用户id</th>
+      <th class="biaotou">密码</th>
+      <th class="biaotou">email</th>
       <th class="biaotou">身份</th>
-      <th class="biaotou">发帖数量</th>
-      <th class="biaotou">粉丝数量</th>
+      <th class="biaotou">stu_id</th>
+      <th class="biaotou">操作</th>
+      <!-- <th class="biaotou">粉丝数量</th> -->
     </tr>
-    <tr>
+    <!-- <tr>
       <td><img src="../../../assets/img/img3-1.jpg"/></td>
       <td>去年夏天</td>
       <td>17483927494</td>
       <td>家长</td>
       <td>5</td>
       <td>297</td>
+    </tr> -->
+    <tr *ngFor='let item of user'>
+      <td>{{item.user_id}}</td>
+      <td>{{item.password}}</td>
+      <td>{{item.email}}</td>
+      <td>{{item.identity}}</td>
+      <td>{{item.stu_id}}</td>
+      <td>
+        <button class="btn1" style="background-color:green">编辑</button>
+        <button class="btn2" (click)='del(item)' style="background-color:red">删除</button>
+      </td>
     </tr>
-    <tr>
-      <td><img src="../../../assets/img/img3-2.jpeg"/></td>
-      <td>山水之间</td>
-      <td>15384643937</td>
-      <td>老师</td>
-      <td>34</td>
-      <td>9763</td>
-    </tr>
-    <tr>
+    <!-- <tr>
       <td><img src="../../../assets/img/img3-3.jpg"/></td>
       <td>最美的遇见</td>
       <td>18483637639</td>
@@ -39,6 +43,6 @@
       <td>家长</td>
       <td>67</td>
       <td>6863</td>
-    </tr>
+    </tr> -->
   </table>
 </div>

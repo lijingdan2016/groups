@@ -7,18 +7,18 @@
             <li>职位</li>
             <li>操作</li>
           </ul>
-          <ul>
-            <li>小明</li>
-            <li>李明</li>
-            <li>123@qq.com</li>
-            <li>12345678</li>
-            <li>开发</li>
+          <ul *ngFor='let item of user'>
+            <li>{{item.username}}</li>
+            <li>{{item.name}}</li>
+            <li>{{item.email}}</li>
+            <li>{{item.tel}}</li>
+            <li>{{item.task}}</li>
             <li>
               <button class="btn1">编辑</button>
               <button class="btn2">删除</button>
             </li>
           </ul>
-          <ul>
+          <!-- <ul>
             <li>小华</li>
             <li>李华</li>
             <li>123@qq.com</li>
@@ -50,5 +50,5 @@
                   <button class="btn1">编辑</button>
                   <button class="btn2">删除</button>
                 </li>
-            </ul>
+            </ul> -->
   </div>
