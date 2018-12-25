@@ -15,4 +15,10 @@
 
 <ion-content padding style="background-color:#a1c45a">
       <h1 text-center>加入班级成功！</h1>
+      <span>
+        您现在加入的所有班级有：
+        <ul>
+          <li *ngFor='let a of item'>{{a.class_id}}</li>
+        </ul>
+      </span>
 </ion-content>

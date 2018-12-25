@@ -15,13 +15,14 @@ import { LjhqrjrPage } from '../ljhqrjr/ljhqrjr';
   templateUrl: 'ljhjrbj.html',
 })
 export class LjhjrbjPage {
-
+  user_id;
   constructor(public toastCtrl:ToastController,public http:HttpClient,public navCtrl: NavController, public navParams: NavParams) {
   }
   private headers = new HttpHeaders({'Content-Type':'application/json'});
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LjhjrbjPage');
+    this.user_id=localStorage.getItem('username');//获取本地存储的user_id
   }
   showToast(position: string, message: string) {
     let toast = this.toastCtrl.create({
@@ -32,7 +33,7 @@ export class LjhjrbjPage {
     toast.present(toast);
   }
   search(classid:HTMLInputElement){
-    let a={classid:classid.value};
+    let a={user_id:this.user_id,classid:classid.value};//post传入要多传入一个user_id作为外键插入数据库
     this.http.post(
       '/class/search',a,{
         headers : this.headers,
