@@ -26,12 +26,11 @@ router.post('/registe',function(req,res){
      var account=req.body.name;
      var password=req.body.password;
      var email = req.body.email;
-     var student = req.body.student;
      res.header('Access-Control-Allow-Origin','*');
      res.header('Content-Type','text/plain; charset="utf-8"');
-    const sql='insert into user(user_id,password,email,stu_id) values(?,?,?,?)'; 
-    if(account && password && email && student){
-  db.query(sql,[account,password,email,student],(err,result)=>{
+    const sql='insert into user(user_id,password,email) values(?,?,?)'; 
+    if(account && password && email){
+  db.query(sql,[account,password,email],(err,result)=>{
     if(err){
                 console.error("Error:",err);
                           process.exit();
