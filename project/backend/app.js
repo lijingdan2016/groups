@@ -18,7 +18,8 @@ var tieziRouter = require('./routes/tiezi');
 var zanRouter = require('./routes/zan');
 var gxqmRouter = require('./routes/gxqm');
 var heartRouter = require('./routes/heart');
-
+var userRouter = require('./routes/user');
+var backuserRouter = require('./routes/backuser');
 
 var app = express();
 // view engine setup 摒弃视图
@@ -47,6 +48,8 @@ app.use('/tiezi',tieziRouter);
 app.use('/zan',zanRouter);
 app.use('/gxqm',gxqmRouter);
 app.use('/heart',heartRouter);
+app.use('/user',userRouter);
+app.use('/backuser',backuserRouter);
 
 // catch 404 and forward to error handler
 
