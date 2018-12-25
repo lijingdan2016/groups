@@ -16,7 +16,7 @@ import { LjhcjcgPage } from '../ljhcjcg/ljhcjcg';
 })
 export class LjhcjbjPage {
   
-  user_id;
+  
   classid:Number;
   classname:string;
   classnum:Number;
@@ -29,14 +29,10 @@ export class LjhcjbjPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LjhcjbjPage');
-    //console.log(localStorage.getItem('username'));
-    this.user_id=localStorage.getItem('username');//获取到本地存储的user_id
   }
   
-  commit(cid:HTMLInputElement,cname:HTMLInputElement){
-    let a={cid:cid.value,cname:cname.value,pname:this.user_id}
-    //传入东西的时候多传入你自己的user_id作为外键
-
+  commit(cid:HTMLInputElement,cname:HTMLInputElement,cnum:HTMLInputElement,pname:HTMLInputElement){
+    let a={cid:cid.value,cname:cname.value,cnum:cnum.value,pname:pname.value}
     this.http.post('/class/begin',a,{
       headers : this.headers,
       observe : 'body',
