@@ -28,10 +28,8 @@ export class WjZcPage {
       alert("请输入密码");
     }else if (email.value.length == 0) {
       alert("请输入邮箱");
-    }else if (student.value.length == 0) {
-      alert("请输入学号");
     } else {
-      let userinfo: string = '用户名：' + username.value + '密码：' + password.value + '邮箱：' + email.value +'学号'+student.value;
+      let userinfo: string = '用户名：' + username.value + '密码：' + password.value + '邮箱：' + email.value ;
       // alert(userinfo);
       
       console.log(userinfo);
@@ -43,7 +41,7 @@ export class WjZcPage {
       // }
       // )
     };
-    let a={name:username.value,password:password.value,email:email.value,student:student.value};
+    let a={name:username.value,password:password.value,email:email.value};
     this.http.post('/login/registe',a,{
       headers : this.headers,
       observe : 'body',

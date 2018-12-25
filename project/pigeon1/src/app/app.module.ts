@@ -41,6 +41,7 @@ import { HttpClientModule  } from '@angular/common/http';
 import { LjhqrjrPage } from '../pages/ljhqrjr/ljhqrjr';
 import { LjhtjpyPage } from '../pages/ljhtjpy/ljhtjpy';
 import { LjhcjcgPage } from '../pages/ljhcjcg/ljhcjcg';
+import { Name2Page } from '../pages/name2/name2';
 //import { KrfKcbPage } from '../pages/krf-kcb/krf-kcb';
 
 
@@ -64,6 +65,7 @@ import { LjhcjcgPage } from '../pages/ljhcjcg/ljhcjcg';
     KrfLrcjPage,
     SyrSqPage,
     NamePage,
+    Name2Page,
     TxlPage,
     LjhcjbjPage,
     LjhjrbjPage,
@@ -112,6 +114,7 @@ import { LjhcjcgPage } from '../pages/ljhcjcg/ljhcjcg';
     KrfLrcjPage,
     SyrSqPage,
     NamePage,
+    Name2Page,
     TxlPage,
     LjhcjbjPage,
     LjhjrbjPage,

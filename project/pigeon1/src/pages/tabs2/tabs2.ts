@@ -4,6 +4,7 @@ import { WjMyPage } from '../wj-my/wj-my';
 import { NamePage } from '../name/name';
 import { SyrSqPage } from '../syr-sq/syr-sq';
 import { SyrHome2Page } from '../syr-home2/syr-home2';
+import { Name2Page } from '../name2/name2';
 
 /**
  * Generated class for the Tabs2Page page.
@@ -20,7 +21,7 @@ import { SyrHome2Page } from '../syr-home2/syr-home2';
 export class Tabs2Page {
   tab1Root = SyrHome2Page;
   tab2Root = SyrSqPage;
-  tab3Root = NamePage;
+  tab3Root = Name2Page;
   tab4Root = WjMyPage;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
