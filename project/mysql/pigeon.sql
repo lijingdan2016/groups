@@ -98,6 +98,22 @@ DELETE FROM `score`;
 /*!40000 ALTER TABLE `score` DISABLE KEYS */;
 /*!40000 ALTER TABLE `score` ENABLE KEYS */;
 
+-- 导出  表 pigeon.shoucang 结构
+DROP TABLE IF EXISTS `shoucang`;
+CREATE TABLE IF NOT EXISTS `shoucang` (
+  `tiezi_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  PRIMARY KEY (`tiezi_id`,`user_id`),
+  KEY `FK_scu` (`user_id`),
+  CONSTRAINT `FK_sct` FOREIGN KEY (`tiezi_id`) REFERENCES `tiezi` (`tiezi_id`),
+  CONSTRAINT `FK_scu` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='收藏表';
+
+-- 正在导出表  pigeon.shoucang 的数据：~0 rows (大约)
+DELETE FROM `shoucang`;
+/*!40000 ALTER TABLE `shoucang` DISABLE KEYS */;
+/*!40000 ALTER TABLE `shoucang` ENABLE KEYS */;
+
 -- 导出  表 pigeon.task 结构
 DROP TABLE IF EXISTS `task`;
 CREATE TABLE IF NOT EXISTS `task` (
@@ -112,6 +128,24 @@ CREATE TABLE IF NOT EXISTS `task` (
 DELETE FROM `task`;
 /*!40000 ALTER TABLE `task` DISABLE KEYS */;
 /*!40000 ALTER TABLE `task` ENABLE KEYS */;
+
+-- 导出  表 pigeon.tiezi 结构
+DROP TABLE IF EXISTS `tiezi`;
+CREATE TABLE IF NOT EXISTS `tiezi` (
+  `tiezi_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `tiezi_content` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `tiezi_date` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `zan` int(11) DEFAULT NULL,
+  PRIMARY KEY (`tiezi_id`),
+  KEY `FK_tz` (`user_id`),
+  CONSTRAINT `FK_tz` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='帖子表';
+
+-- 正在导出表  pigeon.tiezi 的数据：~0 rows (大约)
+DELETE FROM `tiezi`;
+/*!40000 ALTER TABLE `tiezi` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tiezi` ENABLE KEYS */;
 
 -- 导出  表 pigeon.user 结构
 DROP TABLE IF EXISTS `user`;
@@ -130,6 +164,22 @@ CREATE TABLE IF NOT EXISTS `user` (
 DELETE FROM `user`;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
+
+-- 导出  表 pigeon.zan 结构
+DROP TABLE IF EXISTS `zan`;
+CREATE TABLE IF NOT EXISTS `zan` (
+  `tiezi_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  PRIMARY KEY (`tiezi_id`,`user_id`),
+  KEY `FK_zu` (`user_id`),
+  CONSTRAINT `FK_zt` FOREIGN KEY (`tiezi_id`) REFERENCES `tiezi` (`tiezi_id`),
+  CONSTRAINT `FK_zu` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='赞';
+
+-- 正在导出表  pigeon.zan 的数据：~0 rows (大约)
+DELETE FROM `zan`;
+/*!40000 ALTER TABLE `zan` DISABLE KEYS */;
+/*!40000 ALTER TABLE `zan` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
