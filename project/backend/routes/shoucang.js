@@ -4,13 +4,13 @@ const db = require('../model/database.js');
 
 //收藏时插入数据库
 router.post('/sc',function(req,res){
-  var tz_id = req.body.tzid;
-  var click_user = req.body.uid;
+  var tiezi_id = req.body.tzid;
+  var user_id = req.body.uid;
   res.header('Access-Control-Allow-Origin','*');
   res.header('Content-Type','text/plain; charset="utf-8"');
   const sql = 'insert into shoucang values(?,?)';
-  if(tz_id && click_user){
-      db.query(sql,[tz_id,click_user],(err,result)=>{
+  if(tiezi_id && user_id){
+      db.query(sql,[tiezi_id,user_id],(err,result)=>{
         if(err){
            console.error("Error:",err);
            process.exit();
@@ -23,12 +23,13 @@ router.post('/sc',function(req,res){
 })
 
 router.post('/del',function(req,res){
-  var tz_id = req.body.tzid;
+  var tiezi_id = req.body.tzid;
+  var user_id = req.body.uid;
   res.header('Access-Control-Allow-Origin','*');
   res.header('Content-Type','text/plain; charset = "utf-8"');
-  const del = 'delete from shoucang where tz_id = '+tz_id;
-  if(tz_id){
-    db.query(del,[tz_id],(err,result) => {
+  const del = 'delete from shoucang where tiezi_id = '+tiezi_id + ' and user_id = ' + user_id;
+  if(tiezi_id){
+    db.query(del,[tiezi_id,user_id],(err,result) => {
       if(err){
         console.error("Error:",err);
         process.exit();

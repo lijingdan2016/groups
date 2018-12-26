@@ -3,7 +3,7 @@ var router = express.Router();
 const db = require('../model/database.js');
 
 
-router.get('/sq',function(req,res){
+router.post('/sq',function(req,res){
  // var user_id = req.body.userid;
   res.header('Access-Control-Allow-Origin','*');
   res.header('Content-Type','text/plain; charset = "utf-8"');
@@ -20,9 +20,24 @@ router.get('/sq',function(req,res){
     });
     console.log(req.body);
   //}
-
-
 })
+
+router.post('/sqtuijian',function(req,res){
+
+  res.header('Access-Control-Allow-Origin','*');
+  res.header('Content-Type','text/plain; charset = "utf-8"');
+  const sql = 'select * from tiezi';
+  db.query(sql,(err,result) => {
+    if(err){
+      console.error("Error:",err);
+      process.exit();
+    }
+    res.end(JSON.stringify({
+      data:result
+    }));
+  });
+  console.log(req.body);
+ })
 
 
 

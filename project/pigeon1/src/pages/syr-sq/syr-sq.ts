@@ -19,27 +19,84 @@ import { Storage } from '@ionic/storage';
 
 export class SyrSqPage {
   items;
-  newitems;
-  data1;
+  tjitems;
+  len;
+  count;
+  flag:Array<number>; 
+  number:number = 0;
   isActive = 1;
   userid:number;
-  isClick(i){
-    this.isActive = i;
-    if(i = 2){
+  uid;
 
-      this.http.get('/shequ/sq').subscribe(
-        (data:A)=>{
-          console.log(data.data);
-          this.items = data.data; 
-          console.dir(this);
-          
-      },(err)=>{
-        console.log('失败:',err);
-      })
+  fun(){
+    this.count = [];
+    this.count.length = this.len;
+    for(var j = 0;j<this.len;j++){
+      this.count[j] = 0;
+    }
+    
+    this.flag = [];
+    this.flag.length = this.len;
+    for(var j = 0;j<this.len;j++){
+      this.flag[j] = 0;
     }
   }
 
+/* shuffle(arr) {
+    let i = arr.length;
+    while (i) {
+        let j = Math.floor(Math.random() * i--);
+        [arr[j], arr[i]] = [arr[i], arr[j]];
+    }
+    return arr;
+} */
 
+  freshen(){
+    
+
+      this.http.post('/shequ/sqtuijian', {} ,{
+        headers : this.headers,
+        observe : 'body',
+        
+        responseType : 'json'
+      }).subscribe(
+        (data:A)=>{
+          console.log(data.data);
+          this.tjitems = data.data; 
+          this.len = this.tjitems.length;
+          console.dir(this);
+
+          this.fun();
+      })
+
+      this.http.post('/shequ/sq', {} ,{
+        headers : this.headers,
+        observe : 'body',
+        
+        responseType : 'json'
+      }).subscribe(
+        (data:A)=>{
+          console.log(data.data);
+          this.items = data.data; 
+          this.len = this.items.length;
+          console.dir(this);
+
+          this.fun();
+      })
+
+
+     
+  }
+
+  isClick(i){
+    this.isActive = i;
+  }
+
+  ionViewDidLoad() {
+      console.log('ionViewDidLoad SyrSqPage');
+      this.freshen();
+      
+    }
   
   
 
@@ -47,8 +104,14 @@ export class SyrSqPage {
     this.navCtrl.push('SyrSousuoPage',{id:2});
   }
 
-  gosub1(){
+  gosub1(idex){
     this.navCtrl.push('SyrEssayPage',{id:3});
+    localStorage.setItem('index', idex);
+  }
+
+  gosub4(idex){
+    this.navCtrl.push('SyrEssayPage',{id:3});
+    localStorage.setItem('index', idex);
   }
 
   private headers = new HttpHeaders({'Content-Type':'application/json'});
@@ -59,59 +122,118 @@ export class SyrSqPage {
               private http: HttpClient, 
               public toastCtrl: ToastController,
               ) {
+
+      
+  }
+  
+
+  gosub2(idx){
+    this.zan(idx);
+  }
+  gosub3(idx){
+    this.shoucang(idx);
   }
 
-  
-  
+  gosub5(ix){
+    this.zan(ix);
+  }
+  gosub6(ix){
+    this.shoucang(ix);
+  }
 
-  count:number = 0;
-  flag:number = 0;
-  tzid1:number = Math.round(Math.random()*10000);
-
-  
 
   //赞和取消赞
-  gosub2(){
+  zan(idx){
+
+    this.uid = localStorage.getItem('user_id');
+   
+    console.log(idx);
+
+    var t = document.getElementsByClassName('li3-3')[idx];
+    console.log(t);
+    let z = t.getElementsByClassName('iconfont')as HTMLCollectionOf<HTMLElement>;
+    console.log(z);
+
+    
+    console.log('count[i]:',this.count[idx]);
+     
+    if(this.count[idx] == 0){
+      z[0].style.color = "#259b24"; 
+      this.count[idx]++;
+
+      console.log('点赞成功');
+
+      //var number = 0;
+      this.number = this.items[idx].zan + 1;
+      //点赞成功计入点赞表
+      this.http.post('/zan/zan', {tzid:this.items[idx].tiezi_id,uid:this.uid} ,{
+        headers : this.headers,
+        observe : 'body',
+        responseType : 'json'
+      }).subscribe(data => {
+        console.log(data);
+      })
+      //点赞成功帖子的赞数+1
+      this.http.post('/zan/zandata', {tz_id:this.items[idx].tiezi_id,num:this.number} ,{
+        headers : this.headers,
+        observe : 'body',
+        responseType : 'json'
+      }).subscribe(data => {
+        console.log(data);
+       
+      })
+
+      this.items[idx].zan = this.number;
+
+    }else{
+      z[0].style.color = "#a1c45a";
+      this.count[idx] = 0;
+
+      this.number = this.items[idx].zan - 1;
+      //取消点赞删除点赞表的那一项
+      this.http.post('/zan/del', {tzid:this.items[idx].tiezi_id,uid:this.uid} ,{
+        headers : this.headers,
+        observe : 'body',
+        responseType : 'json'
+      }).subscribe(data => {
+        console.log(data);
+      })
+      //取消点赞，帖子点赞数-1
+      this.http.post('/zan/zandata', {tz_id:this.items[idx].tiezi_id,num:this.number} ,{
+        headers : this.headers,
+        observe : 'body',
+        responseType : 'json'
+      }).subscribe(data => {
+        console.log(data);
+      })
+      
+      this.items[idx].zan = this.number;
+      //this.storage.set('z[0].style.color', '#a1c45a');
+      //localStorage.setItem('color','#a1c45a');
+      
+    }
+
+    console.log('count[i]:',this.count[idx]);
 
    
-    var z = document.getElementById('huan');
-     
-    if(this.count == 0){
-      z.style.color = "#259b24"; 
-      this.count++;
-
-      this.http.post('/zan/zan', {tzid:this.tzid1,uid:'100'} ,{
-        headers : this.headers,
-        observe : 'body',
-        responseType : 'json'
-      }).subscribe(data => {
-        console.log(data);
-      })
-    }else{
-      z.style.color = "#a1c45a";
-      this.count = 0;
-
-      this.http.post('/zan/del', {tzid:this.tzid1} ,{
-        headers : this.headers,
-        observe : 'body',
-        responseType : 'json'
-      }).subscribe(data => {
-        console.log(data);
-      })
-    }
-    
   }
 
   //收藏和取消收藏
-  gosub3(){
+  shoucang(idx){
 
-    var z = document.getElementById('shoucang');
+    this.uid = localStorage.getItem('user_id');
+
+    var t = document.getElementsByClassName('nei3')[idx];
+    console.log(t);
+    var z = t.getElementsByClassName('iconfont')as HTMLCollectionOf<HTMLElement>;
+    console.log(z);
+    
      
-    if(this.flag == 0){
-      z.style.color = "#259b24"; 
-      this.flag++;
-
-      this.http.post('/shoucang/sc', {tzid:this.tzid1,uid:'100'} ,{
+    if(this.flag[idx] == 0){
+      z[0].style.color = "#259b24"; 
+      this.flag[idx]++;
+      //收藏成功计入收藏表
+      this.http.post('/shoucang/sc', {tzid:this.items[idx].tiezi_id,uid:this.uid} ,{
         headers : this.headers,
         observe : 'body',
         responseType : 'json'
@@ -119,10 +241,10 @@ export class SyrSqPage {
         console.log(data);
       })
     }else{
-      z.style.color = "#a1c45a";
-      this.flag = 0;
-      
-      this.http.post('/shoucang/del', {tzid:this.tzid1} ,{
+      z[0].style.color = "#a1c45a";
+      this.flag[idx] = 0;
+      //取消收藏,删除那一项
+      this.http.post('/shoucang/del', {tzid:this.items[idx].tiezi_id,uid:this.uid} ,{
         headers : this.headers,
         observe : 'body',
         responseType : 'json'
@@ -139,9 +261,7 @@ export class SyrSqPage {
     this.navCtrl.push('SyrTieziPage',{id:1});
   } 
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad SyrSqPage');
-  }
+  
 
 }
 class A {

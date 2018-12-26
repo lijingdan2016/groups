@@ -16,20 +16,21 @@
 
   <div class="box1">
     <div class="nei1">
-      <img src="../../assets/imgs/img3-1.jpg"/>
-      <i class="iconfont" style="font-size: 16px;float: left;margin-left: 65%;position: absolute;bottom: -3px;color: #259b24;">&#xe602;</i>
+      <img src="../../assets/imgs/img3-3.jpg"/>
+      <i class="iconfont" style="font-size: 16px;float: left;margin-left: 65%;position: absolute;bottom: -3px;color:rgb(216, 79, 79);">&#xe628;</i>
     </div>
     <div class="nei2">
-      <p>Rachel Jayson</p>
+      <p>明天</p>
       <p style="font-size: 10px;color: rgb(141, 138, 138);">5:09 PM</p>
     </div>
-    <i class="iconfont" style="font-size: 20px;float:right;margin-top: 3px;color: #259b24;">&#xe638;</i>
+    <i class="iconfont" style="font-size: 20px;float:right;margin-top: 3px;">&#xe638;</i>
   </div>
-  <div class="box2">
-    <h6>童年决定命运</h6>
-    <p>弗洛伊德的精神分析理论指出：5岁之前的人生阶段是人格发展的关键阶段，一个人的人格在这一阶段被基本定型，如果儿童在这一阶段遭遇严重创伤，就会埋下患病的种子。弗洛伊德将人的意识部分比喻为“冰山露在水面上的一角”，而潜意识却是“冰山在水面以下的巨大部分”。潜意识虽不为人知，但很多时候在不知不觉地支配着人的行为。弗洛伊德还提出“童年阴影”理论，认为人的创伤经历，特别是童年的创伤经历会对人的一生都有重要影响。</p>
-　　<p>周星驰拍摄的《美人鱼》刚刚创下30多亿的中国影坛新纪录。记得《美人鱼》宣传时，电影宣传方喊出的口号是“我们欠星爷一张电影票”。的确，70后、80后的童年是伴随着星式喜剧成长起来的，星爷带给了我们无穷的笑声，虽然长大后，我们才看懂这些笑声后无力的悲凉。《美人鱼》上映前，对赌协议就签下20亿的保底收益，放眼中国影坛，也就周星驰有这个底气。</p>
-　　<p>余华曾说：“一个人的童年是决定他一生的，世界给我们的最初图像就是在这个时候出现，决定命运的最好时机就是童年。”所以，为了我们的孩子有一个健全的人格，家长们，请给孩子多一些陪伴，多一些温柔。活着不易，起码要有一个美好的童年回忆。</p>
+  <div *ngFor="let item of items; let i = index;">
+
+   <p *ngIf="i == idx" class="p1">
+     {{item.tiezi_content}}
+   </p>
+   
   </div>
   <div class="box3">
     <div><span>分享到</span></div>
@@ -37,6 +38,26 @@
     <div><i class="iconfont" style="font-size: 20px;color: #259b24;">&#xe607;</i></div>
     <div><i class="iconfont" style="font-size: 20px;color: #259b24;">&#xe60a;</i></div>
     <div><i class="iconfont" style="font-size: 20px;color: #259b24;">&#xe622;</i></div>
+  </div>
+
+  <div class="box4">
+    <p>评论</p>
+  </div>
+
+  <div class="box5">
+    <ul>
+      <li>
+        <div class="dis1">
+          <img src="../../assets/imgs/img3-3.jpg"/>
+        </div>
+        <div class="dis2">
+          <p>明天</p>
+          <p style="font-size: 10px;color: rgb(141, 138, 138);">5:09 PM</p>
+        </div>
+        <i class="iconfont" style="font-size: 16px;float:right;margin-top: 10px;margin-right: 10px;">&#xe606;</i>
+        <div class="dis3"><p>啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦</p></div>
+      </li>
+    </ul>
   </div>
 
 </ion-content>

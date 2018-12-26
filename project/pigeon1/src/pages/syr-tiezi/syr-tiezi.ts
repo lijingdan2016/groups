@@ -20,6 +20,9 @@ export class SyrTieziPage {
 
   neirong:string = "";
   item;
+  userid;
+  
+  
 
   private headers = new HttpHeaders({'Content-Type':'application/json'});
 
@@ -32,36 +35,38 @@ export class SyrTieziPage {
     }); */
   }
 
-
+  
   ionViewDidLoad() {
     console.log('ionViewDidLoad SyrTieziPage');
   }
+
+
  
   gosub1(content){
-
-
-    /* this.http.get('/tiezi/ttzz').subscribe(
-      (data:A)=>{
-        console.log(data.data);
-        this.item = data.data; 
-        console.dir(this.item[0].value);
-        
-        
-    },(err)=>{
-      console.log('失败:',err);
-    }) */
+    this.userid = localStorage.getItem('user_id');
 
     if( !content.value) {
       this.showToast('top','请输入内容！');
       return false;
     }
 
-    let data = {tzid:Math.round(Math.random()*10000),uid:'100',content:content.value};
+    var date = new Date();
+    var year = date.getFullYear();
+    var month = date.getMonth()+1;
+    var day = date.getDate();
+    var hour = date.getHours();
+    var minutes = date.getMinutes();
+
+    //var mydate=date.toLocaleString(); 
+    var mydate =year + '-' + month + '-' + day + ' ' + hour + ':' + minutes;
+
+
+    let data = {uid:this.userid,content:content.value};
 
     /* this.storage.remove("USER_INFO");
     this.storage.set("USER_INFO",JSON.stringify(data)); */
 
-    this.http.post('/tiezi/tz', {tzid:Math.round(Math.random()*10000),uid:'100',content:content.value} ,{
+    this.http.post('/tiezi/tz', {uid:this.userid,content:content.value,date:mydate} ,{
       headers : this.headers,
       observe : 'body',
       // params : {name: username.value, psw: password.value},
@@ -77,8 +82,7 @@ export class SyrTieziPage {
       // 界面跳转
       this.navCtrl.popToRoot();
     }
-
-      
+  
     //this.navCtrl.popToRoot();
   }
 
