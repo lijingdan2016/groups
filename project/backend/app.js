@@ -21,6 +21,7 @@ var heartRouter = require('./routes/heart');
 var userRouter = require('./routes/user');
 var backuserRouter = require('./routes/backuser');
 var index1Router = require('./routes/index1');
+var pinglunRouter = require('./routes/pinglun.js');
 
 var app = express();
 // view engine setup 摒弃视图
@@ -52,6 +53,7 @@ app.use('/heart',heartRouter);
 app.use('/user',userRouter);
 app.use('/backuser',backuserRouter);
 app.use('/index1',index1Router);
+app.use('/pinglun',pinglunRouter);
 // catch 404 and forward to error handler
 
 app.use(function(req, res, next) {
