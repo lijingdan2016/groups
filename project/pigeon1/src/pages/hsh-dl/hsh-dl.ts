@@ -23,11 +23,11 @@ export class HshDlPage {
 
   //userinfo;
   constructor(public toastCtrl: ToastController,public http:HttpClient,public navCtrl: NavController, public navParams: NavParams) {
-    //this.userinfo = navParams.data;
+    this.userinfo = navParams.data;
   }
 
   private headers = new HttpHeaders({'Content-Type':'application/json'});// 请求头
-
+  userinfo;
 
   sfxz(username: HTMLInputElement, password: HTMLInputElement){
     if (username.value.length == 0) {
@@ -37,6 +37,7 @@ export class HshDlPage {
     } else {
     
     let a={name:username.value,password:password.value};
+    
     this.http.post('/login/search',a,{
       headers : this.headers,
       observe : 'body',
@@ -45,6 +46,7 @@ export class HshDlPage {
   ).subscribe(data=>{
       console.log(data);
       
+      localStorage.setItem('user_id',a.name);//本地存储user_id
       if(JSON.stringify(data) === '[]' || data===null) {
         this.showToast('bottom','用户名或密码错误，请重新输入！');
         return ;

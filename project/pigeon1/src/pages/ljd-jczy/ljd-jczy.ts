@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { HttpClient,HttpHeaders } from '@angular/common/http';
 
 /**
  * Generated class for the LjdJczyPage page.
@@ -14,13 +15,26 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'ljd-jczy.html',
 })
 export class LjdJczyPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  private headers = new HttpHeaders({'Content-Type':'application/json'});
+  constructor(public http:HttpClient,public navCtrl: NavController, public navParams: NavParams) {
   }
-
+  homework;
   ionViewDidLoad() {
     console.log('ionViewDidLoad LjdJczyPage');
+    let user_id=localStorage.getItem('user_id');
+    console.log(user_id);
+    this.http.post('/task/parent',{user_id},{
+      headers : this.headers,
+      observe : 'body',
+      responseType : 'json'
+    }
+    ).subscribe(data=>{
+      console.log(data);
+      this.homework=data;
+  
+    })
   }
+}
   /* ionViewDidEnter(){
     let elements = document.querySelectorAll(".tabbar");
     if (elements != null) {
@@ -38,4 +52,4 @@ export class LjdJczyPage {
     }
 } */
 
-}
+
