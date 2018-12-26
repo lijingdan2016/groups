@@ -110,8 +110,11 @@ CREATE TABLE IF NOT EXISTS `task` (
   `user_id` int(11) NOT NULL,
   `task_content` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `task_data` datetime NOT NULL,
+  `class_id` int(11) DEFAULT NULL,
   KEY `FK_ta` (`user_id`),
-  CONSTRAINT `FK_ta` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`)
+  KEY `class_id` (`class_id`),
+  CONSTRAINT `FK_ta` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`),
+  CONSTRAINT `class_id` FOREIGN KEY (`class_id`) REFERENCES `class` (`class_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='任务表';
 
 -- 正在导出表  pigeon.task 的数据：~0 rows (大约)
@@ -132,7 +135,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='用户信息表';
 
--- 正在导出表  pigeon.user 的数据：~6 rows (大约)
+-- 正在导出表  pigeon.user 的数据：~7 rows (大约)
 DELETE FROM `user`;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
 INSERT INTO `user` (`user_id`, `password`, `email`, `identity`, `stu_id`, `nickname`, `signature`) VALUES
@@ -140,7 +143,8 @@ INSERT INTO `user` (`user_id`, `password`, `email`, `identity`, `stu_id`, `nickn
 	(2, '2', '2', '老师', 2, NULL, NULL),
 	(4, '4', '4', '家长', 3, NULL, NULL),
 	(12, '12', '12', '家长', 12, NULL, NULL),
-	(111, '111', '111', '家长', NULL, NULL, NULL),
+	(33, '33', '33', '家长', 33, NULL, NULL),
+	(44, '44', '44', '家长', 44, NULL, NULL),
 	(123, '123', '123', '家长', 123, NULL, NULL);
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 
