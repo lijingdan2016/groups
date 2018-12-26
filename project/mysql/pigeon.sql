@@ -1,6 +1,6 @@
 -- --------------------------------------------------------
--- 主机:                           192.168.152.144
--- 服务器版本:                        8.0.13 - MySQL Community Server - GPL
+-- 主机:                           192.168.226.144
+-- 服务器版本:                        5.5.60-MariaDB - MariaDB Server
 -- 服务器操作系统:                      Linux
 -- HeidiSQL 版本:                  9.5.0.5196
 -- --------------------------------------------------------
@@ -11,17 +11,11 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
-
--- 导出 pigeon 的数据库结构
-DROP DATABASE IF EXISTS `pigeon`;
-CREATE DATABASE IF NOT EXISTS `pigeon` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */;
-USE `pigeon`;
-
 -- 导出  表 pigeon.behave 结构
 DROP TABLE IF EXISTS `behave`;
 CREATE TABLE IF NOT EXISTS `behave` (
   `user_id` int(11) NOT NULL,
-  `behave_content` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `behave_content` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `stu_id` int(11) NOT NULL,
   KEY `FK_be` (`user_id`),
   CONSTRAINT `FK_be` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`)
@@ -37,7 +31,7 @@ DROP TABLE IF EXISTS `class`;
 CREATE TABLE IF NOT EXISTS `class` (
   `class_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
-  `class_name` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `class_name` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`class_id`),
   KEY `FK_cl` (`user_id`),
   CONSTRAINT `FK_cl` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`)
@@ -68,9 +62,9 @@ DELETE FROM `join_class`;
 DROP TABLE IF EXISTS `schedule`;
 CREATE TABLE IF NOT EXISTS `schedule` (
   `user_id` int(11) NOT NULL,
-  `school_name` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `school_name` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `stu_id` int(11) NOT NULL,
-  `stu_name` varchar(10) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `stu_name` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
   KEY `FK_sche` (`user_id`),
   CONSTRAINT `FK_sche` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='课程表';
@@ -104,17 +98,33 @@ DELETE FROM `score`;
 /*!40000 ALTER TABLE `score` DISABLE KEYS */;
 /*!40000 ALTER TABLE `score` ENABLE KEYS */;
 
+-- 导出  表 pigeon.shoucang 结构
+DROP TABLE IF EXISTS `shoucang`;
+CREATE TABLE IF NOT EXISTS `shoucang` (
+  `tiezi_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  PRIMARY KEY (`tiezi_id`,`user_id`),
+  KEY `FK_scu` (`user_id`),
+  CONSTRAINT `FK_sct` FOREIGN KEY (`tiezi_id`) REFERENCES `tiezi` (`tiezi_id`),
+  CONSTRAINT `FK_scu` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='收藏表';
+
+-- 正在导出表  pigeon.shoucang 的数据：~0 rows (大约)
+DELETE FROM `shoucang`;
+/*!40000 ALTER TABLE `shoucang` DISABLE KEYS */;
+/*!40000 ALTER TABLE `shoucang` ENABLE KEYS */;
+
 -- 导出  表 pigeon.task 结构
 DROP TABLE IF EXISTS `task`;
 CREATE TABLE IF NOT EXISTS `task` (
   `user_id` int(11) NOT NULL,
-  `task_content` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `task_content` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `task_data` datetime NOT NULL,
-  `class_id` int(11) DEFAULT NULL,
+  `class_id` int(11) NOT NULL,
   KEY `FK_ta` (`user_id`),
-  KEY `class_id` (`class_id`),
-  CONSTRAINT `FK_ta` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`),
-  CONSTRAINT `class_id` FOREIGN KEY (`class_id`) REFERENCES `class` (`class_id`)
+  KEY `FK_tc` (`class_id`),
+  CONSTRAINT `FK_tc` FOREIGN KEY (`class_id`) REFERENCES `class` (`class_id`),
+  CONSTRAINT `FK_ta` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='任务表';
 
 -- 正在导出表  pigeon.task 的数据：~0 rows (大约)
@@ -122,31 +132,57 @@ DELETE FROM `task`;
 /*!40000 ALTER TABLE `task` DISABLE KEYS */;
 /*!40000 ALTER TABLE `task` ENABLE KEYS */;
 
+-- 导出  表 pigeon.tiezi 结构
+DROP TABLE IF EXISTS `tiezi`;
+CREATE TABLE IF NOT EXISTS `tiezi` (
+  `tiezi_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `tiezi_content` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `tiezi_date` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `zan` int(11) DEFAULT NULL,
+  PRIMARY KEY (`tiezi_id`),
+  KEY `FK_tz` (`user_id`),
+  CONSTRAINT `FK_tz` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='帖子表';
+
+-- 正在导出表  pigeon.tiezi 的数据：~0 rows (大约)
+DELETE FROM `tiezi`;
+/*!40000 ALTER TABLE `tiezi` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tiezi` ENABLE KEYS */;
+
 -- 导出  表 pigeon.user 结构
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE IF NOT EXISTS `user` (
   `user_id` int(11) NOT NULL,
-  `password` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `email` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `identity` char(4) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `stu_id` int(11) DEFAULT NULL,
-  `nickname` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `signature` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `password` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `identity` char(4) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `stu_id` int(11) NOT NULL,
+  `nickname` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `signature` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='用户信息表';
 
--- 正在导出表  pigeon.user 的数据：~7 rows (大约)
+-- 正在导出表  pigeon.user 的数据：~0 rows (大约)
 DELETE FROM `user`;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` (`user_id`, `password`, `email`, `identity`, `stu_id`, `nickname`, `signature`) VALUES
-	(1, '1', '1', '老师', 1, NULL, NULL),
-	(2, '2', '2', '老师', 2, NULL, NULL),
-	(4, '4', '4', '家长', 3, NULL, NULL),
-	(12, '12', '12', '家长', 12, NULL, NULL),
-	(33, '33', '33', '家长', 33, NULL, NULL),
-	(44, '44', '44', '家长', 44, NULL, NULL),
-	(123, '123', '123', '家长', 123, NULL, NULL);
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
+
+-- 导出  表 pigeon.zan 结构
+DROP TABLE IF EXISTS `zan`;
+CREATE TABLE IF NOT EXISTS `zan` (
+  `tiezi_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  PRIMARY KEY (`tiezi_id`,`user_id`),
+  KEY `FK_zu` (`user_id`),
+  CONSTRAINT `FK_zt` FOREIGN KEY (`tiezi_id`) REFERENCES `tiezi` (`tiezi_id`),
+  CONSTRAINT `FK_zu` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='赞';
+
+-- 正在导出表  pigeon.zan 的数据：~0 rows (大约)
+DELETE FROM `zan`;
+/*!40000 ALTER TABLE `zan` DISABLE KEYS */;
+/*!40000 ALTER TABLE `zan` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
