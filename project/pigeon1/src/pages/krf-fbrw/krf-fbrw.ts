@@ -36,7 +36,7 @@ export class KrfFbrwPage {
       }
   }
   save(id:HTMLInputElement,date:HTMLInputElement,content: HTMLInputElement){
-    let userid=localStorage.getItem('username');    
+    let userid=localStorage.getItem('user_id');    
     console.log(userid);
     // let sign: string = student.value+'的平时表现为' + content.value ;
     // console.log(sign);
