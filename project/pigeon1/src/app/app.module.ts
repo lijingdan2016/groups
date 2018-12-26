@@ -84,6 +84,7 @@ import { Name2Page } from '../pages/name2/name2';
     WjDetail1Page,
     WjTouxiangPage,
     WjGxqmPage
+
     
   ],
   imports: [

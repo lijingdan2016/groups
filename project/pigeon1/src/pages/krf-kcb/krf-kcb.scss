@@ -5,10 +5,19 @@ page-krf-kcb{
             line-height:50px;
         }
     }
+    input{
+        margin-top:30px;
+        height:30px;
+        width:260px;
+    }
+    #cha{
+        width:60px;
+        height:30px;
+    }
     #container{
         width:360px;
         height:600px;
-        
+        margin-top:20px;
     
     h5{
         span{
@@ -31,6 +40,7 @@ page-krf-kcb{
         margin-left:110px;
     }
     }
+    
 }
 @font-face {
     font-family: 'iconfont';  /* project id 884911 */

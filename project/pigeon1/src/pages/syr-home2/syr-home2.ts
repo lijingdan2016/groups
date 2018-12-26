@@ -19,7 +19,7 @@ import { LjdPsbxPage } from '../ljd-psbx/ljd-psbx';
 export class SyrHome2Page {
 
   courses(){
-    this.navCtrl.push('KrfKcbPage',{id:5});
+    this.navCtrl.push('LjdKcbPage',{id:5});
   }
   gosub1(){
     this.navCtrl.push('SyrCoursePage',{id:1});

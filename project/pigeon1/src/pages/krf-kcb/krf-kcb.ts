@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { SyrHome2Page } from '../syr-home2/syr-home2';
-
+import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 /**
  * Generated class for the KrfKcbPage page.
  *
@@ -15,15 +14,44 @@ import { SyrHome2Page } from '../syr-home2/syr-home2';
   templateUrl: 'krf-kcb.html',
 })
 export class KrfKcbPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
-
-  ionViewDidLoad() {
+score;
+constructor(public toastCtrl:ToastController,public navCtrl: NavController, public navParams: NavParams,public http:HttpClient) {
+}
+private headers = new HttpHeaders({'Content-Type':'application/json'});
+ionViewDidLoad() {
     console.log('ionViewDidLoad KrfKcbPage');
-  }
+    
+    let c= localStorage.getItem('idname');
+    let a={userid:c}
+    console.log(a);
+    this.http.post('/index1/search',a,{
+      headers : this.headers,
+      observe : 'body',
+      responseType : 'json'
+    }
+  ).subscribe(data=>{
+      console.log(data);
+      this.score=data;
+  })
 
-  butt(){
-    this.navCtrl.push(SyrHome2Page);
-  }
+} 
+}
+
+
+
+
+
+
+class score{
+  MonAM:string;
+  MonPM:string;
+  TueAM:string;
+  TuePM:string;
+  WedAM:string;
+  WedPM:string;
+  ThurAM:string;
+  ThurPM:string;
+  FriAM:string;
+  FriPM:string;
+  stu_id:number;
 }
