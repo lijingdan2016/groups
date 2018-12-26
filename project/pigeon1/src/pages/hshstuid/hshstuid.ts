@@ -23,7 +23,7 @@ export class HshstuidPage {
   }
 
   pushId(studentid:HTMLInputElement){
-    this.navCtrl.push(Tabs2Page);
+    
     if (studentid.value.length == 0) {
       alert("请输入账号");
     }else{
@@ -37,6 +37,7 @@ export class HshstuidPage {
       console.log(data);
       
     })
+    this.navCtrl.push(Tabs2Page);
     }
     
 
