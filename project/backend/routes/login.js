@@ -62,7 +62,7 @@ router.post('/identity',function(req,res){
     })
   }
 })
-
+//选择家长身份
 router.post('/secondidentity',function(req,res){
   var account=req.body.name;
   var password=req.body.password;
@@ -70,6 +70,26 @@ router.post('/secondidentity',function(req,res){
   res.header('Access-Control-Allow-Origin','*');
   res.header('Content-Type','text/plain; charset="utf-8"');
   const sql = "update user set identity = '家长' where user_id = '"+account+"' and password= '"+password+"'";
+  if(account&&password){
+    db.query(sql,(err,result)=>{
+      if(err){
+        console.error("error",err);
+        process.exit
+      }else{
+        console.log(result);
+      }
+    })
+  }
+})
+
+//输入学号
+router.post('/stuid',function(req,res){
+  var account=req.body.name;
+  var password=req.body.password;
+  var studentId = req.body.stu_id;
+  res.header('Access-Control-Allow-Origin','*');
+  res.header('Content-Type','text/plain; charset="utf-8"');
+  const sql = "update user set stu_id = '"+studentId+"' where user_id = '"+account+"' and password= '"+password+"'";
   if(account&&password){
     db.query(sql,(err,result)=>{
       if(err){

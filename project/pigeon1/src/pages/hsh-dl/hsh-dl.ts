@@ -5,6 +5,7 @@ import { HshSfxzPage } from '../hsh-sfxz/hsh-sfxz';
 import { HttpClient , HttpHeaders } from'@angular/common/http'
 import { TabsPage } from '../tabs/tabs';
 import { Tabs2Page } from '../tabs2/tabs2';
+import { ModalController } from 'ionic-angular';
 // import { IdentityPage } from '../identity/identity';
 
 /**
@@ -22,7 +23,7 @@ import { Tabs2Page } from '../tabs2/tabs2';
 export class HshDlPage {
 
   //userinfo;
-  constructor(public toastCtrl: ToastController,public http:HttpClient,public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public modalCtrl: ModalController,public toastCtrl: ToastController,public http:HttpClient,public navCtrl: NavController, public navParams: NavParams) {
     this.userinfo = navParams.data;
   }
 
@@ -37,7 +38,8 @@ export class HshDlPage {
     } else {
     
     let a={name:username.value,password:password.value};
-    
+    let profileModal = this.modalCtrl.create(HshSfxzPage, a);
+    profileModal.present();
     this.http.post('/login/search',a,{
       headers : this.headers,
       observe : 'body',

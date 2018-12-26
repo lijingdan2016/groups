@@ -42,6 +42,7 @@ import { LjhqrjrPage } from '../pages/ljhqrjr/ljhqrjr';
 import { LjhtjpyPage } from '../pages/ljhtjpy/ljhtjpy';
 import { LjhcjcgPage } from '../pages/ljhcjcg/ljhcjcg';
 import { Name2Page } from '../pages/name2/name2';
+import { HshstuidPage } from '../pages/hshstuid/hshstuid';
 //import { KrfKcbPage } from '../pages/krf-kcb/krf-kcb';
 
 
@@ -59,6 +60,7 @@ import { Name2Page } from '../pages/name2/name2';
     HshDlPage,
     HshLityPage,
     HshSfxzPage,
+    HshstuidPage,
     WjZcPage,
    // KrfKcbPage,
     KrfFbrwPage,
@@ -109,6 +111,7 @@ import { Name2Page } from '../pages/name2/name2';
     WjUpdatePage,
     WjSettingPage,
     HshDlPage,
+    HshstuidPage,
     WjZcPage,
    // KrfKcbPage,
     KrfFbrwPage,
