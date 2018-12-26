@@ -11,6 +11,21 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
+-- 导出  表 pigeon.admin 结构
+DROP TABLE IF EXISTS `admin`;
+CREATE TABLE IF NOT EXISTS `admin` (
+  `account` int(11) NOT NULL,
+  `name` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `duties` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `password` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`account`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='管理员';
+
+-- 正在导出表  pigeon.admin 的数据：~0 rows (大约)
+DELETE FROM `admin`;
+/*!40000 ALTER TABLE `admin` DISABLE KEYS */;
+/*!40000 ALTER TABLE `admin` ENABLE KEYS */;
+
 -- 导出  表 pigeon.behave 结构
 DROP TABLE IF EXISTS `behave`;
 CREATE TABLE IF NOT EXISTS `behave` (
