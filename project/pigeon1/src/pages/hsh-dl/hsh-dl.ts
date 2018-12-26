@@ -38,8 +38,7 @@ export class HshDlPage {
     } else {
     
     let a={name:username.value,password:password.value};
-    let profileModal = this.modalCtrl.create(HshSfxzPage, a);
-    profileModal.present();
+    
     this.http.post('/login/search',a,{
       headers : this.headers,
       observe : 'body',
@@ -63,7 +62,8 @@ export class HshDlPage {
         this.navCtrl.push(TabsPage);
       
       }else{
-        this.navCtrl.push(HshSfxzPage,a);
+        let profileModal = this.modalCtrl.create(HshSfxzPage, a);
+        profileModal.present();
       }
     });
     
