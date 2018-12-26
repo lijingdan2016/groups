@@ -100,6 +100,24 @@ router.post('/myclass',function(req,res){
 
 })
 
+router.post('/parentclass',function(req,res){
+	 var user_id=req.body.user_id;
+	 res.header('Access-Control-Allow-Origin','*');
+         res.header('Content-Type','text/plain; charset="utf-8"')
+	 const sql='select * from (join_class,user,class) where user.user_id=join_class.user_id and class.class_id=join_class.class_id and user.user_id=?';
+        db.query(sql,[user_id],(err,result)=>{
+                if(err){
+                        console.log('Error:',err);
+                        return ;
+                       // process.exit();
+                }
+                console.log(result);
+                res.send(result);
+        })
+
+
+})
+
 
 //加入班级后显示他加入过的班级
 router.post('/myjoin_class',function(req,res){
