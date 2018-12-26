@@ -17,12 +17,13 @@
       refreshingText="Refreshing..."></ion-refresher-content>
     </ion-refresher>
     <div style="text-align:center;background-color: #AAAAAA;width:40%;margin:0 auto;">
-      6月26日 下午17:28
+      
     </div>
     <div *ngFor="let item of homework" style="font-weight:bolder;line-height:4px;border:2px solid green;width:85%;height:200px;margin:10px auto;">
       <img src="assets/imgs/image1.jpg"/>
+      
       <p text-center>{{item.task_content}}</p>
-      <p style="margin-left:98px;">{{item.task_data}}</p>
+      <p style="margin-left:49px;">截至时间：{{item.task_data}}</p>
     </div>
     <div style="text-align:center;background-color: #AAAAAA;width:40%;margin:0 auto;">
         

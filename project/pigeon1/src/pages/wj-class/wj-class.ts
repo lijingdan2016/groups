@@ -34,13 +34,22 @@ export class WjClassPage {
       console.log(data);
       this.myclass=data;
     })
+
+
+    this.http.post('/class/parentclass',a,{
+      headers : this.headers,
+      observe : 'body',
+      responseType : 'json'
+    }
+  ).subscribe(data=>{
+      console.log(data);
+      this.myclass=data;
+    })
+  
   }
+   
   
 
 }
 
-class myclass{
-    class_id:number;
-    user_id:number;
-    class_name:string;
-}
+
