@@ -69,7 +69,9 @@ export class SyrSqPage {
           this.fun();
       })
 
-      this.http.post('/shequ/sq', {} ,{
+      this.uid = localStorage.getItem('user_id');
+
+      this.http.post('/shequ/sq', {uid:this.uid} ,{
         headers : this.headers,
         observe : 'body',
         
@@ -90,13 +92,48 @@ export class SyrSqPage {
 
   isClick(i){
     this.isActive = i;
+    if(i = 1){
+      this.http.post('/shequ/sqtuijian', {} ,{
+        headers : this.headers,
+        observe : 'body',
+        
+        responseType : 'json'
+      }).subscribe(
+        (data:A)=>{
+          console.log(data.data);
+          this.tjitems = data.data; 
+          this.len = this.tjitems.length;
+          console.dir(this);
+
+          this.fun();
+      })
+    }
+
+    if(i = 2){
+      this.uid = localStorage.getItem('user_id');
+
+      this.http.post('/shequ/sq', {uid:this.uid} ,{
+        headers : this.headers,
+        observe : 'body',
+        
+        responseType : 'json'
+      }).subscribe(
+        (data:A)=>{
+          console.log(data.data);
+          this.items = data.data; 
+          this.len = this.items.length;
+          console.dir(this);
+
+          this.fun();
+      })
+    }
   }
 
   ionViewDidLoad() {
       console.log('ionViewDidLoad SyrSqPage');
       this.freshen();
       
-    }
+  }
   
   
 
