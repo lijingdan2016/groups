@@ -1,4 +1,4 @@
-/*var express = require('express');
+var express = require('express');
 var router = express.Router();
 const db = require('../model/database');
 
@@ -22,4 +22,4 @@ db.query(sql,(err,result)=>{
 
 
 
-module.exports = router;*/
+module.exports = router;
