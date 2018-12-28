@@ -33,18 +33,21 @@ export class WjClassPage {
   ).subscribe(data=>{
       console.log(data);
       this.myclass=data;
+      if(JSON.stringify(data)==='[]'){
+      this.http.post('/class/parentclass',a,{
+      headers : this.headers,
+      observe : 'body',
+      responseType : 'json'
+    }
+    ).subscribe(data=>{
+      console.log(data);
+      this.myclass=data;
+    })
+      }
     })
 
 
-  //   this.http.post('/class/parentclass',a,{
-  //     headers : this.headers,
-  //     observe : 'body',
-  //     responseType : 'json'
-  //   }
-  // ).subscribe(data=>{
-  //     console.log(data);
-  //     this.myclass=data;
-  //   })
+  
   
   }
    
