@@ -61,7 +61,8 @@ export class SyrTieziPage {
     var mydate =year + '-' + month + '-' + day + ' ' + hour + ':' + minutes;
 
 
-    let data = {uid:this.userid,content:content.value};
+    let data = {uid:this.userid,content:content.value,date:mydate};
+    console.log(data);
 
     /* this.storage.remove("USER_INFO");
     this.storage.set("USER_INFO",JSON.stringify(data)); */

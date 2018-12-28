@@ -40,7 +40,7 @@ export class SyrEssayPage {
       responseType : 'json'
     }).subscribe(
       (data:A)=>{
-        this.items = data.data; 
+        this.items = data.data;
 
     })
 
@@ -53,7 +53,7 @@ export class SyrEssayPage {
     }).subscribe(
       (data:A)=>{
         console.log(data.data);
-        this.nritems = data.data; 
+        this.nritems = data.data;
         console.log(this.nritems);
         //console.dir(this);
     })
@@ -94,7 +94,7 @@ export class SyrEssayPage {
 
   fasong(content){
 
-      this.userid = localStorage.getItem('userid');
+      this.userid = localStorage.getItem('user_id');
       this.idx = localStorage.getItem('index');
 
   

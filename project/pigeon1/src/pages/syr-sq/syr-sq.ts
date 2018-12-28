@@ -27,6 +27,19 @@ export class SyrSqPage {
   isActive = 1;
   userid:number;
   uid;
+  tzid;
+
+  private headers = new HttpHeaders({'Content-Type':'application/json'});
+
+  constructor(public navCtrl: NavController, 
+              public navParams: NavParams,
+              public storage: Storage,
+              private http: HttpClient, 
+              public toastCtrl: ToastController,
+              ) {
+
+      
+  }
 
   fun(){
     this.count = [];
@@ -52,12 +65,14 @@ export class SyrSqPage {
 } */
 
   freshen(){
-    
+
+    this.uid = localStorage.getItem('user_id');
+   
 
       this.http.post('/shequ/sqtuijian', {} ,{
         headers : this.headers,
         observe : 'body',
-        
+        // params : {name: username.value, psw: password.value},
         responseType : 'json'
       }).subscribe(
         (data:A)=>{
@@ -69,12 +84,10 @@ export class SyrSqPage {
           this.fun();
       })
 
-      this.uid = localStorage.getItem('user_id');
-
       this.http.post('/shequ/sq', {uid:this.uid} ,{
         headers : this.headers,
         observe : 'body',
-        
+        // params : {name: username.value, psw: password.value},
         responseType : 'json'
       }).subscribe(
         (data:A)=>{
@@ -92,47 +105,12 @@ export class SyrSqPage {
 
   isClick(i){
     this.isActive = i;
-    if(i = 1){
-      this.http.post('/shequ/sqtuijian', {} ,{
-        headers : this.headers,
-        observe : 'body',
-        
-        responseType : 'json'
-      }).subscribe(
-        (data:A)=>{
-          console.log(data.data);
-          this.tjitems = data.data; 
-          this.len = this.tjitems.length;
-          console.dir(this);
-
-          this.fun();
-      })
-    }
-
-    if(i = 2){
-      this.uid = localStorage.getItem('user_id');
-
-      this.http.post('/shequ/sq', {uid:this.uid} ,{
-        headers : this.headers,
-        observe : 'body',
-        
-        responseType : 'json'
-      }).subscribe(
-        (data:A)=>{
-          console.log(data.data);
-          this.items = data.data; 
-          this.len = this.items.length;
-          console.dir(this);
-
-          this.fun();
-      })
-    }
+    this.freshen();
   }
 
   ionViewDidLoad() {
       console.log('ionViewDidLoad SyrSqPage');
       this.freshen();
-      
   }
   
   
@@ -142,26 +120,25 @@ export class SyrSqPage {
   }
 
   gosub1(idex){
+    
+    this.tzid = this.items[idex].tiezi_id;
+    console.log(this.tzid);
     this.navCtrl.push('SyrEssayPage',{id:3});
-    localStorage.setItem('index', idex);
+
+   
+    localStorage.setItem('index', this.tzid);
   }
 
   gosub4(idex){
+
+    this.tzid = this.tjitems[idex].tiezi_id;
+    console.log(this.tzid);
+
     this.navCtrl.push('SyrEssayPage',{id:3});
-    localStorage.setItem('index', idex);
+    localStorage.setItem('index', this.tzid);
   }
 
-  private headers = new HttpHeaders({'Content-Type':'application/json'});
-
-  constructor(public navCtrl: NavController, 
-              public navParams: NavParams,
-              public storage: Storage,
-              private http: HttpClient, 
-              public toastCtrl: ToastController,
-              ) {
-
-      
-  }
+  
   
 
   gosub2(idx){
