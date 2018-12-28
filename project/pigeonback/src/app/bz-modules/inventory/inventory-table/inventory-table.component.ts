@@ -7,6 +7,8 @@ import { MessageService } from 'primeng/components/common/messageservice';
 import { WarehouseService } from "../../../common/services/warehouse.service";
 import { CategoryService } from "../../../common/services/category.service";
 import { InventoryService } from '../../../common/services/inventory.service';
+import { HttpClient,HttpHeaders } from '@angular/common/http';
+
 
 @Component({
   selector: 'inventory-table',
@@ -14,6 +16,7 @@ import { InventoryService } from '../../../common/services/inventory.service';
   styleUrls: ['./inventory-table.component.scss']
 })
 export class InventoryTableComponent implements OnInit {
+  user;
   //仓库
   public warehouses: SelectItem[];
   //品类
@@ -29,6 +32,7 @@ export class InventoryTableComponent implements OnInit {
   public selectedCategory;
 
   constructor(public router: Router,
+    public http:HttpClient,
     public activeRoute: ActivatedRoute,
     private confirmationService: ConfirmationService,
     private messageService: MessageService,
@@ -39,6 +43,12 @@ export class InventoryTableComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.http.get('/user/data').subscribe(data=>{
+      this.user=data;
+      console.log(data);
+      console.log(this.user)
+    })
+
     this.startDate = new Date();
     this.endDate = new Date();
 
@@ -55,6 +65,15 @@ export class InventoryTableComponent implements OnInit {
     });
   }
 
+  del(item:Object){
+    let a=item;
+    this.http.post('/user/del',{a}).subscribe(
+      data=>{
+          console.log(data);
+      })
+  }
+
+
   public editItem(item) {
     console.log(item);
     this.router.navigateByUrl('/workspace/inventory/inventory-item-detail/item-id/1111');
@@ -70,4 +89,11 @@ export class InventoryTableComponent implements OnInit {
       }
     });
   }
+}
+class user{
+  user_id:number;
+  password:string;
+  email:string;
+  identity:string;
+  stu_id:number
 }
