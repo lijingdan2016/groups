@@ -1,17 +1,18 @@
 .content{
     float: left;
-    width: 75%;
-}
-tr{
     width: 100%;
 }
+tr{
+    width: 200px;
+}
 .biaotou{
-    background-color: rgba(69, 109, 224, 0.4);
+    background-color: white;
     border: 1px solid #BBBBBB;
-    width: 10%;
-    height: 40px;
+    width: 200px;
+    height: 60px;
     font-size: 16px;
     font-weight: normal;
+    text-align:center;
 }
 td{
     text-align: center;

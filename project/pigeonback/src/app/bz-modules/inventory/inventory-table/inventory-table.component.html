@@ -57,6 +57,36 @@
 -->
 
 <div class="content">
+
+        <p-confirmDialog header="{{'confirm' | translate}}" icon="fa fa-question-circle" #cd>
+                <p-footer>
+                    <button type="button" icon="fa-check" class="btn btn-danger" (click)="cd.accept()">{{'accept' | translate}}</button>
+                    <button type="button" icon="fa-close" class="btn btn-primary" (click)="cd.reject()">{{'reject' | translate}}</button>
+                </p-footer>
+            </p-confirmDialog>
+        
+            <h3 class="header-no-margin">{{'inventoryControl.inventoryControl' | translate}}</h3>
+            <form class="form-inline top-filter-form" role="form">
+                <div class="form-group">
+                    <label>{{'inventoryControl.selectedInventory' | translate}}：</label>
+                    <p-dropdown [options]="warehouses" optionLabel="name" [(ngModel)]="selectedInbentory" name="warehouse"></p-dropdown>
+                </div>
+                <div class="form-group">
+                    <label>{{'inventoryControl.selectedCategory' | translate}}：</label>
+                    <p-dropdown [options]="categories" optionLabel="name" [(ngModel)]="selectedCategory" name="category"></p-dropdown>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" class="form-control">
+                        <span class="input-group-btn">
+                            <button class="btn btn-primary" type="button">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </form>
+
     <table>
       <tr>
         <th class="biaotou">用户id</th>
