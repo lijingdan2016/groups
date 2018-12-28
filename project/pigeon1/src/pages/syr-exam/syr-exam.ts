@@ -19,7 +19,7 @@ export class SyrExamPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad SyrExamPage');
+    // console.log('ionViewDidLoad SyrExamPage');
   }
 
 }

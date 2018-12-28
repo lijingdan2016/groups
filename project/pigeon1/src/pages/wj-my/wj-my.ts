@@ -6,25 +6,26 @@ import { WjUpdatePage } from '../wj-update/wj-update';
 import { WjSettingPage } from '../wj-setting/wj-setting';
 import { WjGxqmPage } from '../wj-gxqm/wj-gxqm';
 import { WjTouxiangPage } from '../wj-touxiang/wj-touxiang';
-
-/**
- * Generated class for the WjMyPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
+import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { Events } from 'ionic-angular';  
 @IonicPage()
 @Component({
   selector: 'page-wj-my',
   templateUrl: 'wj-my.html',
 })
 export class WjMyPage {
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  message=new message;
+  signa:Object;
+  private headers = new HttpHeaders({'Content-Type':'application/json'});
+
+  constructor(public navCtrl: NavController, public navParams: NavParams,public http:HttpClient,public events: Events){
+   
   }
   ionViewDidLoad() {
-    console.log('ionViewDidLoad WjMyPage');
+    this.signout();
+    this.ding();
   }
+
   push1(){
     this.navCtrl.push(WjClassPage);
   }
@@ -43,6 +44,35 @@ export class WjMyPage {
   tx(){
     this.navCtrl.push(WjTouxiangPage);
   }
+  signout(){
+    let userid=localStorage.getItem('user_id');  
+    // let nc1=localStorage.getItem('nc');  
+    // let gxqm1=localStorage.getItem('gxqm');
+    // console.log(userid);
+    let a={uid:userid};
+    this.http.post('/gxqm/data',a,{
+      headers : this.headers,
+      observe : 'body',
+      responseType : 'json'
+    }
+    ).subscribe(data=>{
+      console.log(data);
+     
+      this.signa=data;
+    
+    });
+  }
+  ding(){
+    this.events.subscribe('nc', (nc) => {
+      this.message.mc=nc;
+    });
+    this.events.subscribe('gxqm', (gxqm) => {
+      this.message.qm=gxqm;
+    });
+  }
 
-
+}
+class message{
+  public mc:string;  //名称
+  public qm:string;   //签名
 }

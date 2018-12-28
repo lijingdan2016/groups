@@ -19,7 +19,7 @@ export class SyrRecommendPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad SyrRecommendPage');
+    // console.log('ionViewDidLoad SyrRecommendPage');
   }
 
 }

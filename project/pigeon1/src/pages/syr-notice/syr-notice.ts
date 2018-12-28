@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ViewController, Events } from 'ionic-angular';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 /**
  * Generated class for the SyrNoticePage page.
@@ -14,18 +14,20 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
   templateUrl: 'syr-notice.html',
 })
 export class SyrNoticePage {
+  myEvent;
   private headers = new HttpHeaders({'Content-Type':'application/json'});
-  constructor(public navCtrl: NavController, public navParams: NavParams,public http:HttpClient,public viewCtrl:ViewController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public http:HttpClient,public viewCtrl:ViewController,public events: Events) {
   }
-
+  
   ionViewDidLoad() {
-    console.log('ionViewDidLoad SyrNoticePage');
   }
   save(student:HTMLInputElement,content: HTMLInputElement){
+    let userid=localStorage.getItem('user_id');    
+    console.log(userid);
     let sign: string = student.value+'的平时表现为' + content.value ;
-    console.log(sign);
+    // console.log(sign);
     // this.navCtrl.push(sign);
-    let a={stu:student.value,text:content.value};
+    let a={uid:userid,stu:student.value,text:content.value};
     this.http.post('/teacher_behave/registe',a,{
       headers : this.headers,
       observe : 'body',

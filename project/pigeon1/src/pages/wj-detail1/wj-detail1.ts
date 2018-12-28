@@ -19,7 +19,7 @@ export class WjDetail1Page {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad WjDetail1Page');
+    // console.log('ionViewDidLoad WjDetail1Page');
   }
 
 }

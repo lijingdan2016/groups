@@ -84,7 +84,7 @@ export class WjClassdetailPage {
     this.viewCtrl.dismiss();
   }
   ionViewDidLoad() {
-    console.log('ionViewDidLoad WjClassdetailPage');
+    // console.log('ionViewDidLoad WjClassdetailPage');
   }
 
 }

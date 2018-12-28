@@ -3,13 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HshDlPage } from '../hsh-dl/hsh-dl';
 import { WjTouxiangPage } from '../wj-touxiang/wj-touxiang';
 import { WjGxqmPage } from '../wj-gxqm/wj-gxqm';
-
-/**
- * Generated class for the WjSettingPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 
 @IonicPage()
 @Component({
@@ -17,12 +11,14 @@ import { WjGxqmPage } from '../wj-gxqm/wj-gxqm';
   templateUrl: 'wj-setting.html',
 })
 export class WjSettingPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  signa:Object;
+  private headers = new HttpHeaders({'Content-Type':'application/json'});
+  constructor(public navCtrl: NavController, public navParams: NavParams,public http:HttpClient) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad WjSettingPage');
+    // console.log('ionViewDidLoad WjSettingPage');
+    this.signout();
   }
   exit(){
     this.navCtrl.push(HshDlPage);
@@ -32,5 +28,19 @@ export class WjSettingPage {
   }
   gx(){
     this.navCtrl.push(WjGxqmPage);
+  }
+  signout(){
+    let userid=localStorage.getItem('user_id');    
+    // console.log(userid);
+    let a={uid:userid};
+    this.http.post('/gxqm/data',a,{
+      headers : this.headers,
+      observe : 'body',
+      responseType : 'json'
+    }
+    ).subscribe(data=>{
+      // console.log(data);
+      this.signa=data;
+    });
   }
 }

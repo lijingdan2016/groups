@@ -19,7 +19,7 @@ export class TxlPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad TxlPage');
+    // console.log('ionViewDidLoad TxlPage');
   }
 
 }

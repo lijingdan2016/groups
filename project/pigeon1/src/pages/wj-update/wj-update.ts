@@ -19,7 +19,7 @@ export class WjUpdatePage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad WjUpdatePage');
+    // console.log('ionViewDidLoad WjUpdatePage');
   }
   showAlert(){
     const alert = this.alertCtrl.create({

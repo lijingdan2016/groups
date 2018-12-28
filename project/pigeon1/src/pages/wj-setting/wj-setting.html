@@ -14,10 +14,10 @@
           <span class="tou">我的头像</span><img src="../../assets/imgs/33.jpg">
         </button>  
         <button ion-item>
-          账号信息<p>234566781</p>
+          账号信息<p *ngFor="let item of signa">{{item.user_id}}</p>
         </button>
         <button ion-item (click)="gx();">
-          个性签名<p>一切为了孩子，思思最棒!!!</p>
+          个性签名<p *ngFor="let item of signa">{{item.signature}}</p>
         </button>
         <ion-item>
           <ion-label color='dark'>主题颜色</ion-label>

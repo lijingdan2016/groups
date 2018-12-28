@@ -27,7 +27,7 @@ export class Tabs2Page {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad Tabs2Page');
+    //console.log('ionViewDidLoad Tabs2Page');
   }
 
 }

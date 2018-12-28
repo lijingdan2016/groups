@@ -21,7 +21,7 @@ export class WjClassPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad WjClassPage');
+    // console.log('ionViewDidLoad WjClassPage');
     this.user_id=localStorage.getItem('user_id');
     let a={user_id:this.user_id}
 
@@ -31,23 +31,20 @@ export class WjClassPage {
       responseType : 'json'
     }
   ).subscribe(data=>{
-      console.log(data);
+      // console.log(data);
       this.myclass=data;
-      if(JSON.stringify(data)==='[]'){
-      this.http.post('/class/parentclass',a,{
-      headers : this.headers,
-      observe : 'body',
-      responseType : 'json'
-    }
-    ).subscribe(data=>{
-      console.log(data);
-      this.myclass=data;
-    })
-      }
     })
 
 
-  
+  //   this.http.post('/class/parentclass',a,{
+  //     headers : this.headers,
+  //     observe : 'body',
+  //     responseType : 'json'
+  //   }
+  // ).subscribe(data=>{
+  //     console.log(data);
+  //     this.myclass=data;
+  //   })
   
   }
    

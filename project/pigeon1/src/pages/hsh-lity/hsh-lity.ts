@@ -23,7 +23,7 @@ export class HshLityPage {
     this.navCtrl.setRoot(HshDlPage);
   }
   ionViewDidLoad() {
-    console.log('ionViewDidLoad HshLityPage');
+    // console.log('ionViewDidLoad HshLityPage');
   }
 
 }

@@ -32,7 +32,7 @@ export class WjZcPage {
       let userinfo: string = '用户名：' + username.value + '密码：' + password.value + '邮箱：' + email.value ;
       // alert(userinfo);
       
-      console.log(userinfo);
+      // console.log(userinfo);
       this.navCtrl.push(HshDlPage,userinfo);
       // this.http.post('/users',userinfo).subscribe(userinfo=>{
       //   console.log(userinfo);
@@ -48,7 +48,7 @@ export class WjZcPage {
       responseType : 'json'
     }
   ).subscribe(data=>{
-      console.log(data);
+      // console.log(data);
     
     })
     
@@ -56,7 +56,7 @@ export class WjZcPage {
 
  
   ionViewDidLoad() {
-    console.log('ionViewDidLoad WjZcPage');
+    // console.log('ionViewDidLoad WjZcPage');
     
   }
   fanhui(){

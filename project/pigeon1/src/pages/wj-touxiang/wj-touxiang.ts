@@ -13,7 +13,7 @@ export class WjTouxiangPage {
 
   ionViewDidLoad() {
     // var $scope;
-    console.log('ionViewDidLoad WjTouxiangPage');
+    // console.log('ionViewDidLoad WjTouxiangPage');
 //     // 添加图片
 //     $scope.addPhoto = function () {
 //       this.actionSheetCtrl.show({

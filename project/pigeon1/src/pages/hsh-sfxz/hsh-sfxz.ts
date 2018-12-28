@@ -25,14 +25,14 @@ export class HshSfxzPage {
   }
 
   goToHome1(){
-    console.log(this.a);
+    // console.log(this.a);
     this.navCtrl.push(TabsPage);
     this.http.post('/login/identity',this.a,{
       headers : this.headers,
       observe : 'body',
       responseType : 'json'
     }).subscribe(data=>{
-      console.log(data);
+      // console.log(data);
       
     })
       
@@ -48,7 +48,7 @@ export class HshSfxzPage {
       observe : 'body',
       responseType : 'json'
     }).subscribe(data=>{
-      console.log(data);
+      // console.log(data);
       
     })
   }
@@ -56,8 +56,8 @@ export class HshSfxzPage {
 
   ionViewDidLoad() {
     let modelData: string = '用户名：' + this.navParams.get('name')+'密码：'+ this.navParams.get('password');
-    console.log(modelData);
-    console.log('ionViewDidLoad HshSfxzPage');
+    // console.log(modelData);
+    // console.log('ionViewDidLoad HshSfxzPage');
   }
 
 }

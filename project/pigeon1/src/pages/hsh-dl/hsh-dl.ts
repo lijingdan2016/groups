@@ -45,7 +45,7 @@ export class HshDlPage {
       responseType : 'json'
     }
   ).subscribe(data=>{
-      console.log(data);
+      // console.log(data);
       
       localStorage.setItem('user_id',a.name);//本地存储user_id
       if(JSON.stringify(data) === '[]' || data===null) {
@@ -81,7 +81,7 @@ export class HshDlPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
+    // console.log('ionViewDidLoad LoginPage');
   }
   zuce(){
     this.navCtrl.push(WjZcPage);

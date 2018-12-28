@@ -19,7 +19,7 @@ export class WjAqszPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad WjAqszPage');
+    // console.log('ionViewDidLoad WjAqszPage');
   }
 
 }

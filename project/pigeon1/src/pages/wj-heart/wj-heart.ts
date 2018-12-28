@@ -33,7 +33,7 @@ export class WjHeartPage {
         headers : this.headers,
         observe : 'body',
       }).subscribe(data => {
-        console.log(data);
+        // console.log(data);
         this.message=data;
       });
     

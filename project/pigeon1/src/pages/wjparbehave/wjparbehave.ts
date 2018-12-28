@@ -19,7 +19,7 @@ export class WjparbehavePage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad WjparbehavePage');
+    // console.log('ionViewDidLoad WjparbehavePage');
   }
 
 }

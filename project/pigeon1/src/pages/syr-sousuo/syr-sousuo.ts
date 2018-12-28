@@ -19,7 +19,7 @@ export class SyrSousuoPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad SyrSousuoPage');
+    // console.log('ionViewDidLoad SyrSousuoPage');
   }
 
 }

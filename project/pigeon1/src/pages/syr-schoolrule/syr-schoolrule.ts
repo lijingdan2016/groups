@@ -19,7 +19,7 @@ export class SyrSchoolrulePage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad SyrSchoolrulePage');
+    // console.log('ionViewDidLoad SyrSchoolrulePage');
   }
 
 }
