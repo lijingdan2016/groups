@@ -22,6 +22,7 @@ var userRouter = require('./routes/user');
 var backuserRouter = require('./routes/backuser');
 var index1Router = require('./routes/index1');
 var pinglunRouter = require('./routes/pinglun.js');
+var index2Router = require('./routes/index2.js');
 
 var app = express();
 // view engine setup 摒弃视图
@@ -54,6 +55,7 @@ app.use('/user',userRouter);
 app.use('/backuser',backuserRouter);
 app.use('/index1',index1Router);
 app.use('/pinglun',pinglunRouter);
+app.use('/index2',index2Router);
 // catch 404 and forward to error handler
 
 app.use(function(req, res, next) {
