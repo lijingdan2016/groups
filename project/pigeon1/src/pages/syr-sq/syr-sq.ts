@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams ,ToastController} from 'ionic-angular';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Storage } from '@ionic/storage';
+import { SyrTieziPage } from '../syr-tiezi/syr-tiezi';
+import { SyrSousuoPage } from '../syr-sousuo/syr-sousuo';
+import { SyrEssayPage } from '../syr-essay/syr-essay';
 
 
 /**
@@ -116,14 +119,14 @@ export class SyrSqPage {
   
 
   gosub(){
-    this.navCtrl.push('SyrSousuoPage',{id:2});
+    this.navCtrl.push(SyrSousuoPage,{id:2});
   }
 
   gosub1(idex){
     
     this.tzid = this.items[idex].tiezi_id;
     console.log(this.tzid);
-    this.navCtrl.push('SyrEssayPage',{id:3});
+    this.navCtrl.push(SyrEssayPage,{id:3});
 
    
     localStorage.setItem('index', this.tzid);
@@ -134,7 +137,7 @@ export class SyrSqPage {
     this.tzid = this.tjitems[idex].tiezi_id;
     console.log(this.tzid);
 
-    this.navCtrl.push('SyrEssayPage',{id:3});
+    this.navCtrl.push(SyrEssayPage,{id:3});
     localStorage.setItem('index', this.tzid);
   }
 
@@ -272,7 +275,7 @@ export class SyrSqPage {
   
 
   send(){
-    this.navCtrl.push('SyrTieziPage',{id:1});
+    this.navCtrl.push(SyrTieziPage,{id:1});
   } 
 
   

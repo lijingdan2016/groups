@@ -23,7 +23,7 @@ export class HshstuidPage {
   }
 
   pushId(studentid:HTMLInputElement){
-    
+    localStorage.setItem('stu_id',studentid.value);
     if (studentid.value.length == 0) {
       alert("请输入账号");
     }else{

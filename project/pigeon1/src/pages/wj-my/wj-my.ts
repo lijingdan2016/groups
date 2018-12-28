@@ -14,7 +14,7 @@ import { Events } from 'ionic-angular';
   templateUrl: 'wj-my.html',
 })
 export class WjMyPage {
-  message=new message;
+  // message=new message;
   signa:Object;
   private headers = new HttpHeaders({'Content-Type':'application/json'});
 
@@ -23,7 +23,7 @@ export class WjMyPage {
   }
   ionViewDidLoad() {
     this.signout();
-    this.ding();
+    // this.ding();
   }
 
   push1(){
@@ -62,17 +62,17 @@ export class WjMyPage {
     
     });
   }
-  ding(){
-    this.events.subscribe('nc', (nc) => {
-      this.message.mc=nc;
-    });
-    this.events.subscribe('gxqm', (gxqm) => {
-      this.message.qm=gxqm;
-    });
-  }
+  // ding(){
+  //   this.events.subscribe('nc', (nc) => {
+  //     this.message.mc=nc;
+  //   });
+  //   this.events.subscribe('gxqm', (gxqm) => {
+  //     this.message.qm=gxqm;
+  //   });
+  // }
 
 }
-class message{
-  public mc:string;  //名称
-  public qm:string;   //签名
-}
+// class message{
+//   public mc:string;  //名称
+//   public qm:string;   //签名
+// }

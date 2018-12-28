@@ -1,8 +1,8 @@
 {
   "host":"localhost",
   "user":"root",
-  "password":"<HSH>00y",
-  "database":"F_user",
+  "password":"ddd",
+  "database":"pigeon",
   "connectionLimit":10,
   "supporBigNumbers":true
 

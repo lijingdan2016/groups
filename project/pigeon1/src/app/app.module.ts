@@ -44,8 +44,17 @@ import { LjhcjcgPage } from '../pages/ljhcjcg/ljhcjcg';
 import { Name2Page } from '../pages/name2/name2';
 import { HshstuidPage } from '../pages/hshstuid/hshstuid';
 //import { KrfKcbPage } from '../pages/krf-kcb/krf-kcb';
-
-
+import { SyrNoticePage } from '../pages/syr-notice/syr-notice'; 
+import { SyrTeacherrulePage } from '../pages/syr-teacherrule/syr-teacherrule';
+import { SyrSchoolrulePage } from '../pages/syr-schoolrule/syr-schoolrule';
+import { SyrDailyPage } from '../pages/syr-daily/syr-daily';
+import { SyrSousuoPage } from '../pages/syr-sousuo/syr-sousuo';
+import { SyrClassPage } from '../pages/syr-class/syr-class';
+import { SyrRecommendPage } from '../pages/syr-recommend/syr-recommend';
+import { SyrExamPage } from '../pages/syr-exam/syr-exam';
+import { SyrCoursePage } from '../pages/syr-course/syr-course';
+import { SyrEssayPage } from '../pages/syr-essay/syr-essay';
+import { SyrTieziPage } from '../pages/syr-tiezi/syr-tiezi';
 @NgModule({
   declarations: [
     MyApp,
@@ -85,9 +94,18 @@ import { HshstuidPage } from '../pages/hshstuid/hshstuid';
     LjdJczyPage,
     WjDetail1Page,
     WjTouxiangPage,
-    WjGxqmPage
-
-    
+    WjGxqmPage,
+    SyrNoticePage,
+    SyrTeacherrulePage,
+    SyrSchoolrulePage,
+    SyrDailyPage,
+    SyrSousuoPage,
+    SyrClassPage,
+    SyrRecommendPage,
+    SyrExamPage,
+    SyrCoursePage,
+    SyrEssayPage,
+    SyrTieziPage
   ],
   imports: [
     BrowserModule,
@@ -138,7 +156,18 @@ import { HshstuidPage } from '../pages/hshstuid/hshstuid';
     LjdJczyPage,
     WjDetail1Page,
     WjTouxiangPage,
-    WjGxqmPage
+    WjGxqmPage,
+    SyrNoticePage,
+    SyrTeacherrulePage,
+    SyrSchoolrulePage,
+    SyrDailyPage,
+    SyrSousuoPage,
+    SyrClassPage,
+    SyrRecommendPage,
+    SyrExamPage,
+    SyrCoursePage,
+    SyrEssayPage,
+    SyrTieziPage
   ],
   providers: [
     StatusBar,

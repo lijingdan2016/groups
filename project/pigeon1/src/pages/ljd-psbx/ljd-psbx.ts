@@ -37,7 +37,7 @@ export class LjdPsbxPage {
         responseType : 'json'
       }
       ).subscribe(data1=>{
-        // console.log(data1);
+        console.log(data1);
         this.stu=data1;
       });
     });

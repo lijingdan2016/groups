@@ -15,7 +15,7 @@ export class MyApp {
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,public storage:Storage) {
     this.storage.get('firstIn').then((result)=>{
-      console.log('firstIn is',result);
+      // console.log('firstIn is',result);
       result = false;
       if(result){
         this.rootPage = HshDlPage;
