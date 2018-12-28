@@ -91,9 +91,13 @@ CREATE TABLE IF NOT EXISTS `pinglun` (
   CONSTRAINT `FK_plu` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='评论表';
 
--- 正在导出表  pigeon.pinglun 的数据：~0 rows (大约)
+-- 正在导出表  pigeon.pinglun 的数据：~3 rows (大约)
 DELETE FROM `pinglun`;
 /*!40000 ALTER TABLE `pinglun` DISABLE KEYS */;
+INSERT INTO `pinglun` (`tiezi_id`, `user_id`, `pinglun_content`, `date`) VALUES
+	(1, 1, '11111111111的评论', '2018-12-28 8:31'),
+	(2, 2, '2222222222的评论', '2018-12-28 8:40'),
+	(1, 1, '111111的评论', '2018-12-28 8:49');
 /*!40000 ALTER TABLE `pinglun` ENABLE KEYS */;
 
 -- 导出  表 pigeon.schedule 结构
@@ -181,11 +185,14 @@ CREATE TABLE IF NOT EXISTS `tiezi` (
   PRIMARY KEY (`tiezi_id`),
   KEY `FK_tz` (`user_id`),
   CONSTRAINT `FK_tz` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='帖子表';
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='帖子表';
 
--- 正在导出表  pigeon.tiezi 的数据：~0 rows (大约)
+-- 正在导出表  pigeon.tiezi 的数据：~2 rows (大约)
 DELETE FROM `tiezi`;
 /*!40000 ALTER TABLE `tiezi` DISABLE KEYS */;
+INSERT INTO `tiezi` (`tiezi_id`, `user_id`, `tiezi_content`, `tiezi_date`, `zan`) VALUES
+	(1, 1, '1111111111111111111', '2018-12-28 8:29', 3),
+	(2, 2, '222222222222222222', '2018-12-28 8:40', 2);
 /*!40000 ALTER TABLE `tiezi` ENABLE KEYS */;
 
 -- 导出  表 pigeon.user 结构
@@ -201,25 +208,30 @@ CREATE TABLE IF NOT EXISTS `user` (
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='用户信息表';
 
--- 正在导出表  pigeon.user 的数据：~0 rows (大约)
+-- 正在导出表  pigeon.user 的数据：~2 rows (大约)
 DELETE FROM `user`;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
+INSERT INTO `user` (`user_id`, `password`, `email`, `identity`, `stu_id`, `nickname`, `signature`) VALUES
+	(1, '1', '1', '老师', NULL, NULL, NULL),
+	(2, '2', '2', '家长', 123456, NULL, NULL);
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 
 -- 导出  表 pigeon.zan 结构
 DROP TABLE IF EXISTS `zan`;
 CREATE TABLE IF NOT EXISTS `zan` (
-  `tiezi_id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL,
-  PRIMARY KEY (`tiezi_id`,`user_id`),
-  KEY `FK_zu` (`user_id`),
-  CONSTRAINT `FK_zt` FOREIGN KEY (`tiezi_id`) REFERENCES `tiezi` (`tiezi_id`),
-  CONSTRAINT `FK_zu` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='赞';
+  `tiezi_id` int(11) DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  KEY `FK_zan` (`tiezi_id`),
+  KEY `FK_zan1` (`user_id`),
+  CONSTRAINT `FK_zan` FOREIGN KEY (`tiezi_id`) REFERENCES `tiezi` (`tiezi_id`),
+  CONSTRAINT `FK_zan1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- 正在导出表  pigeon.zan 的数据：~0 rows (大约)
+-- 正在导出表  pigeon.zan 的数据：~1 rows (大约)
 DELETE FROM `zan`;
 /*!40000 ALTER TABLE `zan` DISABLE KEYS */;
+INSERT INTO `zan` (`tiezi_id`, `user_id`) VALUES
+	(1, 1);
 /*!40000 ALTER TABLE `zan` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
