@@ -1,6 +1,3 @@
-
-
-
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
@@ -49,7 +46,7 @@ private headers = new HttpHeaders({'Content-Type':'application/json'});
         }else{
           localStorage.setItem('idname',a.userid);
           alert('查询成功');
-         this.navCtrl.push('KrfKcbPage');
+         this.navCtrl.push(KrfKcbPage);
         }
   })
 }

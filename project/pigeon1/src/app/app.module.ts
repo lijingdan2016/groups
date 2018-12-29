@@ -55,6 +55,8 @@ import { SyrExamPage } from '../pages/syr-exam/syr-exam';
 import { SyrCoursePage } from '../pages/syr-course/syr-course';
 import { SyrEssayPage } from '../pages/syr-essay/syr-essay';
 import { SyrTieziPage } from '../pages/syr-tiezi/syr-tiezi';
+import { KrfKcbPage } from '../pages/krf-kcb/krf-kcb';
+import { LjdKcbPage } from '../pages/ljd-kcb/ljd-kcb';
 @NgModule({
   declarations: [
     MyApp,
@@ -105,7 +107,10 @@ import { SyrTieziPage } from '../pages/syr-tiezi/syr-tiezi';
     SyrExamPage,
     SyrCoursePage,
     SyrEssayPage,
-    SyrTieziPage
+    SyrTieziPage,
+    KrfKcbPage,
+    LjdKcbPage
+
   ],
   imports: [
     BrowserModule,
@@ -167,7 +172,10 @@ import { SyrTieziPage } from '../pages/syr-tiezi/syr-tiezi';
     SyrExamPage,
     SyrCoursePage,
     SyrEssayPage,
-    SyrTieziPage
+    SyrTieziPage,
+    KrfKcbPage,
+    LjdKcbPage
+  
   ],
   providers: [
     StatusBar,
