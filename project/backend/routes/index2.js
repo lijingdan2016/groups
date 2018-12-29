@@ -7,7 +7,15 @@ router.get('/',function(req, res, next) {
 
 });
 
-
+router.get('/data2',function(req,res){
+  res.header('Access-Control-Allow-Origin','*');
+  res.header('Content-Type','text/plain;charset="utf-8"');
+  const sql ='select * from score';
+  db.query(sql,(err,result)=>{
+    res.send(result);
+    console.log(result);
+    });
+})
 router.post('/score33',function(req,res){
   console.log(111);
   var score1= req.body.score1;
@@ -19,7 +27,7 @@ router.post('/score33',function(req,res){
   const sql='insert into score(chinese,math,english) values(?,?,?)'; 
   db.query(sql,[score1,score2,score3],(err,result)=>{
     if(err){
-        res.send('²éÑ¯Ê§°Ü£º'+err);
+        res.send('ï¿½ï¿½Ñ¯Ê§ï¿½Ü£ï¿½'+err);
     }else{
         res.send(result);
         console.log(result);
