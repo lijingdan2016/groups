@@ -7,16 +7,22 @@
 <ion-content>
   <h5>请输入</h5>
   <div class="in">
-    <h6>学生编号：</h6>
-    <select>
-      <option value ="2016011234">2016011234</option>
-      <option value ="2016091235">2016091235</option>
-      <option value="2016011036">2016011036</option>
-      <option value="2016783456">2016783456</option>
-      <option value="......">......</option>
-    </select>
+      <h6>考试类型：</h6>
+      <select>
+        <option value ="期中考试">期中考试</option>
+        <option value ="期末考试">期末考试</option>
+        <option value ="月考">月考</option>
+      </select>
   </div>
   <div class="in">
+      <h6>考试日期：</h6>
+      <input type="text" name="grade" placeholder="例:2018-12-30" #time/>
+  </div>
+  <div class="in">
+      <h6>学生学号：</h6>
+      <input type="number" placeholder="例:2016011491" #student/>
+  </div>
+  <!-- <div class="in">
     <h6>考试科目：</h6>
     <select>
       <option value ="数学">数学</option>
@@ -28,31 +34,21 @@
       <option value="历史">历史</option>
       <option value="信息技术">信息技术</option>
     </select>
-  </div>
+  </div> -->
   <div class="in">
       <h6>语文成绩：</h6>
-      <input type="number" name="grade" value="95" min="0" max="100" step="1" #score1/>
+      <input type="number" placeholder="例:60" #score1/>
   </div>
   <div class="in">
     <h6>数学成绩：</h6>
-    <input type="number" name="grade" value="95" min="0" max="100" step="1" #score2/>
+     <input type="number" placeholder="例:60" #score2/>
 </div>
 <div class="in">
   <h6>英语成绩：</h6>
-  <input type="number" name="grade" value="95" min="0" max="100" step="1" #score3/>
+     <input type="number" placeholder="例:60" #score3/>
 </div>
-  <div class="in">
-      <h6>考试类型：</h6>
-      <select>
-        <option value ="期中考试">期中考试</option>
-        <option value ="期末考试">期末考试</option>
-        <option value ="月考">月考</option>
-      </select>
-  </div>
-  <div class="in">
-      <h6>考试日期：</h6>
-      <input type="text" name="grade" value="2018-11-12"/>
-  </div>
-  <button id="butt1" (click)="save(score1,score2,score3)">保存</button>
+  
+  
+  <button id="butt1" (click)="save(score1,score2,score3,student,time)">保存</button>
   <button id="butt2">取消</button>
 </ion-content>

@@ -87,7 +87,7 @@ CREATE TABLE IF NOT EXISTS `schedule` (
 DROP TABLE IF EXISTS `score`;
 CREATE TABLE IF NOT EXISTS `score` (
   `user_id` int(11) NOT NULL,
-  `exam_data` datetime NOT NULL,
+  `exam_data` datetime DEFAULT NULL,
   `stu_id` int(11) NOT NULL,
   `chinese` int(11) DEFAULT NULL,
   `math` int(11) DEFAULT NULL,
@@ -140,7 +140,7 @@ CREATE TABLE IF NOT EXISTS `tiezi` (
   PRIMARY KEY (`tiezi_id`),
   KEY `FK_tz` (`user_id`),
   CONSTRAINT `FK_tz` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='帖子表';
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='帖子表';
 
 -- 数据导出被取消选择。
 -- 导出  表 pigeon.user 结构

@@ -25,7 +25,7 @@ router.post('/search',function(req,res){
   console.log(stu_id);
   res.header('Access-Control-Allow-Origin','*');
   res.header('Content-Type','text/plain;charset="utf-8"');
-  const sql = 'select * from kech where stu_id ='+stu_id;
+  const sql = 'select * from schedule where stu_id =?';
   db.query(sql,[stu_id],(err,result)=>{
     if(err){
         res.send('查询失败：'+err);
