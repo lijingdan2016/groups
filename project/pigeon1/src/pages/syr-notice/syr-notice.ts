@@ -36,6 +36,7 @@ export class SyrNoticePage {
     ).subscribe(data=>{
       console.log(data);
     })
+    this.navCtrl.popToRoot();
   }
 
 }
