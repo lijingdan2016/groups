@@ -163,8 +163,9 @@ export class SyrSqPage {
   zan(idx){
 
     this.uid = localStorage.getItem('user_id');
-   
+   //console.log("zan:",this.tjitems[idx].zan);
     console.log(idx);
+    
 
     var t = document.getElementsByClassName('li3-3')[idx];
     console.log(t);
@@ -181,9 +182,9 @@ export class SyrSqPage {
       console.log('点赞成功');
 
       //var number = 0;
-      this.number = this.items[idx].zan + 1;
+      this.number = this.tjitems[idx].zan + 1;
       //点赞成功计入点赞表
-      this.http.post('/zan/zan', {tzid:this.items[idx].tiezi_id,uid:this.uid} ,{
+      this.http.post('/zan/zan', {tzid:this.tjitems[idx].tiezi_id,uid:this.uid} ,{
         headers : this.headers,
         observe : 'body',
         responseType : 'json'
@@ -191,7 +192,7 @@ export class SyrSqPage {
         console.log(data);
       })
       //点赞成功帖子的赞数+1
-      this.http.post('/zan/zandata', {tz_id:this.items[idx].tiezi_id,num:this.number} ,{
+      this.http.post('/zan/zandata', {tz_id:this.tjitems[idx].tiezi_id,num:this.number} ,{
         headers : this.headers,
         observe : 'body',
         responseType : 'json'
@@ -200,15 +201,15 @@ export class SyrSqPage {
        
       })
 
-      this.items[idx].zan = this.number;
+      this.tjitems[idx].zan = this.number;
 
-    }else{
+    }else if(this.count[idx] == 1){
       z[0].style.color = "#a1c45a";
       this.count[idx] = 0;
 
-      this.number = this.items[idx].zan - 1;
+      this.number = this.tjitems[idx].zan - 1;
       //取消点赞删除点赞表的那一项
-      this.http.post('/zan/del', {tzid:this.items[idx].tiezi_id,uid:this.uid} ,{
+      this.http.post('/zan/del', {tzid:this.tjitems[idx].tiezi_id,uid:this.uid} ,{
         headers : this.headers,
         observe : 'body',
         responseType : 'json'
@@ -216,7 +217,7 @@ export class SyrSqPage {
         console.log(data);
       })
       //取消点赞，帖子点赞数-1
-      this.http.post('/zan/zandata', {tz_id:this.items[idx].tiezi_id,num:this.number} ,{
+      this.http.post('/zan/zandata', {tz_id:this.tjitems[idx].tiezi_id,num:this.number} ,{
         headers : this.headers,
         observe : 'body',
         responseType : 'json'
@@ -224,7 +225,7 @@ export class SyrSqPage {
         console.log(data);
       })
       
-      this.items[idx].zan = this.number;
+      this.tjitems[idx].zan = this.number;
       //this.storage.set('z[0].style.color', '#a1c45a');
       //localStorage.setItem('color','#a1c45a');
       
@@ -234,6 +235,8 @@ export class SyrSqPage {
 
    
   }
+
+
 
   //收藏和取消收藏
   shoucang(idx){
@@ -250,7 +253,7 @@ export class SyrSqPage {
       z[0].style.color = "#259b24"; 
       this.flag[idx]++;
       //收藏成功计入收藏表
-      this.http.post('/shoucang/sc', {tzid:this.items[idx].tiezi_id,uid:this.uid} ,{
+      this.http.post('/shoucang/sc', {tzid:this.tjitems[idx].tiezi_id,uid:this.uid} ,{
         headers : this.headers,
         observe : 'body',
         responseType : 'json'
@@ -261,7 +264,7 @@ export class SyrSqPage {
       z[0].style.color = "#a1c45a";
       this.flag[idx] = 0;
       //取消收藏,删除那一项
-      this.http.post('/shoucang/del', {tzid:this.items[idx].tiezi_id,uid:this.uid} ,{
+      this.http.post('/shoucang/del', {tzid:this.tjitems[idx].tiezi_id,uid:this.uid} ,{
         headers : this.headers,
         observe : 'body',
         responseType : 'json'
