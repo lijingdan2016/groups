@@ -22,6 +22,15 @@ router.post('/tz',function(req,res){
       //console.log(req.body.name); 
     }
 })
+router.get('/tzlength',function(req,res){
+    res.header('Access-Control-Allow-Origin','*');
+      res.header('Content-Type','text/plain; charset="utf-8"')
+    const sql = 'select tiezi_id from tiezi';
+db.query(sql,(err,result)=>{
+  res.send(result);
+})
+})
+
 
 
 

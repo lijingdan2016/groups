@@ -4,25 +4,25 @@
         <form #form="ngForm" (ngSubmit)="form.form.valid" novalidate class="form-horizontal login-form" role="form">
             <div class="form-group" [ngClass]="{ 'has-error': form.submitted && !userName.valid }">
                 <div class="col-xs-12">
-                    <input required name="userName" [(ngModel)]="user.userName" #userName="ngModel" type="text" class="form-control" placeholder="username">
+                    <input required name="userName" [(ngModel)]="user.userName" #userName="ngModel" type="text" class="form-control" #username placeholder="username">
                     <div *ngIf="form.submitted && !userName.valid" class="text-danger">{{'userLogin.userNameDanger' | translate}}</div>
                 </div>
             </div>
             <div class="form-group" [ngClass]="{ 'has-error': form.submitted && !password.valid }">
                 <div class="col-xs-12">
-                    <input required minlength="8" [(ngModel)]="user.password" name="password" #password="ngModel" type="password" class="form-control"
+                    <input required minlength="8" [(ngModel)]="user.password" name="password" #password="ngModel" type="password" #password class="form-control"
                         placeholder="password">
                     <div *ngIf="form.submitted && !password.valid" class="text-danger">{{'userLogin.passWordDanger' | translate}}</div>
                 </div>
             </div>
             <div class="form-group">
                 <div class="col-xs-12">
-                    <button type="submit" class="btn btn-success btn-block" (click)="login()">{{'userLogin.login' | translate}}</button>
+                    <button type="submit" class="btn btn-success btn-block" (click)="login(username,password)">登录</button>
                 </div>
             </div>
             <div class="form-group">
                 <div class="col-xs-4">
-                    <a href="javascript:void(0);" (click)="forgetPwd()" class="btn-link btn-block">{{'userLogin.forgotPass' | translate}}</a>
+                    <a href="javascript:void(0);" (click)="forgetPwd()" class="btn-link btn-block">忘记密码？</a>
                 </div>
                 <!-- <div class="col-xs-4">
                     <a href="https://gitee.com/mumu-osc/OpenWMS-Frontend" target="_blank">

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { ActivatedRoute, Router } from "@angular/router";
 
 @Component({
   selector: 'dashboard',
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-
+  user;
+  long:any;
+  tz;
+  tzlong:any;
   public barChart = {
     title: {
-      text: '库存金额变化',
+      text: '帖子量',
       subtext: '纯属虚构',
       x: 'center'
     },
@@ -53,7 +58,7 @@ export class DashboardComponent implements OnInit {
 
   public lineChart = {
     title: {
-      text: '库存量变化',
+      text: '用户总量',
       subtext: '纯属虚构',
       x: "center"
     },
@@ -68,7 +73,7 @@ export class DashboardComponent implements OnInit {
     yAxis: {
       type: 'value',
       axisLabel: {
-        formatter: '{value} 次'
+        formatter: '{value} '
       }
     },
     series: [
@@ -80,9 +85,20 @@ export class DashboardComponent implements OnInit {
     ]
   };
 
-  constructor() { }
+  constructor(public http:HttpClient,private router: Router,) { }
 
   ngOnInit() {
+    this.http.get('/user/data').subscribe(data=>{
+      this.user=data;
+      this.long=this.user.length;
+      console.log(this.long);
+    })
+    this.http.get('/tiezi/tzlength').subscribe(data1=>{
+      this.tz=data1;
+      this.tzlong=this.tz.length;
+      console.log(this.tzlong);
+    })
   }
+  
 
 }

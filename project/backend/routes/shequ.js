@@ -4,10 +4,10 @@ const db = require('../model/database.js');
 
 
 router.post('/sq',function(req,res){
- // var user_id = req.body.userid;
+  var user_id = req.body.uid;
   res.header('Access-Control-Allow-Origin','*');
   res.header('Content-Type','text/plain; charset = "utf-8"');
-  const sql = 'select * from tiezi where user_id = 100';
+  const sql = 'select * from tiezi where user_id = ' + user_id;
   //if(user_id){
     db.query(sql,(err,result) => {
       if(err){

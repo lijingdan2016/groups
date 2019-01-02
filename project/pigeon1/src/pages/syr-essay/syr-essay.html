@@ -19,9 +19,9 @@
           <img src="../../assets/imgs/img3-3.jpg"/>
           <!-- <i class="iconfont" style="font-size: 16px;float: left;margin-left: 65%;position: absolute;bottom: -3px;color:rgb(216, 79, 79);">&#xe628;</i> -->
         </div>
-        <div class="nei2" >
-          <p>明天</p>
-          <div *ngFor="let item of items; let i = index;">
+        <div class="nei2" *ngFor="let item of items; let i = index;">
+          <p> {{item.user_id}}</p>
+          <div >
           <p style="font-size: 10px;color: rgb(141, 138, 138);" > {{item.tiezi_date}}</p></div>
         </div>
         <i class="iconfont" style="font-size: 20px;float:right;margin-top: 3px;">&#xe638;</i>
@@ -52,7 +52,7 @@
           <img src="../../assets/imgs/img3-3.jpg"/>
         </div>
         <div class="dis2">
-          <p>明天</p>
+          <p>{{item.user_id}}</p>
           <p style="font-size: 10px;color: rgb(141, 138, 138);">{{item.date}}</p>
         </div>
         <i class="iconfont" style="font-size: 16px;float:right;margin-top: 10px;margin-right: 10px;">&#xe606;</i>

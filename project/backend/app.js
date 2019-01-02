@@ -26,6 +26,9 @@ var pinglunRouter = require('./routes/pinglun');
 var taskRouter = require('./routes/task');
 var parent_behaveRouter = require('./routes/parent_behave');
 var teacher_behaveRouter = require('./routes/teacher_behave');
+var backadminRouter = require('./routes/backadmin');
+var backloginRouter = require('./routes/backlogin');
+
 
 var app = express();
 // view engine setup 摒弃视图
@@ -62,6 +65,9 @@ app.use('/pinglun',pinglunRouter);
 app.use('/task',taskRouter);
 app.use('/parent_behave',parent_behaveRouter);
 app.use('/teacher_behave',teacher_behaveRouter);
+app.use('/backadmin',backadminRouter);
+app.use('/backlogin',backloginRouter);
+
 // catch 404 and forward to error handler
 
 app.use(function(req, res, next) {
