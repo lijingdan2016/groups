@@ -8,12 +8,12 @@ router.get('/',function(req, res, next) {
 });
 
 router.get('/data2',function(req,res){
-   var stu=req.body.stuid;
+  // var stu=req.body.stuid;
   res.header('Access-Control-Allow-Origin','*');
   res.header('Content-Type','text/plain;charset="utf-8"');
    
-  const sql ='select chinese,math,english from score where stu_id=?';
-  db.query(sql,[stu],(err,result)=>{
+  const sql ='select chinese,math,english from score';
+  db.query(sql,(err,result)=>{
     res.send(result);
     console.log(result);
     });
@@ -30,7 +30,7 @@ router.post('/luru',function(req,res){
   res.header('Content-Type','text/plain;charset="utf-8"');
   const sql='insert into score(user_id,chinese,math,english,stu_id,exam_data) values(?,?,?,?,?,?)'; 
  if(score1 && score2 && score3 && user && stu){
-  db.query(sql,[user,score1,score2,score3,stu,time1],(err,result)=>{
+  db.query(sql,[user,score1,score2,score3,stu,time],(err,result)=>{
     if(err){
                 console.error("Error:",err);
                           process.exit();
@@ -39,6 +39,6 @@ router.post('/luru',function(req,res){
             console.log(result);
                
   });
+};
 });
-
 module.exports = router;
