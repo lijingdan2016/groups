@@ -4,9 +4,14 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
+<ion-header no-border>
+
+    <ion-navbar color="fanhui">
+      <ion-title right>查看成绩</ion-title>
+    </ion-navbar>
+  </ion-header>
 <ion-content>
   <div style="height:150px;width:100%;background-color:#249B25">
-      <i class="iconfont">&#xe625;</i>
     <img style="border-radius:20px;margin-left:70px;margin-top:30px;" src="assets/imgs/image4.jpg"/>
     <div style="border-radius:20px;margin-left:150px;margin-top:-70px;color:white;">
       <h5 style="font-weight:bolder;">王小妹妹</h5>
@@ -38,7 +43,7 @@
     <h6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;英语：{{item.english}}</h6>
   </div>
   <div class="div4" (click)="chu()">
-    <ion-icon name="md-arrow-dropdown"></ion-icon>
+    <ion-icon name="md-arrow-dropdown" id="narrow"></ion-icon>
   </div>
   <div *ngFor='let item of score'>
     <!-- {{item.student_id}} -->

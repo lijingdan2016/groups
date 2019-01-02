@@ -1,5 +1,5 @@
 -- --------------------------------------------------------
--- 主机:                           192.168.234.144
+-- 主机:                           192.168.23.166
 -- 服务器版本:                        5.5.60-MariaDB - MariaDB Server
 -- 服务器操作系统:                      Linux
 -- HeidiSQL 版本:                  9.5.0.5196
@@ -75,9 +75,17 @@ CREATE TABLE IF NOT EXISTS `pinglun` (
 DROP TABLE IF EXISTS `schedule`;
 CREATE TABLE IF NOT EXISTS `schedule` (
   `user_id` int(11) NOT NULL,
-  `school_name` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-  `stu_id` int(11) NOT NULL,
-  `stu_name` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `stu_id` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `MonAM` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `MonPM` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `TueAM` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `TuePM` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `WedAM` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `WedPM` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `ThurAM` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `ThurPM` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `FriAM` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `FriPM` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
   KEY `FK_sche` (`user_id`),
   CONSTRAINT `FK_sche` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='课程表';
@@ -140,7 +148,7 @@ CREATE TABLE IF NOT EXISTS `tiezi` (
   PRIMARY KEY (`tiezi_id`),
   KEY `FK_tz` (`user_id`),
   CONSTRAINT `FK_tz` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='帖子表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='帖子表';
 
 -- 数据导出被取消选择。
 -- 导出  表 pigeon.user 结构
@@ -149,7 +157,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `user_id` int(11) NOT NULL,
   `password` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `email` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `identity` char(4) COLLATE utf8_unicode_ci NOT NULL,
+  `identity` char(4) COLLATE utf8_unicode_ci DEFAULT NULL,
   `stu_id` int(11) DEFAULT NULL,
   `nickname` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
   `signature` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,

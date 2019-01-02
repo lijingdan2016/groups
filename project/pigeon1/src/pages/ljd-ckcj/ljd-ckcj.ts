@@ -33,6 +33,11 @@ export class LjdCkcjPage {
       this.score=data;
     })
   }
+
+  turn(){
+    
+  }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad LjdCkcjPage');
     // this.chu();
