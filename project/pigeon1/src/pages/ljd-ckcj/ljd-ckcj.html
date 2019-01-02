@@ -6,6 +6,7 @@
 -->
 <ion-content>
   <div style="height:150px;width:100%;background-color:#249B25">
+      <i class="iconfont">&#xe625;</i>
     <img style="border-radius:20px;margin-left:70px;margin-top:30px;" src="assets/imgs/image4.jpg"/>
     <div style="border-radius:20px;margin-left:150px;margin-top:-70px;color:white;">
       <h5 style="font-weight:bolder;">王小妹妹</h5>
@@ -24,7 +25,7 @@
     <!-- <p style="font-weight:bolder;">{{item.data}}</p> -->
     <p style="color:rgba(0,0,0,0.6)">2015-10-01  12:00  王虎老师</p>
     <hr style="margin:0px;height:1px;border:0px;background-color:rgba(0,0,0,0.6)"/>
-    <h6>成绩：语文：{{item.Chinese}}</h6>
+    <h6>成绩：语文：{{item.chinese}}</h6>
     <h6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;数学：{{item.math}}</h6>
     <h6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;英语：{{item.english}}</h6>
   </div>
@@ -32,7 +33,7 @@
     <!-- <p style="font-weight:bolder;">{{item.data}}</p> -->
     <p style="color:rgba(0,0,0,0.6)">2015-11-01  12:00  王虎老师</p>
     <hr style="margin:0px;height:1px;border:0px;background-color:rgba(0,0,0,0.6)"/>
-    <h6>成绩：语文：{{item.Chinese}}</h6>
+    <h6>成绩：语文：{{item.chinese}}</h6>
     <h6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;数学：{{item.math}}</h6>
     <h6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;英语：{{item.english}}</h6>
   </div>
@@ -42,7 +43,7 @@
   <div *ngFor='let item of score'>
     <!-- {{item.student_id}} -->
     {{item.math}}
-    {{item.Chinese}}
+    {{item.chinese}}
     {{item.english}}
     <!-- {{item.data}} -->
    </div>

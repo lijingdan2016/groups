@@ -21,10 +21,10 @@ export class LjdCkcjPage {
   }
   
   chu(){
-    let stu=localStorage.getItem('stu_id');
-    console.log(stu);
-    let a={stuid:stu};
-    this.http.post('/index2/data2',a,{
+    //let stu=localStorage.getItem('stu_id');
+    //console.log(stu);
+    //let a={stuid:stu};
+    this.http.get('/index2/data2',{
       headers : this.headers,
       observe : 'body',
       responseType : 'json'
@@ -43,6 +43,6 @@ class score{
   // student_id:number;
   // data:string;
   math:number;
-  Chinese:number;
+  chinese:number;
   english:number 
 }
