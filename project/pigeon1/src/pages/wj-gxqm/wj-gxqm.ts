@@ -33,6 +33,8 @@ export class WjGxqmPage {
     }
     ).subscribe(data=>{ 
     })
+
+    this.navCtrl.popToRoot();
   }
   
 }

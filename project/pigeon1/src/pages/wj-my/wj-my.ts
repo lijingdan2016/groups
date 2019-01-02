@@ -62,6 +62,25 @@ export class WjMyPage {
     
     });
   }
+
+  syr(){
+    let userid=localStorage.getItem('user_id');  
+    // let nc1=localStorage.getItem('nc');  
+    // let gxqm1=localStorage.getItem('gxqm');
+    // console.log(userid);
+    let a={uid:userid};
+    this.http.post('/gxqm/data',a,{
+      headers : this.headers,
+      observe : 'body',
+      responseType : 'json'
+    }
+    ).subscribe(data=>{
+      //console.log(data);
+     
+      this.signa=data;
+    
+    });
+  }
   // ding(){
   //   this.events.subscribe('nc', (nc) => {
   //     this.message.mc=nc;
