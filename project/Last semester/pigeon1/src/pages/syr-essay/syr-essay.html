@@ -1,0 +1,105 @@
+<!--
+  Generated template for the SyrEssayPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border>
+
+  <ion-navbar color="gr">
+    <ion-title center>文章正文</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    
+      <div class="box1" >
+        <div class="nei1">
+          <img src="../../assets/imgs/img3-3.jpg"/>
+          <!-- <i class="iconfont" style="font-size: 16px;float: left;margin-left: 65%;position: absolute;bottom: -3px;color:rgb(216, 79, 79);">&#xe628;</i> -->
+        </div>
+        <div class="nei2" *ngFor="let item of items; let i = index;">
+          <p> {{item.user_id}}</p>
+          <div >
+          <p style="font-size: 10px;color: rgb(141, 138, 138);" > {{item.tiezi_date}}</p></div>
+        </div>
+        <i class="iconfont" style="font-size: 20px;float:right;margin-top: 3px;">&#xe638;</i>
+      </div>
+      <div *ngFor="let item of items; let i = index;">
+      <p class="p1" >
+        {{item.tiezi_content}}
+      </p>
+      
+      </div>
+    
+  <div class="box3">
+    <div><span>分享到</span></div>
+    <div><i class="iconfont" style="font-size: 20px;color: #259b24;">&#xe721;</i></div>
+    <div><i class="iconfont" style="font-size: 20px;color: #259b24;">&#xe607;</i></div>
+    <div><i class="iconfont" style="font-size: 20px;color: #259b24;">&#xe60a;</i></div>
+    <div><i class="iconfont" style="font-size: 20px;color: #259b24;">&#xe622;</i></div>
+  </div>
+
+  <div class="box4">
+    <p>评论</p>
+  </div>
+
+  <div class="box5" *ngFor="let item of nritems;">
+    <ul>
+      <li>
+        <div class="dis1">
+          <img src="../../assets/imgs/img3-3.jpg"/>
+        </div>
+        <div class="dis2">
+          <p>{{item.user_id}}</p>
+          <p style="font-size: 10px;color: rgb(141, 138, 138);">{{item.date}}</p>
+        </div>
+        <i class="iconfont" style="font-size: 16px;float:right;margin-top: 10px;margin-right: 10px;">&#xe606;</i>
+        <div class="dis3"><p>{{item.pinglun_content}}</p></div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="beijing" (click) = "beijing()"></div>
+
+</ion-content>
+
+<ion-footer>
+  <div class="footer5" style="display: block;">
+    <div class="footer1">
+      <div class="footer2">
+        <i class="iconfont" style="font-size: 20px;margin-top: 3px;">&#xe610;</i>
+        <span>转发</span>
+      </div>
+    </div>
+    <div class="footer1">
+      <div class="footer2" (click) = "pinglun()">
+        <i class="iconfont" style="font-size: 20px;margin-top: 3px;">&#xe606;</i>
+        <span>评论</span>
+      </div>
+    </div>
+    <div class="footer1">
+      <div class="footer3">
+        <i class="iconfont" style="font-size: 20px;margin-top: 3px;">&#xe605;</i>
+        <span>赞</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer4" style="display: none">
+    <div class="pinglun">
+      <ion-textarea placeholder="写评论..." #content></ion-textarea>
+      <span (click) = "fasong(content)">发送</span>
+    </div>
+    <div class="bottom">
+      <ul>
+        <li><i class="iconfont" style="font-size: 25px;line-height: 50px;color: rgb(136, 136, 136);">&#xe604;</i></li>
+        <li style="font-size: 23px;line-height: 50px;color: rgb(136, 136, 136);">@</li>
+        <li style="font-size: 25px;line-height: 50px;color: rgb(136, 136, 136);">#</li>
+        <li><i class="iconfont" style="font-size: 25px;line-height: 50px;color: rgb(136, 136, 136);">&#xe654;</i></li>
+        <li><i class="iconfont" style="font-size: 25px;line-height: 50px;color: rgb(136, 136, 136);">&#xe679;</i></li>
+      </ul>
+    </div>
+  </div>
+</ion-footer>

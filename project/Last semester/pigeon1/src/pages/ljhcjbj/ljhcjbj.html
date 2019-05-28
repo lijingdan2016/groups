@@ -1,0 +1,38 @@
+<!--
+  Generated template for the LjhcjbjPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="ye" text-center>
+    <ion-title>创建班级</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <div class="box">
+        <!-- <ion-item>
+          <ion-label>您的账户：</ion-label>
+          <ion-input type="text" placeholder="请输入您的账号id"  [(ngModel)]="peoplename" #pname></ion-input>
+        </ion-item> -->
+        <ion-item>
+            <ion-label>班级代号：</ion-label>
+            <ion-input type="text" placeholder="请输入六位数字" [(ngModel)]="classid" #cid></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>班级名称：</ion-label>
+            <ion-input type="text" placeholder="请输入班级群名称" [(ngModel)]="classname" #cname></ion-input>
+        </ion-item>
+        <!-- <ion-item>
+          <ion-label>班级人数：</ion-label>
+          <ion-input type="text" placeholder="请输入班级人数" [(ngModel)]="classnum" #cnum></ion-input>
+        </ion-item> -->
+        <button ion-button block color="ejan" (click)="commit(cid,cname)">创建班级</button>
+      </div>
+    
+</ion-content>

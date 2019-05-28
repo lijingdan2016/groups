@@ -1,0 +1,22 @@
+<ion-content>
+    <div class="div1" (click)="syr();">
+      <img class="img1" src="../../assets/imgs/33.jpg" (click)="tx();">
+      <p class="p1" (click)="bj();" *ngFor="let item of signa">{{item.nickname}}</p>
+      <p class="p2" (click)="bj();" *ngFor="let item of signa">{{item.signature}}&nbsp;&nbsp;<ion-icon name="md-create"></ion-icon></p>
+    </div>
+    <ion-list no-lines>
+        <button ion-item (click)="push1();">
+            <ion-icon name="md-book" color='hui'></ion-icon>班级<ion-icon name="md-arrow-dropright" class="icon1" color="hui"></ion-icon>     
+        </button>  
+        <button ion-item (click)="push2();">
+            <ion-icon name="md-heart" color='hui'></ion-icon>我的收藏<ion-icon name="md-arrow-dropright" class="icon1" color="hui"></ion-icon> 
+        </button>
+        <button ion-item>
+            <ion-icon name="md-time" color="hui"></ion-icon>使用天数<p class="p3">21</p>
+        </button>
+        <button ion-item (click)="push4();">
+            <ion-icon name="md-refresh" color="hui"></ion-icon>版本更新<ion-icon name="md-arrow-dropright" class="icon1" color="hui"></ion-icon>        </button>
+        <button ion-item (click)="push5();">
+            <ion-icon name="md-settings" color="hui"></ion-icon>设置<ion-icon name="md-arrow-dropright" class="icon1" color="hui"></ion-icon>        </button>
+    </ion-list>
+</ion-content>

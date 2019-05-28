@@ -1,0 +1,39 @@
+page-hsh-lity {
+
+    
+    .articleHeader {
+        position: relative;
+        width: 100%;
+        height: 640px;
+      }
+      
+    .articleHeader .search {
+    position: absolute;
+    z-index: 3;
+    height: 32px;
+    right: 0px;
+    }
+    .articleHeader .goon {
+        position: absolute;
+        z-index: 3;
+        height: 32px;
+        bottom:30px;
+        left: 135px;
+    }
+      
+      .articleHeader .coverFlow {
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+      }
+    ion-slide {
+        background-color: #eeeeee;
+    }
+     
+    ion-slide img {
+        height: 640px;
+        // width: auto !important;
+        
+    }  
+}

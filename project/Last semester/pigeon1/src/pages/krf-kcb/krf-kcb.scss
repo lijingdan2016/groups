@@ -1,0 +1,59 @@
+page-krf-kcb{
+    ion-header{
+        height:50px;
+        ion-title{
+            line-height:50px;
+        }
+    }
+    input{
+        margin-top:30px;
+        height:30px;
+        width:260px;
+    }
+    #cha{
+        width:60px;
+        height:30px;
+    }
+    #container{
+        width:360px;
+        height:600px;
+        margin-top:20px;
+    
+    h5{
+        span{
+            margin-left:100px;
+        }
+    }
+    .week{
+        margin-top:20px;
+        margin-left:20px;
+        button{
+            width:70px;
+            height:30px;
+            margin-left:50px;
+        }
+    }
+    button{
+        width:70px;
+        height:30px;
+        margin-top:20px;
+        margin-left:110px;
+    }
+    }
+    
+}
+@font-face {
+    font-family: 'iconfont';  /* project id 884911 */
+    src: url('//at.alicdn.com/t/font_884911_9oxqez936pf.eot');
+    src: url('//at.alicdn.com/t/font_884911_9oxqez936pf.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_884911_9oxqez936pf.woff') format('woff'),
+    url('//at.alicdn.com/t/font_884911_9oxqez936pf.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_884911_9oxqez936pf.svg#iconfont') format('svg');
+  }
+
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;}

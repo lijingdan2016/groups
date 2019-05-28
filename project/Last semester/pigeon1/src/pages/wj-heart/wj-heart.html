@@ -1,0 +1,129 @@
+<ion-header text-center no-border>
+  <ion-navbar color="gr">
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      收藏
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+
+      <ion-list-header>今天</ion-list-header>
+  
+      <ion-item *ngFor="let item of message">
+        <ion-avatar item-start>
+          <!-- <img src="../../assets/imgs/12.jpg"> -->
+        </ion-avatar>
+        <h2>{{item.title}}</h2>
+        <p>{{item.pushname}}</p>
+        <!-- <ion-note item-end>{{item.ontime}}</ion-note> -->
+      </ion-item>
+  
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="../../assets/imgs/13.jpg">
+        </ion-avatar>
+        <h2>关于教育体制改革，留着给全家读读吧！</h2>
+        <p>欣欣爸爸</p>
+        <ion-note item-end>下午1:12</ion-note>
+      </ion-item>
+  
+      
+  
+    </ion-list>
+  
+    <ion-list>
+  
+      <ion-list-header>昨天</ion-list-header>
+  
+      <ion-item (click)='detail();'>
+        <ion-avatar item-start>
+          <img src="../../assets/imgs/15.jpg">
+        </ion-avatar>
+        <h2>你真的懂孩子吗？</h2>
+        <p>SHE</p>
+        <ion-note item-end>下午11:11</ion-note>
+      </ion-item>
+  
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="../../assets/imgs/16.jpg">
+        </ion-avatar>
+        <h2>经典原文，留着</h2>
+        <p>快乐一家</p>
+        <ion-note item-end>下午8:54</ion-note>
+      </ion-item>
+  
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="../../assets/imgs/99.jpg">
+        </ion-avatar>
+        <h2>海里竟然有这些物质！！！</h2>
+        <p>明明</p>
+        <ion-note item-end>上午7:22</ion-note>
+      </ion-item>
+  
+    
+  
+    </ion-list>
+  
+    <ion-list>
+  
+      <ion-list-header>上个星期</ion-list-header>
+  
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="../../assets/imgs/55.jpg">
+        </ion-avatar>
+        <h2>怎么学习英文？</h2>
+        <p>爱笑的女孩</p>
+        <ion-note item-end>星期日</ion-note>
+      </ion-item>
+  
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="../../assets/imgs/88.jpg">
+        </ion-avatar>
+        <h2>我的心里都是你，我的孩子</h2>
+        <p>S妈</p>
+        <ion-note item-end>星期五</ion-note>
+      </ion-item>
+  
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="../../assets/imgs/img1-1.png">
+        </ion-avatar>
+        <h2>计算的艺术</h2>
+        <p>清晨的阳光</p>
+        <ion-note item-end>星期三</ion-note>
+      </ion-item>
+      
+      <ion-item>
+          <ion-avatar item-start>
+            <img src="../../assets/imgs/14.jpg">
+          </ion-avatar>
+          <h2>关于清华大学的一篇文章</h2>
+          <p>忘记时间</p>
+          <ion-note item-end>上午10:03</ion-note>
+        </ion-item>
+
+        <ion-item>
+            <ion-avatar item-start>
+              <img src="../../assets/imgs/88.jpg">
+            </ion-avatar>
+            <h2>眼睛里的秘密</h2>
+            <p>美丽动人</p>
+            <ion-note item-end>上午2:08</ion-note>
+          </ion-item>
+  
+    </ion-list>
+</ion-content>

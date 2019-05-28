@@ -1,0 +1,25 @@
+<!--
+  Generated template for the LjhtjpyPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="ye">
+    <ion-title text-center>添加朋友</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="box">
+      <ion-searchbar placeholder="请输入查找的用户账号" #userid></ion-searchbar>
+      <button ion-button round color="gr" (click)="find(userid)">添加用户</button>  
+      <button ion-button round color="gr">扫一扫添加朋友</button>
+      <button ion-button round color="gr">手机通讯录添加朋友</button>
+      <button ion-button round color="gr">面对面建班级群</button>
+  </div>
+
+</ion-content>

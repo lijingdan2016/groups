@@ -1,0 +1,54 @@
+<ion-header no-border>
+    <ion-navbar color="gr" >
+      <ion-title right>录入成绩</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+<ion-content>
+  <h5>请输入</h5>
+  <div class="in">
+      <h6>考试类型：</h6>
+      <select>
+        <option value ="期中考试">期中考试</option>
+        <option value ="期末考试">期末考试</option>
+        <option value ="月考">月考</option>
+      </select>
+  </div>
+  <div class="in">
+      <h6>考试日期：</h6>
+      <input type="text" name="grade" placeholder="例:2018-12-30" #time/>
+  </div>
+  <div class="in">
+      <h6>学生学号：</h6>
+      <input type="number" placeholder="例:2016011491" #student/>
+  </div>
+  <!-- <div class="in">
+    <h6>考试科目：</h6>
+    <select>
+      <option value ="数学">数学</option>
+      <option value ="语文">语文</option>
+      <option value="英语">英语</option>
+      <option value="物理">物理</option>
+      <option value="劳动">劳动</option>
+      <option value="生物">生物</option>
+      <option value="历史">历史</option>
+      <option value="信息技术">信息技术</option>
+    </select>
+  </div> -->
+  <div class="in">
+      <h6>语文成绩：</h6>
+      <input type="number" placeholder="例:60" #score1/>
+  </div>
+  <div class="in">
+    <h6>数学成绩：</h6>
+     <input type="number" placeholder="例:60" #score2/>
+</div>
+<div class="in">
+  <h6>英语成绩：</h6>
+     <input type="number" placeholder="例:60" #score3/>
+</div>
+  
+  
+  <button id="butt1" (click)="save(score1,score2,score3,student,time)">保存</button>
+  <button id="butt2">取消</button>
+</ion-content>

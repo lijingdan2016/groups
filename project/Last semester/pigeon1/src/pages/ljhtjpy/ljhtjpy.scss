@@ -1,0 +1,22 @@
+page-ljhtjpy {
+    ion-navbar{
+        ion-title{
+            padding-right:44px;
+        }
+        
+    }
+    ion-content{
+        .box{
+            text-align:center;
+            ion-searchbar{
+                height: 80px;
+            }
+            button{
+                width:70%;
+                height: 60px;
+                margin:10px 0;
+                background-color: #ffe79a;
+            }
+        }
+    }
+}

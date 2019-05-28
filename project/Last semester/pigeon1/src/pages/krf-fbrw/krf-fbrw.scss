@@ -1,0 +1,92 @@
+page-krf-fbrw{
+    ion-header{
+        height:50px;
+        ion-navbar{
+            
+            ion-title{
+                line-height:50px;
+            }
+        }
+        
+        
+    }
+
+    ion-content{
+        .active{
+            border-bottom: 1px solid #ffe79a;
+        }
+        margin-top:0px;
+        ul{
+            margin: 0;
+        }
+        ul li{
+            list-style: none;
+            display:inline-block;
+            margin-left:30px;
+            height: 30px;
+            line-height: 30px;
+            margin-top: 10px;
+            font-size:20px;
+        }
+    }
+    .homework{
+        .content{
+            //text-align: center;
+            font-size: 18px;
+        }
+        ul{
+            padding-left: 10px;
+            li{
+                list-style: disc;
+                width: 100%;
+                float: left;
+                line-height: 35px;
+                span{
+                    font-size: 16px;
+                }
+                .left{
+                    float: left;
+                }
+                .right{
+                    float: right;
+                    color: gray;
+                }
+            }
+        }
+    
+        // margin:0 auto;
+        width:100%;
+        height:100px;
+        background-color:rgb(226, 225, 225);
+        h5{
+            margin-top: 5px;
+            text-align: center;
+        }
+        i{
+            margin-left:20px;
+            margin-right:10px;
+            color:grey;
+        }
+        p{
+            color:grey;
+            font-size:14px;
+        }
+        margin-bottom:30px;
+    }
+}
+
+@font-face {
+    font-family: 'iconfont';  /* project id 884911 */
+    src: url('//at.alicdn.com/t/font_884911_axqh1tsebx9.eot');
+    src: url('//at.alicdn.com/t/font_884911_axqh1tsebx9.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_884911_axqh1tsebx9.woff') format('woff'),
+    url('//at.alicdn.com/t/font_884911_axqh1tsebx9.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_884911_axqh1tsebx9.svg#iconfont') format('svg');
+  }
+
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:20px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;}

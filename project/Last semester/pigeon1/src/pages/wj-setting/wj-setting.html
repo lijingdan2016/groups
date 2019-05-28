@@ -1,0 +1,51 @@
+<ion-header text-center no-border>
+  <ion-navbar color="gr">
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      设置
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <ion-list no-lines>
+        <button ion-item (click)="touxiang();">
+          <span class="tou">我的头像</span><img src="../../assets/imgs/33.jpg">
+        </button>  
+        <button ion-item>
+          账号信息<p *ngFor="let item of signa">{{item.user_id}}</p>
+        </button>
+        <button ion-item (click)="gx();">
+          个性签名<p *ngFor="let item of signa">{{item.signature}}</p>
+        </button>
+        <ion-item>
+          <ion-label color='dark'>主题颜色</ion-label>
+          <ion-select [(ngModel)]="gaming" interface="popover">
+            <ion-option value="vl">绿色</ion-option>
+            <ion-option value="large">护眼</ion-option>
+            <ion-option value="middle">夜间</ion-option>
+          </ion-select>
+        </ion-item>
+        <!-- <ion-list> -->
+          <ion-item>
+            <ion-label color='dark'>字体大小</ion-label>
+            <ion-select [(ngModel)]="gaming" interface="popover">
+              <ion-option value="vl">超大</ion-option>
+              <ion-option value="large">大</ion-option>
+              <ion-option value="middle">中</ion-option>
+              <ion-option value="little">小</ion-option>
+            </ion-select>
+          </ion-item>
+        <!-- </ion-list> -->
+        <button ion-item>
+          安全设置<ion-icon name="md-arrow-dropright" class="icon1" color="hui"></ion-icon>        
+        </button>
+        <button ion-item>
+          关于我们<ion-icon name="md-arrow-dropright" class="icon1" color="hui"></ion-icon>       
+        </button>
+
+    </ion-list>
+    <button block ion-button color='ejan' style="margin-top:30px;color: black;font-size: 18px;" (click)="exit();"> 退出登录</button>
+
+</ion-content>

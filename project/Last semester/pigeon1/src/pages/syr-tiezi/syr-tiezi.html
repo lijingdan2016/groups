@@ -1,0 +1,30 @@
+<ion-header text-center no-border>
+  <ion-navbar color='#F9F8F8'>
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <div class="title"><ion-title style="padding: 0;">
+      发帖子
+    </ion-title></div>
+    <div class="span"><span class="span2" (click) = "gosub1(content)" >发送</span></div>
+  </ion-navbar>
+</ion-header>
+<ion-content >
+  <div class="box2">
+    <ion-textarea placeholder="分享点新鲜事..." #content></ion-textarea>
+  </div>
+  
+
+  
+</ion-content>
+<ion-footer>
+  <div class="box3">
+    <ul>
+      <li><i class="iconfont" style="font-size: 25px;line-height: 50px;color: black;">&#xe604;</i></li>
+      <li style="font-size: 23px;line-height: 50px;">@</li>
+      <li style="font-size: 25px;line-height: 50px;">#</li>
+      <li><i class="iconfont" style="font-size: 25px;line-height: 50px;color: black;">&#xe654;</i></li>
+      <li><i class="iconfont" style="font-size: 25px;line-height: 50px;color: black;">&#xe679;</i></li>
+    </ul>
+  </div>
+</ion-footer>

@@ -1,0 +1,32 @@
+<ion-header no-border>
+
+    <ion-navbar color="gr" >
+      <ion-title right>课程表</ion-title>
+    </ion-navbar>
+  </ion-header>
+
+<ion-content>
+
+  <div id="container" *ngFor='let item of score'>
+    <h5><span>上午</span><span>下午</span></h5>
+    <div class="week">星期一<button style="background:#FF9800">{{item.MonAM}}</button><button style="background:#009688"> {{item.MonPM}}</button></div>
+    <div class="week">星期二<button style="background:#9B45CD">{{item.TueAM}}</button><button style="background:#5677FC">{{item.TuePM}}</button></div>
+    <button style="background:#FF9800">{{item.WedAM}}</button>
+    <div class="week">星期三<button style="background:#3F51B5">{{item.WedAM}}</button></div>
+    <div class="week">星期四<button style="background:#FCC356">{{item.ThurAM}}</button><button style="background:#FF4081">{{item.ThurPM}}</button></div>
+    <div class="week">星期五<button style="background:#56D9FC">{{item.FriAM}}</button></div>
+  </div>
+  <!-- <div *ngFor='let item of score'>
+      {{item.MonAM}}
+      {{item.MonPM}}
+      {{item.TueAM}}
+      {{item.TuePM}}
+      {{item.WedAM}}
+      {{item.WedPM}}
+      {{item.ThurAM}}
+      {{item.ThurPM}}
+      {{item.FriAM}}
+      {{item.FriPM}}
+      {{item.stu_id}}
+     </div>
+</ion-content> -->

@@ -1,0 +1,21 @@
+<!--
+  Generated template for the LjhjrbjPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="gr">
+    <ion-title text-center>添加班级</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div class="box">
+    <ion-input placeholder="请输入老师给您的六位班级号或班级名称" #classid></ion-input>
+    <button ion-button block color="green" (click)="search(classid)">加入班级</button>
+  </div>
+</ion-content>

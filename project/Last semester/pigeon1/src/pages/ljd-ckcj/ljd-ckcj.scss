@@ -1,0 +1,44 @@
+page-ljd-ckcj {
+    ion-content{
+        position: relative;
+        .div2{
+            position:absolute;
+            top:130px; 
+            border-radius:20px;
+            margin-left:40px;
+            text-align:center;
+        }
+        .div3{
+            position:absolute;
+            top:350px;
+            border-radius:20px;
+            margin-left:40px;
+            text-align:center;
+        }
+        .div4{
+            position:absolute;
+            top:590px;
+            margin-left:180px;
+        }
+        ion-icon{
+            font-size:30px;
+        }
+        .div5{
+            position:absolute;
+            right:20px;
+            top:50px;
+            button{
+                background-color:#249B25;
+            }
+        }     
+        #narrow{
+            position:absolute;
+            top:-50px;
+        }
+    }
+
+   
+
+
+    
+}

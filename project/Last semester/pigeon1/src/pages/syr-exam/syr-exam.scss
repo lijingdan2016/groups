@@ -1,0 +1,25 @@
+page-syr-exam {
+    .toolbar-md{
+        min-height:46px;
+    }
+    .toolbar-title-md{
+        font-size: 18px;
+    }
+    ion-content{
+        ul{
+            padding-left: 10px;
+            li{
+                width: 30%;
+                margin: 15px 10%;
+                float: left;
+                text-align: center;
+                background-color: aquamarine;
+                border-radius: 8px;
+                span{
+                    font-size: 18px;
+                    line-height: 2.5em;
+                }
+            }
+        }
+    }
+}

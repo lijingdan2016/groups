@@ -1,0 +1,50 @@
+<!-- <ion-header>
+    
+    <ion-title>发布任务</ion-title>
+    
+</ion-header> -->
+<ion-header no-border>
+
+  <ion-navbar color="ye">
+    <ion-title right>发布任务</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding="">
+  <div>
+    <ul>
+      <li (click)="task(0)" class="{{num=='0'?'active':''}}">任务</li>
+      <li (click)="task(1)" class="{{num=='1'?'active':''}}">已发布</li>
+    </ul>
+  </div>
+  <div class="content">
+      <div [ngSwitch]="num">
+          <div *ngSwitchCase="0">
+              <p>相应班级id：<input type="text" #id></p>
+              <p>截至日期：<input type="text" placeholder="请输入2015-03-03形式" #date></p> 
+              <p >作业内容：</p>
+              <textarea rows="" cols="" id="teamIntroduction" style="height:200px;width:330px;" #content></textarea>
+              <button block ion-button color='ejan' style="margin-top:30px;color: black;font-size: 18px;background-color:#ffe79a" (click)="save(id,date,content);"> 保存</button>
+          </div>
+          <div *ngSwitchCase="1">
+              <div class="homework" style="margin-top:10px;" *ngFor='let item of homework'>
+                  <h5>{{item.task_content}}</h5>
+                  <!-- <p><i class="iconfont" id="left">&#xe669;</i>物理</p> -->
+                  <p><i class="iconfont" id="left">&#xe602;</i>截止时间 ：{{item.task_data}}</p>
+              </div>
+          </div>
+      </div>
+    
+  </div>
+  
+  <!-- <div class="homework">
+    <h5>任务二 ： 等差数列求和</h5>
+    <p><i class="iconfont" id="left">&#xe669;</i>数学</p>
+    <p><i class="iconfont" id="left">&#xe602;</i>截止时间 ：周二9 : 00am</p>
+  </div>
+  <div class="homework">
+    <h5>任务三 ： 《醉翁亭记》翻译</h5>
+    <p><i class="iconfont" id="left">&#xe669;</i>语文</p>
+    <p><i class="iconfont" id="left">&#xe602;</i>截止时间 ：周四8 : 00am</p>
+  </div> -->
+</ion-content>
