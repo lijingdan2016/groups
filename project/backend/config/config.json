@@ -1,9 +1,0 @@
-{
-  "host":"localhost",
-  "user":"root",
-  "password":"ddd",
-  "database":"pigeon",
-  "connectionLimit":10,
-  "supporBigNumbers":true
-
-}
