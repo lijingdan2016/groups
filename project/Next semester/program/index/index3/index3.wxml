@@ -1,0 +1,12 @@
+<!--index/index3/index3.wxml-->
+<view class='info'>
+    <image src='http://www.jz5u.com/Soft/UploadPic/Upload/20173141113146880.jpg'></image>
+    <image src='https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=284667911,2701377769&fm=27&gp=0.jpg'></image>
+    <image src='https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=241853692,477144144&fm=27&gp=0.jpg'></image>
+    <image src='https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2795088552,2023829488&fm=27&gp=0.jpg'></image>
+    <image src='https://ss0.baidu.com/73F1bjeh1BF3odCf/it/u=2169064089,1215780782&fm=85&s=F9B28B544871461506A54CE90300E062'></image>
+    <image src='https://ss0.baidu.com/73t1bjeh1BF3odCf/it/u=3632187107,1823422693&fm=85&s=B32B6CA652023CED5207088B030070CA'></image>
+    
+    <image src='http://5b0988e595225.cdn.sohucs.com/images/20180929/09cc0f22b51f4ddf883e54bab90ad7f6.jpeg' class='last'></image>
+    <image src='http://5b0988e595225.cdn.sohucs.com/images/20180929/41bf3904f26740db88fc665b7fd67be8.jpeg' class='last'></image>
+</view>
