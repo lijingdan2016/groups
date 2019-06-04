@@ -1,32 +1,5 @@
-/* pages/smooth/smooth.wxss */
-
-/* pages/quiet/quiet.wxss */
-/**index.wxss**/
-/* .userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-}
-
-.userinfo-nickname {
-  color: #aaa;
-}
-
-.usermotto {
-  margin-top: 200px;
-} */
-
-
-
 .container{
-  height: 550px;
+  height: 500px;
   overflow: hidden;
 }
 /*1*/
@@ -51,13 +24,13 @@
 .rotate-disk-container{
   position: absolute;
   top: 30px;
-  height:100%;
+  height:80%;
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  left: 155px;
+  /* left: 180px; */
 }
 .rotate-disk{
   width: 450rpx;
@@ -90,7 +63,7 @@
 .title-container{
   position: absolute;
   top: 0;
-  left:-40px;
+  left:-20px;
   height: 160rpx;
   width: 100%;
   display: flex;
@@ -146,35 +119,21 @@
   justify-content: center;
   align-items: center;
 }
-.operation-icon{
-}
 .icon-prev{
-  /*background-image: url('../../assets/img/icon.png');
-  background-repeat: no-repeat;
-  background-position: -76px -153px;*/
   width: 80rpx;
   height: 80rpx;
 }
 .icon-play{
-  /*background-image: url('../../assets/img/icon.png');
-  background-repeat: no-repeat;
-  background-position: -136px -153px;*/
   margin: 0 20rpx;
   width: 98rpx;
   height: 98rpx;
 }
 .icon-pause{
-  /*background-image: url('../../assets/img/icon.png');
-  background-repeat: no-repeat;
-  background-position: -178px -193px;*/
   margin: 0 20rpx;
   width: 98rpx;
   height: 98rpx;
 }
 .icon-next{
-  /*background-image: url('../../assets/img/icon.png');
-  background-repeat: no-repeat;
-  background-position: -204px -154px;*/
   width: 80rpx;
   height: 80rpx;
 }

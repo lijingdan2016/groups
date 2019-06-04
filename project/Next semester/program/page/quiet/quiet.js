@@ -24,9 +24,6 @@ Page({
         console.log(res.data);
         that.setData({
           audioList: res.data,
-          // 'list[0].id':res.data[0].src,
-          // 'list[0].title': res.data[0].name,
-          //  list: res.data,
           //res代表success函数的事件对，data是固定的,list是数组
         })
         var old = res.data;
@@ -40,7 +37,6 @@ Page({
       }
     });
     console.log('onLoad')
-    //console.log(this.data.audioList.length)
     //  获取本地存储存储audioIndex
     var audioIndexStorage = wx.getStorageSync('audioIndex')
     console.log(audioIndexStorage)
@@ -51,10 +47,8 @@ Page({
   onReady: function (e) {
     console.log('onReady')
     // 使用 wx.createAudioContext 获取 audio 上下文 context
-    // this.audioCtx = wx.createAudioContext('audio')
   },
   bindSliderchange: function (e) {
-    // clearInterval(this.data.timer)
     let value = e.detail.value
     let that = this
     console.log(e.detail.value)
@@ -179,21 +173,25 @@ Page({
             sliderValue: Math.floor(currentPosition * 100 / duration),
           })
         }
+        if (currentPosition != undefined) {
+          if (duration != undefined) {
+            var x = Number(currentPosition),
+                y = Number(duration);
+            if (x == y) {
+              that.bindTapNext()
+            } else if ((x + 1) == y) {
+              that.bindTapNext()
+            }
+          }
+        }
       }
     })
   },
   stotime: function (s) {
     let t = '';
     if (s > -1) {
-      // let hour = Math.floor(s / 3600);
       let min = Math.floor(s / 60) % 60;
       let sec = s % 60;
-      // if (hour < 10) {
-      //   t = '0' + hour + ":";
-      // } else {
-      //   t = hour + ":";
-      // }
-
       if (min < 10) { t += "0"; }
       t += min + ":";
       if (sec < 10) { t += "0"; }

@@ -179,6 +179,17 @@ Page({
             sliderValue: Math.floor(currentPosition * 100 / duration),
           })
         }
+        if (currentPosition != undefined) {
+          if (duration != undefined) {
+            var x = Number(currentPosition),
+              y = Number(duration);
+            if (x == y) {
+              that.bindTapNext()
+            } else if ((x + 1) == y) {
+              that.bindTapNext()
+            }
+          }
+        }
       }
     })
   },
