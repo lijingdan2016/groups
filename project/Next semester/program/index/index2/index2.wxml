@@ -5,6 +5,6 @@
         <button class='btn' bindtap='goIndex2'>不良嗜好型失眠 >></button>
         <button class='btn' bindtap='goIndex3'>焦虑型失眠 >></button>
         <button class='btn' bindtap='goIndex4'>抑郁型失眠 >></button>
-        <button class='btn' bindtap='goIndex5'>睡眠小贴士 >></button>
+        <button class='btn' bindtap='goIndex5'>睡眠文章 >></button>
     </view>
 </view>

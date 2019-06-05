@@ -14,11 +14,16 @@ Component({
       selectedIconPath: "/image/text1.png",
       text: "助眠"
     }, {
-        pagePath: "/index/index3/index3",
-        iconPath: "/image/sleep.png",
-        selectedIconPath: "/image/sleep1.png",
-        text: "表情"
-    }]
+        pagePath: "/index/index4/index4",
+        iconPath: "/image/shop.png",
+        selectedIconPath: "/image/shop1.png",
+        text: "推荐"
+    },{
+    pagePath: "/index/index3/index3",
+    iconPath: "/image/my.png",
+    selectedIconPath: "/image/my1.png",
+    text: "我的"
+}]
   },
   attached() {
   },

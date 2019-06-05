@@ -31,7 +31,7 @@ Page({
     },
     goIndex5: function () {
         wx.navigateTo({
-            url: '/page/tip/tip',
+            url: '/page/article/article',
         })
     }
 })
