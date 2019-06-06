@@ -7,12 +7,17 @@
 .userinfo-avatar {
   width: 128rpx;
   height: 128rpx;
-  margin: 20rpx;
   border-radius: 50%;
+  margin-left: 15px;
 }
 
 .userinfo-nickname {
-  color: #aaa;
+    position: absolute;
+    color: rgb(59, 129, 221);
+    margin-left: -50px;
+    font-size: 16px;
+    font-family: '幼圆';
+    top: 65px;
 }
 .top{
     width: 75%;
@@ -30,8 +35,8 @@
 }
 .top_container{
     position: absolute;
-    top: 80px;
-    left: 37%;
+    top: 70px;
+    left: 39%;
 }
 .text{
     color: rgb(47, 189, 255);

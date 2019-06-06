@@ -13,12 +13,14 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.5.0",
-	"appid": "wx4e6af7f2e28449a9",
-	"projectname": "明夏",
+	"appid": "wxde6dc4995bde89b1",
+	"projectname": "%E6%98%8E%E5%A4%8F",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
 	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,

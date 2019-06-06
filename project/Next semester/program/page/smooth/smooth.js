@@ -35,7 +35,12 @@ Page({
           audioList.push(old[i]);
         }
         console.log(res.data);
-
+        var timers = function () {
+          setInterval(function () {
+            that.autoNext(that)
+          }, 1000)
+        }
+        timers();
 
       }
     });
@@ -73,8 +78,9 @@ Page({
       }
     })
   },
+  //上一首
   bindTapPrev: function () {
-    console.log('bindTapNext')
+    console.log('bindTapPrev')
     let length = this.data.audioList.length
     let audioIndexPrev = this.data.audioIndex
     let audioIndexNow = audioIndexPrev
@@ -90,10 +96,19 @@ Page({
       duration: 0,
     })
     let that = this
+    console.log('bindTapPrev1')
+    console.log(that.data.pauseStatus)
+    //点击上一首时停止当前播放并跳转上一首自动播放
     setTimeout(() => {
       if (that.data.pauseStatus === true) {
         that.play()
+        this.setData({ pauseStatus: false })
+      } else {
+        wx.pauseBackgroundAudio()
+        that.setData({ pauseStatus: false })
+        that.play()
       }
+
     }, 1000)
     wx.setStorageSync('audioIndex', audioIndexNow)
   },
@@ -167,10 +182,26 @@ Page({
     }, 1000)
     this.setData({ timer: timer })
   },
+  //自动切换下一首
+  autoNext(that) {
+    wx.getBackgroundAudioPlayerState({
+      success: function (res) {
+        let { status, duration, currentPosition } = res
+        if (currentPosition != undefined) {
+          if (duration != undefined) {
+            var x = Number(currentPosition),
+              y = Number(duration);
+            if ((x + 1) == y) {
+              that.bindTapNext()
+            }
+          }
+        }
+      }
+    })
+  },
   setDuration(that) {
     wx.getBackgroundAudioPlayerState({
       success: function (res) {
-        console.log(res)
         let { status, duration, currentPosition } = res
         if (status === 1 || status === 0) {
           that.setData({
@@ -178,17 +209,6 @@ Page({
             duration: that.stotime(duration),
             sliderValue: Math.floor(currentPosition * 100 / duration),
           })
-        }
-        if (currentPosition != undefined) {
-          if (duration != undefined) {
-            var x = Number(currentPosition),
-              y = Number(duration);
-            if (x == y) {
-              that.bindTapNext()
-            } else if ((x + 1) == y) {
-              that.bindTapNext()
-            }
-          }
         }
       }
     })
