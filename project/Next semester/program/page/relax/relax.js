@@ -105,7 +105,7 @@ Page({
         this.setData({ pauseStatus: false })
       } else {
         wx.pauseBackgroundAudio()
-        that.setData({ pauseStatus: false })
+        that.setData({ pauseStatus: false })//播放按钮显示暂停
         that.play()
       }
 
